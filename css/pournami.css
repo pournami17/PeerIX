@@ -1,0 +1,59 @@
+.announcement-cnt {
+	float: left;
+	width: 100%;
+	border: 1px solid black;
+	padding: 10px;
+	margin: 0 0 10px 0;
+	height: 200px;
+	overflow: hidden;
+}
+.announcement-cnt ul{
+	list-style: none;
+	padding: 0 10px;
+	height: auto;
+}
+.announce-inner-wrapper {
+	height: 135px;
+    display: block;
+    width: 100%;
+	overflow-x: hidden;
+    overflow-y: scroll;
+}
+.dashboard-left-wrapper .btn-dashboard {
+	font-size: 1em;
+	text-transform: none;
+	white-space: normal;
+    word-wrap: break-word;
+}
+.dashboard-left-wrapper label {
+	text-align: left;
+	padding: 0 0 10px 0;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0;
+    float: left;
+    width: 100%;
+}
+.year-wrapper,
+.overall-correct-responses {
+	float: left;
+	width: 100%;
+}
+.select-graduate-year,
+.post-grad-year {
+	float: left;
+	width: 50%;
+}
+.select-graduate-year .form-group {
+	margin: 0;
+}
+.select-graduate-year select {
+	width: 150px;
+}
+.residents-number {
+	font-size: 30px;
+    font-weight: 600;
+}
+hr {
+	border-color: #000;
+}

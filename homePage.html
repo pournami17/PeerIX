@@ -27,6 +27,7 @@
 	<link href="css/bootstrap-datepicker.css?v=1.6.1" rel="stylesheet" id="bootstrapDatePicker-css" type="text/css" />
 	<link href="css/style.css?v=1.0" rel="stylesheet" id="style-css" type="text/css" />
 	<link href="css/custom.css?v=1.0" rel="stylesheet" id="custom-css" type="text/css" />
+    <link href="css/pournami.css?v=1.0" rel="stylesheet" id="pournami-css" type="text/css" />
 	<link href="css/theme.css?v=1.0" rel="stylesheet" id="theme-css" type="text/css" />
 	<link href="css/font-awesome/css/font-awesome.min.css?v=4.6.3" rel="stylesheet" id="fontAwesome-css" type="text/css" />
 	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en" rel="stylesheet" id="googleFonts-css" type="text/css" />
@@ -93,272 +94,565 @@
             </div>
         </header>
         <div class="container content-mrgT detailscontent-wrapper">
-            <div class="peerIxSt">
+            
                 <div class="container pretestscore-headingwrapper">
                     <div class="row"></div>
                 </div>
-                <div class="row percentageBg "><div id="graph-scripts">
-                    <script type="text/javascript"
-                        src="js/highcharts/v4.2.5/highcharts.js"></script>
-                    <script type="text/javascript"
-                        src="js/highcharts/v4.2.5/highcharts-more.js"></script>
-                    <script type="text/javascript"
-                        src="js/highcharts/v4.2.5/solid-gauge.js"></script>
-                    </div>
-                    <div class="graph-bg col-xs-12 col-sm-6 chartchoose chartchooseNew text-center" id="overall-graph">
-                        <h2>
-                            <span class="chartext overallscore-heading">Overall Score</span> <a href="#"
-                            class="questionIcon graph-question-icon"> <i class="fa fa-question-circle-o"
-                            aria-hidden="true"></i>
-                            </a>
-                        </h2>
-                    <div class="chart-wrapper">
-                        <div class="oveScore1" style="width: 100%">
-                            <div id="overall_score_chart" style="width:100%; max-height: 400px;">Loading...</div>
-                            <script type="text/javascript">
-                                $(function () {
-                                    if (!Highcharts.theme) {
-                                        Highcharts.setOptions({
-                                            chart: {
-                                                backgroundColor: 'transparent'
-                                            },
-                                            colors: ['#4d6991', '#E03100', '#F49503'],
-                                            title: {
-                                                style: {
-                                                    color: 'silver'
-                                                }
-                                            },
-                                            tooltip: {
-                                                style: {
-                                                    color: 'silver'
-                                                }
-                                            }
-                                        });
-                                    }
+                <div class="row">
+                    <div class="col-sm-12 col-md-9 dashboard-left-wrapper">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-9">
+                                <div class="year-wrapper">
+                                    <form class="form-horizontal select-graduate-year">
+                                        <fieldset>
+                                            <div class="form-group">
+                                              <label for="selectbasic">Select Graduate Year for status</label>
+                                              <div>
+                                                <select id="selectbasic" name="selectbasic" class="form-control">
+                                                  <option value="1">PGY 1</option>
+                                                  <option value="2">PGY 2</option>
+                                                </select>
+                                              </div>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                    <div class="post-grad-year">
+                                        <label>Post Graduate Year 1</label>
+                                        <label><span class="residents-number">25</span> Total Residents</label>
+                                    </div>
+                                </div>
+                                <div class="overall-correct-responses">
+                                    <h4>Overall Correct Response</h4>
+                                    <div class="row">
+                                        <div id="graph-scripts">
+                                            <script type="text/javascript"
+                                                src="js/highcharts/v4.2.5/highcharts.js"></script>
+                                            <script type="text/javascript"
+                                                src="js/highcharts/v4.2.5/highcharts-more.js"></script>
+                                            <script type="text/javascript"
+                                                src="js/highcharts/v4.2.5/solid-gauge.js"></script>
+                                        </div>
+                                        <div class="chartchoose chartchooseNew" id="overall-graph">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-7"> 
+                                                    <div class="chart-wrapper">
+                                                        <div class="oveScore1" style="width: 100%">
+                                                            <div id="overall_score_chart" style="width:100%; max-height: 400px;">Loading...</div>
+                                                            <script type="text/javascript">
+                                                                $(function () {
+                                                                    if (!Highcharts.theme) {
+                                                                        Highcharts.setOptions({
+                                                                            chart: {
+                                                                                backgroundColor: 'transparent'
+                                                                            },
+                                                                            colors: ['#4d6991', '#E03100', '#F49503'],
+                                                                            title: {
+                                                                                style: {
+                                                                                    color: 'silver'
+                                                                                }
+                                                                            },
+                                                                            tooltip: {
+                                                                                style: {
+                                                                                    color: 'silver'
+                                                                                }
+                                                                            }
+                                                                        });
+                                                                    }
 
-                                    var gaugeOptions = {
-                                        chart: {
-                                            type: 'solidgauge',
-                                            marginTop:40,
-                                            marginBottom:40,
-                                            marginLeft: 40,
-                                            marginRight: 40
-                                        },
-                                        title: null,
-                                        pane : {
-                                            size: '100%',
-                                            startAngle: 0,
-                                            endAngle: 360,
-                                            background: {
-                                                backgroundColor:'none',
-                                                innerRadius: '100%',
-                                                outerRadius: '100%',
-                                                shape: 'circle',
-                                                borderWidth: 0
-                                            }
-                                        },
+                                                                    var gaugeOptions = {
+                                                                        chart: {
+                                                                            type: 'solidgauge',
+                                                                            marginTop:40,
+                                                                            marginBottom:40,
+                                                                            marginLeft: 40,
+                                                                            marginRight: 40
+                                                                        },
+                                                                        title: null,
+                                                                        pane : {
+                                                                            size: '100%',
+                                                                            startAngle: 0,
+                                                                            endAngle: 360,
+                                                                            background: {
+                                                                                backgroundColor:'none',
+                                                                                innerRadius: '100%',
+                                                                                outerRadius: '100%',
+                                                                                shape: 'circle',
+                                                                                borderWidth: 0
+                                                                            }
+                                                                        },
 
-                                        tooltip: {
-                                            enabled: false
-                                        },
+                                                                        tooltip: {
+                                                                            enabled: false
+                                                                        },
 
-                                        // the value axis
-                                        yAxis: [
-                                        {
-                                            lineWidth: 0,
-                                            zIndex: 4,
-                                            min: 0,
-                                            max: 100,
-                                            title: {
-                                                text: ''
-                                            },
+                                                                        // the value axis
+                                                                        yAxis: [
+                                                                        {
+                                                                            lineWidth: 0,
+                                                                            zIndex: 4,
+                                                                            min: 0,
+                                                                            max: 100,
+                                                                            title: {
+                                                                                text: ''
+                                                                            },
 
-                                            minorTickLength: 0,
-                                            tickWidth: 2,
-                                            tickLength: 15,
-                                            tickColor: Highcharts.getOptions().colors[1],
-                                            tickPosition: 'outside',
-                                            tickPositions: [16],
-                                            labels: {
-                                                distance: 20,
-                                                enabled: true,
-                                                x: 15,
-                                                y: -20,
-                                                formatter: function() {
-                                                    return '<span class="graph-average-score">' + this.value + '%</span>';
-                                                },
-                                                useHTML: true,
-                                                style: {
-                                                  fontSize: '1em',
-                                                  margin: 70,
-                                                  color: Highcharts.getOptions().colors[1]
-                                                }
-                                           }
-                                        },
-                                        {
-                                            lineWidth: 0,
-                                            zIndex: 4,
-                                            min: 0,
-                                            max: 100,
-                                            title: {
-                                                text: ''
-                                            },
+                                                                            minorTickLength: 0,
+                                                                            tickWidth: 2,
+                                                                            tickLength: 15,
+                                                                            tickColor: Highcharts.getOptions().colors[1],
+                                                                            tickPosition: 'outside',
+                                                                            tickPositions: [16],
+                                                                            labels: {
+                                                                                distance: 20,
+                                                                                enabled: true,
+                                                                                x: 15,
+                                                                                y: -20,
+                                                                                formatter: function() {
+                                                                                    return '<span class="graph-average-score">' + this.value + '%</span>';
+                                                                                },
+                                                                                useHTML: true,
+                                                                                style: {
+                                                                                  fontSize: '1em',
+                                                                                  margin: 70,
+                                                                                  color: Highcharts.getOptions().colors[1]
+                                                                                }
+                                                                           }
+                                                                        },
+                                                                        {
+                                                                            lineWidth: 0,
+                                                                            zIndex: 4,
+                                                                            min: 0,
+                                                                            max: 100,
+                                                                            title: {
+                                                                                text: ''
+                                                                            },
 
-                                            minorTickLength: 0,
-                                            tickWidth: 2,
-                                            tickLength: 18,
-                                            tickColor: Highcharts.getOptions().colors[1],
-                                            tickPosition: 'inside',
-                                            tickPositions: [16],
-                                            labels: {
-                                                style: {
-                                                  visibility: 'hidden'
-                                                }
-                                           }
-                                        },
-                                        {
-                                            lineWidth: 0,
-                                            zIndex: 4,
-                                            min: 0,
-                                            max: 100,
-                                            title: {
-                                                text: ''
-                                            },
+                                                                            minorTickLength: 0,
+                                                                            tickWidth: 2,
+                                                                            tickLength: 18,
+                                                                            tickColor: Highcharts.getOptions().colors[1],
+                                                                            tickPosition: 'inside',
+                                                                            tickPositions: [16],
+                                                                            labels: {
+                                                                                style: {
+                                                                                  visibility: 'hidden'
+                                                                                }
+                                                                           }
+                                                                        },
+                                                                        {
+                                                                            lineWidth: 0,
+                                                                            zIndex: 4,
+                                                                            min: 0,
+                                                                            max: 100,
+                                                                            title: {
+                                                                                text: ''
+                                                                            },
 
-                                            minorTickLength: 0,
-                                            tickWidth: 2,
-                                            tickLength: 20,
-                                            tickColor: Highcharts.getOptions().colors[2],
-                                            tickPosition: 'outside',
-                                            tickPositions: [63],
-                                            labels: {
-                                                distance: 60,
-                                                enabled: true,
-                                                align: 'low',
-                                                x: 5,
-                                                y: 10,
-                                                formatter: function() {
-                                                    return '<span class="graph-abeam-score">' + this.value + '%</span>';
-                                                },
-                                                useHTML: true,
-                                                style: {
-                                                  fontSize: '1em',
-                                                  rotation: 0,
-                                                  color:Highcharts.getOptions().colors[2],
-                                                  float: 'left',
-                                                  border: '1px'
-                                                }
-                                           }
-                                        },
-                                        {
-                                            lineWidth: 0,
-                                            zIndex: 4,
-                                            min: 0,
-                                            max: 100,
-                                            title: {
-                                                text: ''
-                                            },
+                                                                            minorTickLength: 0,
+                                                                            tickWidth: 2,
+                                                                            tickLength: 20,
+                                                                            tickColor: Highcharts.getOptions().colors[2],
+                                                                            tickPosition: 'outside',
+                                                                            tickPositions: [63],
+                                                                            labels: {
+                                                                                distance: 60,
+                                                                                enabled: true,
+                                                                                align: 'low',
+                                                                                x: 5,
+                                                                                y: 10,
+                                                                                formatter: function() {
+                                                                                    return '<span class="graph-abeam-score">' + this.value + '%</span>';
+                                                                                },
+                                                                                useHTML: true,
+                                                                                style: {
+                                                                                  fontSize: '1em',
+                                                                                  rotation: 0,
+                                                                                  color:Highcharts.getOptions().colors[2],
+                                                                                  float: 'left',
+                                                                                  border: '1px'
+                                                                                }
+                                                                           }
+                                                                        },
+                                                                        {
+                                                                            lineWidth: 0,
+                                                                            zIndex: 4,
+                                                                            min: 0,
+                                                                            max: 100,
+                                                                            title: {
+                                                                                text: ''
+                                                                            },
 
-                                            minorTickLength: 0,
-                                            tickWidth: 2,
-                                            tickLength: 16,
-                                            tickColor: Highcharts.getOptions().colors[2],
-                                            tickPosition: 'inside',
-                                            tickPositions: [63],
-                                            labels: {
-                                                style: {
-                                                  visibility: 'hidden'
-                                                }
-                                           }
-                                        }
-                                        ],
+                                                                            minorTickLength: 0,
+                                                                            tickWidth: 2,
+                                                                            tickLength: 16,
+                                                                            tickColor: Highcharts.getOptions().colors[2],
+                                                                            tickPosition: 'inside',
+                                                                            tickPositions: [63],
+                                                                            labels: {
+                                                                                style: {
+                                                                                  visibility: 'hidden'
+                                                                                }
+                                                                           }
+                                                                        }
+                                                                        ],
 
-                                        plotOptions: {
-                                            solidgauge: {
-                                                dataLabels: {
-                                                    y: 5,
-                                                    borderWidth: 0,
-                                                    useHTML: true
-                                                }
-                                            }
-                                        }
+                                                                        plotOptions: {
+                                                                            solidgauge: {
+                                                                                dataLabels: {
+                                                                                    y: 5,
+                                                                                    borderWidth: 0,
+                                                                                    useHTML: true
+                                                                                }
+                                                                            }
+                                                                        }
 
-                                    };
+                                                                    };
 
-                                    // Over all score chart
-                                    $('#overall_score_chart').highcharts(Highcharts.merge(gaugeOptions, {
+                                                                    // Over all score chart
+                                                                    $('#overall_score_chart').highcharts(Highcharts.merge(gaugeOptions, {
 
-                                        credits: {
-                                            enabled: false
-                                        },
+                                                                        credits: {
+                                                                            enabled: false
+                                                                        },
 
-                                        series: [{
-                                            name: 'Your Score',
-                                            innerRadius:'65%',
-                                            outerRadius: '78%',
-                                            radius: '78%',
-                                            color: Highcharts.getOptions().colors[0],
-                                            data: [{y:23, color: '#4d6991'}],
-                                            dataLabels: {
-                                                format: '<div class="score-percent"><span class="center-number" style="color:' +
-                                                    ((Highcharts.getOptions().colors[0]) || 'black') + '">{y}</span><span class="score-percent-symbol">%</span></div><div class="score-percent-your-score-text">Your Score</div></div>'
-                                            },
-                                        },{
-                                            name: 'Average Score',
-                                            innerRadius:'78%',
-                                            outerRadius: '90%',
-                                            radius: '90%',
-                                            color: Highcharts.getOptions().colors[1],
-                                            data: [{y:16, color: '#E03100'}]
-                                        },{
-                                            name: 'Projected ABEM Score based on questions to date',
-                                            innerRadius:'90%',
-                                            outerRadius: '100%',
-                                            radius: '100%',
-                                            color: Highcharts.getOptions().colors[2],
-                                            data: [{y:63, color: '#F49503'}]
-                                        }],
+                                                                        series: [{
+                                                                            name: 'Your Score',
+                                                                            innerRadius:'65%',
+                                                                            outerRadius: '78%',
+                                                                            radius: '78%',
+                                                                            color: Highcharts.getOptions().colors[0],
+                                                                            data: [{y:23, color: '#4d6991'}],
+                                                                            dataLabels: {
+                                                                                format: '<div class="score-percent"><span class="center-number" style="color:' +
+                                                                                    ((Highcharts.getOptions().colors[0]) || 'black') + '">{y}</span><span class="score-percent-symbol">%</span></div><div class="score-percent-your-score-text">Your Score</div></div>'
+                                                                            },
+                                                                        },{
+                                                                            name: 'Average Score',
+                                                                            innerRadius:'78%',
+                                                                            outerRadius: '90%',
+                                                                            radius: '90%',
+                                                                            color: Highcharts.getOptions().colors[1],
+                                                                            data: [{y:16, color: '#E03100'}]
+                                                                        },{
+                                                                            name: 'Projected ABEM Score based on questions to date',
+                                                                            innerRadius:'90%',
+                                                                            outerRadius: '100%',
+                                                                            radius: '100%',
+                                                                            color: Highcharts.getOptions().colors[2],
+                                                                            data: [{y:63, color: '#F49503'}]
+                                                                        }],
 
-                                    }));
-                                });
-                            </script>
+                                                                    }));
+                                                                });
+                                                            </script>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-5">
+                                                    <div class="container graph-details">
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                <div class="panel-group acrdInfo">
+                                                                    <div class="sub_legend">
+                                                                        <span class="indigo_legend legend_common"></span>
+                                                                        <span class="legend_text score-tag" onclick="void(0)">Your Score <i data-toggle="tooltip" data-placement="bottom" title="This score represents the percentage of questions that you have answered correctly." class="blue-result-tooltip result-tooltip fa fa-question-circle-o" aria-hidden="true"></i></span>
+                                                                    </div>
+                                                                    <div class="sub_legend">
+                                                                        <span class="red_legend legend_common"></span>
+                                                                        <span class="legend_text" onclick="void(0)">Average Score <i data-toggle="tooltip" data-placement="bottom" title="This score is the average score of all tests (practice, simulated)." class="red-result-tooltip result-tooltip fa fa-question-circle-o" aria-hidden="true"></i>
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="sub_legend">
+                                                                        <span class="orange_legend legend_common"></span>
+                                                                        <span class="legend_text" onclick="void(0)">Projected ABEM Score <i data-toggle="tooltip" data-placement="bottom" title="The PEER IX calculates an ABEM projected score by analyzing your performance on all PEER exams and multiplying an ‘ABEM emphasis factor’ which is associated with the exam emphasis placed on each EM Topic. Note that this is only an estimate and may not reflect ABEM performance." class="orange-result-tooltip result-tooltip fa fa-question-circle-o" aria-hidden="true"></i>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-3">
+                                <button type="button" class="btn btn-primary btn-dashboard">Create Testing Schedule</button>
+                                <button type="button" class="btn btn-primary btn-dashboard">Create a Practice Test</button>
+                                <button type="button" class="btn btn-primary btn-dashboard">Add/Remove Residents</button>
+                                <button type="button" class="btn btn-primary btn-dashboard">View My Notification</button>
+                                <button type="button" class="btn btn-primary btn-dashboard">View PGY 1reports</button>
+                                <button type="button" class="btn btn-primary btn-dashboard">View More Options</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="table-responsive">
+                                <table class="table"> 
+                                    <thead> 
+                                        <tr> 
+                                            <th>Assignments</th> 
+                                            <th>Start Date</th> 
+                                            <th>End Date</th> 
+                                            <th>Status</th> 
+                                        </tr> 
+                                    </thead> 
+                                    <tbody> 
+                                        <tr>
+                                            <td>Table cell</td> 
+                                            <td>Table cell</td> 
+                                            <td>Table cell</td> 
+                                            <td>Table cell</td> 
+                                        </tr> 
+                                        <tr>
+                                            <td>Table cell</td> 
+                                            <td>Table cell</td> 
+                                            <td>Table cell</td> 
+                                            <td>Table cell</td>
+                                        </tr>
+                                    </tbody> 
+                                </table> 
+                            </div>
                         </div>
                     </div>
-                    <div class="container graph-details">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div class="panel-group acrdInfo">
-                                    <div class="sub_legend">
-                                        <span class="indigo_legend legend_common"></span>
-                                        <span class="legend_text score-tag" onclick="void(0)">Your Score <i data-toggle="tooltip" data-placement="bottom" title="This score represents the percentage of questions that you have answered correctly." class="blue-result-tooltip result-tooltip fa fa-question-circle-o" aria-hidden="true"></i></span>
-                                    </div>
-                                    <div class="sub_legend">
-                                        <span class="red_legend legend_common"></span>
-                                        <span class="legend_text" onclick="void(0)">Average Score <i data-toggle="tooltip" data-placement="bottom" title="This score is the average score of all tests (practice, simulated)." class="red-result-tooltip result-tooltip fa fa-question-circle-o" aria-hidden="true"></i>
-                                        </span>
-                                    </div>
-                                    <div class="sub_legend">
-                                        <span class="orange_legend legend_common"></span>
-                                        <span class="legend_text" onclick="void(0)">Projected ABEM Score <i data-toggle="tooltip" data-placement="bottom" title="The PEER IX calculates an ABEM projected score by analyzing your performance on all PEER exams and multiplying an ‘ABEM emphasis factor’ which is associated with the exam emphasis placed on each EM Topic. Note that this is only an estimate and may not reflect ABEM performance." class="orange-result-tooltip result-tooltip fa fa-question-circle-o" aria-hidden="true"></i>
-                                        </span>
-                                    </div>
+                    <div class="col-sm-12 col-md-3 announcement-wrapper">
+                    <div class="announcement-cnt program-announcement">
+                        <h4><span>Program Announcement</span>
+                            <a href="#" class="pull-right"><i class="fa fa-cog" aria-hidden="true"></i></a>
+                        </h4>
+                        <div class="announce-inner-wrapper">
+                            <ul>
+                                <li><a href="#">Please click here to see your syllybus for PGY 1</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="announcement-cnt acep-announcement">
+                        <h4><span>Acep Announcement</span></h4>
+                        <div class="announce-inner-wrapper">
+                            <ul>
+                                <li><a href="#">ACEP have just released Podcasting series, check it out! https:Peercast.org</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col-md-12">
+                        <h3 class="text-center">Performance Metrics</h3>
+                        <hr>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Name</th>
+                                                <th>Overall score</th>
+                                                <th>Click</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="checkbox">
+                                                        <label>
+                                                          <input type="checkbox">
+                                                        </label>
+                                                      </div>
+                                                </td>
+                                                <td>John Doe</td>
+                                                <td>89%</td>
+                                                <td>></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="checkbox">
+                                                        <label>
+                                                          <input type="checkbox">
+                                                        </label>
+                                                      </div>
+                                                </td>
+                                                <td>John Doe</td>
+                                                <td>89%</td>
+                                                <td>></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="checkbox">
+                                                        <label>
+                                                          <input type="checkbox">
+                                                        </label>
+                                                      </div>
+                                                </td>
+                                                <td>John Doe</td>
+                                                <td>89%</td>
+                                                <td>></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-md-3">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Name</th>
+                                                <th>Average Question/Day</th>
+                                                <th>Click</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="checkbox">
+                                                        <label>
+                                                          <input type="checkbox">
+                                                        </label>
+                                                      </div>
+                                                </td>
+                                                <td>John Doe</td>
+                                                <td>89%</td>
+                                                <td>></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="checkbox">
+                                                        <label>
+                                                          <input type="checkbox">
+                                                        </label>
+                                                      </div>
+                                                </td>
+                                                <td>John Doe</td>
+                                                <td>89%</td>
+                                                <td>></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="checkbox">
+                                                        <label>
+                                                          <input type="checkbox">
+                                                        </label>
+                                                      </div>
+                                                </td>
+                                                <td>John Doe</td>
+                                                <td>89%</td>
+                                                <td>></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-md-3">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Category</th>
+                                                <th>Scores</th>
+                                                <th>Click</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="checkbox">
+                                                        <label>
+                                                          <input type="checkbox">
+                                                        </label>
+                                                      </div>
+                                                </td>
+                                                <td>John Doe</td>
+                                                <td>89%</td>
+                                                <td>></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="checkbox">
+                                                        <label>
+                                                          <input type="checkbox">
+                                                        </label>
+                                                      </div>
+                                                </td>
+                                                <td>John Doe</td>
+                                                <td>89%</td>
+                                                <td>></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="checkbox">
+                                                        <label>
+                                                          <input type="checkbox">
+                                                        </label>
+                                                      </div>
+                                                </td>
+                                                <td>John Doe</td>
+                                                <td>89%</td>
+                                                <td>></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-md-3">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Name</th>
+                                                <th>% completed</th>
+                                                <th>Click</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="checkbox">
+                                                        <label>
+                                                          <input type="checkbox">
+                                                        </label>
+                                                      </div>
+                                                </td>
+                                                <td>John Doe</td>
+                                                <td>89%</td>
+                                                <td>></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="checkbox">
+                                                        <label>
+                                                          <input type="checkbox">
+                                                        </label>
+                                                      </div>
+                                                </td>
+                                                <td>John Doe</td>
+                                                <td>89%</td>
+                                                <td>></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="checkbox">
+                                                        <label>
+                                                          <input type="checkbox">
+                                                        </label>
+                                                      </div>
+                                                </td>
+                                                <td>John Doe</td>
+                                                <td>89%</td>
+                                                <td>></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <script type="text/javascript">
+    </div>
+</div>
+<!-- /container -->
+<script type="text/javascript">
                     jQuery(function () {
                         jQuery('[data-toggle="tooltip"]').tooltip();
                     });
                     </script>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-<!-- /container -->
-
 <script type="text/javascript" src="js/bootstrap.min.js?v=1.0" id="boostrap-js"></script>
 <script type="text/javascript" src="js/bootstrap-datepicker.js?v=1.0" id="boostrapDatePicker-js"></script>
 <script type="text/javascript" src="js/peerix-footer.js?v=1.0" id="peerixFooter-js"></script>
