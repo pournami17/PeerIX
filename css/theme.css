@@ -1,0 +1,449 @@
+.movieHideImage, .hiddenPlayerContainer {
+    display: none !important;
+}
+
+#lbHoverNav {
+    display: none !important;
+    position: relative !important;
+}
+
+#lbBottomContainer {
+    position: relative !important;
+}
+
+#lbOuterContainer {
+    max-width: 90%;
+}
+
+.jwplayer {
+    max-width: 100%;
+}
+
+#critique_exam_player_logo {
+    display: none;
+}
+
+#critique_exam_player_display_button {
+    display: none !important;
+    opacity: 0 !important;
+}
+
+#critique_exam_player_controlbar {
+    bottom: 0 !important;
+    max-width: 100% !important;
+}
+
+#critique_exam_player_controlbar .jwcenter {
+    left: 75px !important;
+    right: 100px !important;
+}
+
+.lytebox .content_image {
+    border: 3px solid #dfdfdf;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 300px;
+}
+
+#lbMain * {
+    box-sizing: content-box;
+}
+
+#login-error-message {
+    color: red;
+}
+
+.error_settings {
+    border: 1px solid red;
+}
+/*.content-mrgT {
+    margin-top: 0px !important;
+    padding-top: 60px;
+} */
+.indigo_legend {
+    background-color: #4d6991;
+}
+
+.orange_legend {
+    background-color: #f99910;
+}
+
+.red_legend {
+    background-color: #E03100;
+}
+
+.legend_common {
+    padding: 22px 20px 8px 8px;
+    border-radius: 6px;
+    float: left;
+    clear: both;
+}
+
+.sub_legend {
+    margin-top: 19px;
+}
+
+.legend_text {
+    margin-top: 2px;
+    padding: 0px 0px 19px 15px;
+    font-size: 23px;
+    font-weight: 600;
+    float: left;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    display: inline-block;
+    width: 85%;
+}
+
+.abeam-score-question {
+    font-size: 30px !important;
+    color: black;
+    padding: 25px 0px 30px 15px;
+}
+
+.average-score-question {
+    font-size: 30px !important;
+    color: black;
+    padding: 25px 0px 30px 5px;
+}
+
+/*Practice Page Styles Begins*/
+.radioMain1 .btn-default, .radioMain2 .btn-default {
+    background: #ffffff none repeat scroll 0 0;
+    border-radius: 100% !important;
+    box-shadow: none;
+    padding: 5px 8px;
+}
+
+.radioMain1 label.rememberText, .radioMain2 label.rememberText {
+    color: #cdcdcd;
+    font-weight: normal;
+    margin-left: 6px;
+    margin-top: 4px;
+}
+
+.hideDiv {
+    display: none;
+}
+
+#ptForm .error, #qtForm .error{
+    color: red;
+}
+/*Practice Page Styles Ends*/
+
+/* Overlay and loader*/
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0); /* Black fallback color */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+#peer-loader {
+    width: 100%;
+    display: none;
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px;
+    /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px !important;
+    /* Override the font-size specified earlier (36px) for all navigation links */
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+    .closebtn {
+        font-size: 40px !important;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+.submit-status {
+    color: green;
+    float: left;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    width: 100%;
+}
+
+.submit-error {
+    color: red;
+    float: left;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    width: 100%;
+}
+
+.score-by-category {
+    background-color: #FFFFFF;
+}
+
+body .force-show {
+    display: block;
+}
+
+.pulse-notification-time-day {
+    display: none;
+}
+
+.peerix-loader {
+    margin: 10px auto 0;
+    width: 200px;
+    display:none;
+}
+
+.peerix-loader img {
+    float: left;
+}
+
+.peerix-loader span {
+    float: left;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.remove-flag {
+    background-color: orange;
+    padding: 8px;
+    margin-top: -30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.text-right .plus, .mark-favorite  .plus  {
+    background: url(../images/plus.png) no-repeat left top;
+    padding: 20px;
+    cursor: pointer;
+}
+.text-right .minus, .mark-favorite .minus {
+    background: url(../images/minus.png) no-repeat left top;
+    padding: 20px;
+    cursor: pointer;
+}
+
+#user-exam-wrapper .question-head {
+    position:relative;
+    top:0px !important;
+    z-index:0;
+}
+
+#user-exam-wrapper .question-head #closX {
+    display:none;
+}
+
+.lockedAnswer * {
+     -webkit-touch-callout: none; /* iOS Safari */
+     -webkit-user-select: none;   /* Chrome/Safari/Opera */
+     -khtml-user-select: none;    /* Konqueror */
+     -moz-user-select: none;      /* Firefox */
+     -ms-user-select: none;       /* Internet Explorer/Edge */
+     user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+    cursor: auto !important;
+}
+
+#exam_form .lockedAnswer .user-selected-answer {
+    border: 1px solid #1e91be !important;
+    font-weight: 600 !important;
+}
+
+.lockedAnswer .active {
+    border: 1px solid #adadad !important;
+    font-weight: normal !important;
+}
+#lbLauncher, #lbOverlay, #lbMain {
+    z-index: 999999 !important;
+}
+
+#user-exam-wrapper .errormessage-wrapper .btn-primary {
+    margin-top: 25px;
+    max-width: 90%;
+    width: 300px;
+}
+
+#user-exam-wrapper .errormessage-wrapper .exam-error-message-details {
+    max-width: 90%;
+    width: 100%;
+}
+.no-accordion {
+    width: 100%;
+    max-width: 800px;
+    margin: 60px auto 0px;
+    text-align: center;
+    background-color: #ebebeb;
+    padding: 50px 0px 50px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 900;
+}
+.read-full
+{
+    display: block;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 3.6em;
+    font-size: 15px;
+    line-height: 1.8em;
+}
+.ppoints .graybg, .previews .graybg {
+    background-color: #e0e0e1;
+}
+.peer-points, .peer-reviews {
+    padding:25px !important;
+}
+#submit-feedback {
+    color:#FFFFFF;
+    background-color: #4c6a92;
+    font-weight: bold;
+    cursor: pointer;
+}
+.feedback-success {
+    color: green !important;
+    display:none;
+}
+.feedback-error {
+    color: red !important;
+    display:none;
+}
+.feedback-submit {
+    float: left;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    width: 100%;
+}
+.no-link a{
+    cursor : default !important;
+}
+
+#wait_for_validation {
+    color: red;
+    font-weight: bold;
+}
+#peerpath_info_link{
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.question-answer-on #user-exam-wrapper {
+    margin-top:25px;
+}
+.peer-image {
+    cursor:pointer;
+}
+.peer-content {
+   display: inline-block;
+   width: 98%;
+}
+.peer-image {
+   display: inline-block;
+   vertical-align: top;
+}
+.peer-image img {
+    padding-bottom: 5px;
+}
+.peer-text {
+   display: inline-block;
+   width: 82%;
+   padding: 10px 15px 0px 30px;
+}
+.mark-favorite {
+   display: inline-block;
+   width: 1%;
+   vertical-align: top;
+   margin-top: 10px;
+}
+.peer-fav-tem {
+   padding: 20px 30px 20px 25px!important;
+}
+.simulator-options .alphabet{
+    float: left;
+    font-weight: bold;
+    width: 20px;
+}
+
+.simulator-options .answer-text {
+    float: left;
+    width: 90%;
+    word-wrap: break-word;
+}
+
+.myprogress-header {
+    font-size: 20px;
+}
+
+.myprogress-subheader {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.peer-content {
+    color:#000;
+}
+
+.peerix-hidden-content {
+    display:none;
+}
+
+#user-exam-wrapper .qstn-case-bg *, #user-exam-wrapper .qstn-text * {
+    font-family : Helvetica,open sans,sans-serif;
+}
+.daily-pulse-submit-status {
+    text-align: center;
+    font-weight: bold;
+    display:none;
+}
+#save_peerix_daily_pulse .error{
+    color: red;
+}
+#save_peerix_daily_pulse .success{
+    color: green;
+}
+#daily-pulse-settings {
+    cursor: pointer;
+}
