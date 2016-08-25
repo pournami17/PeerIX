@@ -162,6 +162,190 @@ div.dataTables_wrapper div.dataTables_filter label {
 .notificationdetails-time .glyphicon-time {
   padding-right: 5px;
 }
+/*-----------Director homepage-------------*/
+.announcement-cnt {
+  float: left;
+  width: 100%;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 0 0 10px 0;
+  height: 200px;
+  overflow: hidden;
+}
+.announcement-cnt ul{
+  list-style: none;
+  padding: 0 10px;
+  height: auto;
+}
+.announce-inner-wrapper {
+  height: 135px;
+    display: block;
+    width: 100%;
+  overflow-x: hidden;
+    overflow-y: scroll;
+}
+.dashboard-left-wrapper .btn-dashboard {
+  font-size: 1em;
+  text-transform: none;
+  white-space: normal;
+    word-wrap: break-word;
+}
+.dashboard-left-wrapper label {
+  text-align: left;
+  padding: 0 0 10px 0;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0;
+    float: left;
+    width: 100%;
+}
+.dashboard-left-wrapper .legend_text {
+  font-weight: 400;
+    font-size: 16px;
+}
+.dashboard-left-wrapper .legend_text .result-tooltip {
+  font-size: 22px !important;
+}
+.year-wrapper,
+.overall-correct-responses {
+  float: left;
+  width: 100%;
+}
+.select-graduate-year,
+.post-grad-year {
+  float: left;
+  width: 50%;
+}
+.select-graduate-year .form-group {
+  margin: 0;
+}
+.select-graduate-year select {
+  width: 150px;
+}
+.residents-number {
+  font-size: 30px;
+    font-weight: 600;
+}
+hr {
+  border-color: #000;
+}
+.assignments-table td a {
+  padding: 0 10px;
+  text-decoration: underline;
+}
+.btn.btn-filter span.glyphicon {
+  opacity: 1;
+}
+.btn-filter,
+.btn-filter:active,
+.btn-filter:focus,
+.btn-filter:hover,
+.btn-filter:active:focus, 
+.btn-filter:active:hover {
+  background: none;
+    border: none;
+    outline: none;
+}
+.filterable {
+    margin-top: 15px;
+    border: none;
+}
+.filterable .filters input[disabled] {
+    background-color: transparent;
+    border: none;
+    cursor: auto;
+    box-shadow: none;
+    padding: 0;
+    height: auto;
+}
+.filterable .filters input[disabled]::-webkit-input-placeholder {
+    color: #333;
+}
+.filterable .filters input[disabled]::-moz-placeholder {
+    color: #333;
+}
+.filterable .filters input[disabled]:-ms-input-placeholder {
+    color: #333;
+}
+.filterable .checkbox {
+  margin-top: 0;
+}
+.performance-metrics {
+  font-weight: 600;
+}
+.filterable .panel-heading {
+  padding-left: 0;
+    padding-right: 0;
+    float: left;
+    width: 100%;
+    background: none;
+    color: #000;
+    border: none;
+}
+.filterable .panel-title {
+  float: left;
+  width: 75%;
+}
+/*-----End of director homepage-------*/
+/*---------Curriculum Builder------------------*/
+.curriculum-builder-wrapper h3 {
+  font-size: 18px;
+    border-bottom: 1px solid #ccc;
+    padding: 6px 0;
+    font-weight: 600;
+}
+.form-curriculum-gsy-class label {
+  font-weight: normal;
+    font-size: 16px;
+    margin: 6px 0;
+    padding-left: 0;
+}
+.form-curriculum-gsy-class .form-group {
+  float: left;
+  width: 100%;
+}
+.table-curriculum-builder {
+  padding: 50px 0;
+}
+.btn-add-row {
+  background: #4c6a92;
+  border: 1px solid #4c6a92;
+  box-shadow: none;
+  outline: none;
+  padding: 12px 16px;
+}
+.btn-add-row:hover,
+.btn-add-row:active,
+.btn-add-row:focus,
+.btn-add-row:active:focus, 
+.btn-add-row:active:hover {
+  background: #5576a3;
+}
+.btn-add-row i {
+  color: #fff;
+}
+.table-curriculum-builder .table-bordered>tbody>tr>td, 
+.table-curriculum-builder .table-bordered>tbody>tr>th, 
+.table-curriculum-builder .table-bordered>tfoot>tr>td, 
+.table-curriculum-builder .table-bordered>tfoot>tr>th, 
+.table-curriculum-builder .table-bordered>thead>tr>td, 
+.table-curriculum-builder .table-bordered>thead>tr>th {
+    border: 1px solid #ddd;
+    padding: 16px 20px;
+    font-size: 16px;
+}
+/*--------END OF CURRICULUM BUILDER--------------*/
+/*------CREATE PRACTICE TEST---------------*/
+.assign-resident-wrapper {
+  padding: 0 0 50px 0;
+}
+.assign-resident-wrapper h4 {
+  font-weight: 600;
+}
+.assign-resident-wrapper label {
+  float: left;
+  width: 100%;
+}
 @media (max-width: 600px) {
   .notification-wrapper .col-xs-10 {
     width: 100%;
