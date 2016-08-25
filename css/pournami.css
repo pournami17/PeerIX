@@ -34,6 +34,13 @@
     float: left;
     width: 100%;
 }
+.dashboard-left-wrapper .legend_text {
+	font-weight: 400;
+    font-size: 16px;
+}
+.dashboard-left-wrapper .legend_text .result-tooltip {
+	font-size: 22px !important;
+}
 .year-wrapper,
 .overall-correct-responses {
 	float: left;
@@ -56,4 +63,61 @@
 }
 hr {
 	border-color: #000;
+}
+.assignments-table td a {
+	padding: 0 10px;
+	text-decoration: underline;
+}
+.btn.btn-filter span.glyphicon {
+	opacity: 1;
+}
+.btn-filter,
+.btn-filter:active,
+.btn-filter:focus,
+.btn-filter:hover,
+.btn-filter:active:focus, 
+.btn-filter:active:hover {
+	background: none;
+    border: none;
+    outline: none;
+}
+.filterable {
+    margin-top: 15px;
+    border: none;
+}
+.filterable .filters input[disabled] {
+    background-color: transparent;
+    border: none;
+    cursor: auto;
+    box-shadow: none;
+    padding: 0;
+    height: auto;
+}
+.filterable .filters input[disabled]::-webkit-input-placeholder {
+    color: #333;
+}
+.filterable .filters input[disabled]::-moz-placeholder {
+    color: #333;
+}
+.filterable .filters input[disabled]:-ms-input-placeholder {
+    color: #333;
+}
+.filterable .checkbox {
+	margin-top: 0;
+}
+.performance-metrics {
+	font-weight: 600;
+}
+.filterable .panel-heading {
+	padding-left: 0;
+    padding-right: 0;
+    float: left;
+    width: 100%;
+    background: none;
+    color: #000;
+
+}
+.filterable .panel-title {
+	float: left;
+	width: 75%;
 }

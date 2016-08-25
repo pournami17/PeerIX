@@ -98,7 +98,7 @@
                 <div class="container pretestscore-headingwrapper">
                     <div class="row"></div>
                 </div>
-                <div class="row">
+                <div>
                     <div class="col-sm-12 col-md-9 dashboard-left-wrapper">
                         <div class="row">
                             <div class="col-sm-12 col-md-9">
@@ -143,7 +143,7 @@
                                                                     if (!Highcharts.theme) {
                                                                         Highcharts.setOptions({
                                                                             chart: {
-                                                                                backgroundColor: 'transparent'
+                                                                                backgroundColor: '#F6F9FB'
                                                                             },
                                                                             colors: ['#4d6991', '#E03100', '#F49503'],
                                                                             title: {
@@ -162,10 +162,10 @@
                                                                     var gaugeOptions = {
                                                                         chart: {
                                                                             type: 'solidgauge',
-                                                                            marginTop:40,
-                                                                            marginBottom:40,
-                                                                            marginLeft: 40,
-                                                                            marginRight: 40
+                                                                            marginTop: 70,
+                                                                            marginBottom:70,
+                                                                            marginLeft: 70,
+                                                                            marginRight: 70
                                                                         },
                                                                         title: null,
                                                                         pane : {
@@ -388,30 +388,61 @@
                         </div>
                         <div class="row">
                             <div class="table-responsive">
-                                <table class="table"> 
+                                <table class="table assignments-table"> 
                                     <thead> 
                                         <tr> 
-                                            <th>Assignments</th> 
-                                            <th>Start Date</th> 
-                                            <th>End Date</th> 
-                                            <th>Status</th> 
+                                            <th>
+                                                <span>Assignments</span>
+                                                <div class="pull-right">
+                                                    <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span></button>
+                                                </div>
+                                            </th> 
+                                            <th>
+                                                <span>Start Date</span>
+                                                <div class="pull-right">
+                                                    <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span></button>
+                                                </div>
+                                            </th> 
+                                            <th>
+                                                <span>End Date</span>
+                                                <div class="pull-right">
+                                                    <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span></button>
+                                                </div>
+                                            </th> 
+                                            <th>
+                                                <span>Status</span>
+                                                <div class="pull-right">
+                                                    <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span></button>
+                                                </div>
+                                            </th> 
                                         </tr> 
                                     </thead> 
                                     <tbody> 
                                         <tr>
-                                            <td>Table cell</td> 
-                                            <td>Table cell</td> 
-                                            <td>Table cell</td> 
-                                            <td>Table cell</td> 
+                                            <td>Cardiovascular Disorder</td> 
+                                            <td>8/26/16</td> 
+                                            <td>9/1/16</td> 
+                                            <td>Active</td> 
                                         </tr> 
                                         <tr>
-                                            <td>Table cell</td> 
-                                            <td>Table cell</td> 
-                                            <td>Table cell</td> 
-                                            <td>Table cell</td>
+                                            <td>Cutaneous Disorders<a href="#">View Results</a></td> 
+                                            <td>7/15/16</td> 
+                                            <td>8/22/16</td> 
+                                            <td>Complete</td>
                                         </tr>
                                     </tbody> 
-                                </table> 
+                                </table>
+                                 <div class="col-xs-12">
+                                    <ul class="pagination pull-right">
+                                        <li><a href="#">«</a></li>
+                                        <li><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="#">»</a></li>
+                                    </ul>
+                                </div> 
                             </div>
                         </div>
                     </div>
@@ -439,208 +470,257 @@
                 </div>
                 <div class="row">
                         <div class="col-md-12">
-                        <h3 class="text-center">Performance Metrics</h3>
+
+                        <h3 class="text-center performance-metrics">Performance Metrics</h3>
                         <hr>
                             <div class="row">
                                 <div class="col-md-3">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>Name</th>
-                                                <th>Overall score</th>
-                                                <th>Click</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                          <input type="checkbox">
-                                                        </label>
-                                                      </div>
-                                                </td>
-                                                <td>John Doe</td>
-                                                <td>89%</td>
-                                                <td>></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                          <input type="checkbox">
-                                                        </label>
-                                                      </div>
-                                                </td>
-                                                <td>John Doe</td>
-                                                <td>89%</td>
-                                                <td>></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                          <input type="checkbox">
-                                                        </label>
-                                                      </div>
-                                                </td>
-                                                <td>John Doe</td>
-                                                <td>89%</td>
-                                                <td>></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                    <div class="panel panel-primary filterable">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">Student Performance Ranking</h3>
+                                            <div class="pull-right">
+                                                <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span></button>
+                                            </div>
+                                        </div>
+                                        <table class="table">
+                                            <thead>
+                                                <tr class="filters">
+                                                    <th></th>
+                                                    <th><input type="text" class="form-control" placeholder="Name" disabled></th>
+                                                    <th style="min-width: 115px;"><input type="text" class="form-control" placeholder="Overall score" disabled></th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                  <input type="checkbox">
+                                                                </label>
+                                                              </div>
+                                                        </td>
+                                                        <td>John Doe</td>
+                                                        <td>89%</td>
+                                                        <td><a href="#">></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <label>
+                                                              <input type="checkbox">
+                                                            </label>
+                                                          </div>
+                                                    </td>
+                                                    <td>Jane Doe</td>
+                                                    <td>82%</td>
+                                                    <td><a href="#">></a></td>
+                                                </tr>
+                                                <tr>
+                                                     <td>
+                                                        <div class="checkbox">
+                                                            <label>
+                                                              <input type="checkbox">
+                                                            </label>
+                                                          </div>
+                                                    </td>
+                                                    <td>Jane Doe2</td>
+                                                    <td>78%</td>
+                                                    <td><a href="#">></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="panel-footer">
+                                            <a href="#">More</a>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-md-3">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>Name</th>
-                                                <th>Average Question/Day</th>
-                                                <th>Click</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                          <input type="checkbox">
-                                                        </label>
-                                                      </div>
-                                                </td>
-                                                <td>John Doe</td>
-                                                <td>89%</td>
-                                                <td>></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                          <input type="checkbox">
-                                                        </label>
-                                                      </div>
-                                                </td>
-                                                <td>John Doe</td>
-                                                <td>89%</td>
-                                                <td>></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                          <input type="checkbox">
-                                                        </label>
-                                                      </div>
-                                                </td>
-                                                <td>John Doe</td>
-                                                <td>89%</td>
-                                                <td>></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                    <div class="panel panel-primary filterable">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">Student Engagement Level</h3>
+                                            <div class="pull-right">
+                                                <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span></button>
+                                            </div>
+                                        </div>
+                                        <table class="table">
+                                            <thead>
+                                                <tr class="filters">
+                                                    <th></th>
+                                                    <th><input type="text" class="form-control" placeholder="Name" disabled></th>
+                                                    <th style="min-width: 115px;"><input type="text" class="form-control" placeholder="Average Question/Day" disabled></th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                  <input type="checkbox">
+                                                                </label>
+                                                              </div>
+                                                        </td>
+                                                        <td>John Doe</td>
+                                                        <td>15</td>
+                                                        <td><a href="#">></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <label>
+                                                              <input type="checkbox">
+                                                            </label>
+                                                          </div>
+                                                    </td>
+                                                    <td>Jane Doe</td>
+                                                    <td>10</td>
+                                                    <td><a href="#">></a></td>
+                                                </tr>
+                                                <tr>
+                                                     <td>
+                                                        <div class="checkbox">
+                                                            <label>
+                                                              <input type="checkbox">
+                                                            </label>
+                                                          </div>
+                                                    </td>
+                                                    <td>Jane Doe 2</td>
+                                                    <td>8</td>
+                                                    <td><a href="#">></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="panel-footer">
+                                            <a href="#">More</a>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-md-3">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>Category</th>
-                                                <th>Scores</th>
-                                                <th>Click</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                          <input type="checkbox">
-                                                        </label>
-                                                      </div>
-                                                </td>
-                                                <td>John Doe</td>
-                                                <td>89%</td>
-                                                <td>></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                          <input type="checkbox">
-                                                        </label>
-                                                      </div>
-                                                </td>
-                                                <td>John Doe</td>
-                                                <td>89%</td>
-                                                <td>></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                          <input type="checkbox">
-                                                        </label>
-                                                      </div>
-                                                </td>
-                                                <td>John Doe</td>
-                                                <td>89%</td>
-                                                <td>></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                    <div class="panel panel-primary filterable">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">Overall Performance by Category</h3>
+                                            <div class="pull-right">
+                                                <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span></button>
+                                            </div>
+                                        </div>
+                                        <table class="table">
+                                            <thead>
+                                                <tr class="filters">
+                                                    <th></th>
+                                                    <th style="min-width: 140px;"><input type="text" class="form-control" placeholder="Category" disabled></th>
+                                                    <th><input type="text" class="form-control" placeholder="Scores" disabled></th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                  <input type="checkbox">
+                                                                </label>
+                                                              </div>
+                                                        </td>
+                                                        <td>Signs, Symptoms, and Presentation</td>
+                                                        <td>89%</td>
+                                                        <td><a href="#">></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <label>
+                                                              <input type="checkbox">
+                                                            </label>
+                                                          </div>
+                                                    </td>
+                                                    <td>Obstetrics and Gynecology</td>
+                                                    <td>89%</td>
+                                                    <td><a href="#">></a></td>
+                                                </tr>
+                                                <tr>
+                                                     <td>
+                                                        <div class="checkbox">
+                                                            <label>
+                                                              <input type="checkbox">
+                                                            </label>
+                                                          </div>
+                                                    </td>
+                                                    <td>Procedures and Skills</td>
+                                                    <td>89%</td>
+                                                    <td><a href="#">></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="panel-footer">
+                                            <a href="#">More</a>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-md-3">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>Name</th>
-                                                <th>% completed</th>
-                                                <th>Click</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                          <input type="checkbox">
-                                                        </label>
-                                                      </div>
-                                                </td>
-                                                <td>John Doe</td>
-                                                <td>89%</td>
-                                                <td>></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                          <input type="checkbox">
-                                                        </label>
-                                                      </div>
-                                                </td>
-                                                <td>John Doe</td>
-                                                <td>89%</td>
-                                                <td>></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                          <input type="checkbox">
-                                                        </label>
-                                                      </div>
-                                                </td>
-                                                <td>John Doe</td>
-                                                <td>89%</td>
-                                                <td>></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                    <div class="panel panel-primary filterable">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">Percentage of PEER Completed</h3>
+                                            <div class="pull-right">
+                                                <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span></button>
+                                            </div>
+                                        </div>
+                                        <table class="table">
+                                            <thead>
+                                                <tr class="filters">
+                                                    <th></th>
+                                                    <th><input type="text" class="form-control" placeholder="Name" disabled></th>
+                                                    <th style="min-width: 115px;"><input type="text" class="form-control" placeholder="% completed" disabled></th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                  <input type="checkbox">
+                                                                </label>
+                                                              </div>
+                                                        </td>
+                                                        <td>John Doe</td>
+                                                        <td>89%</td>
+                                                        <td><a href="#">></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <label>
+                                                              <input type="checkbox">
+                                                            </label>
+                                                          </div>
+                                                    </td>
+                                                    <td>Jane Doe</td>
+                                                    <td>90%</td>
+                                                    <td><a href="#">></a></td>
+                                                </tr>
+                                                <tr>
+                                                     <td>
+                                                        <div class="checkbox">
+                                                            <label>
+                                                              <input type="checkbox">
+                                                            </label>
+                                                          </div>
+                                                    </td>
+                                                    <td>Jane Doe 2</td>
+                                                    <td>89%</td>
+                                                    <td><a href="#">></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="panel-footer">
+                                            <a href="#">More</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -654,6 +734,7 @@
                     });
                     </script>
 <script type="text/javascript" src="js/bootstrap.min.js?v=1.0" id="boostrap-js"></script>
+<script type="text/javascript" src="js/director-home.js"></script>
 <script type="text/javascript" src="js/bootstrap-datepicker.js?v=1.0" id="boostrapDatePicker-js"></script>
 <script type="text/javascript" src="js/peerix-footer.js?v=1.0" id="peerixFooter-js"></script>
 </body>
