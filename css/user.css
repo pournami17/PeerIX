@@ -20,6 +20,9 @@
 #userTable {
 	margin-top: 100px;
 }
+.fa-refresh:before {
+  content: '';
+}
 #userTable.dataTable thead .sorting_asc:after {
   content: "\25BC";
   font-size: 11px;
