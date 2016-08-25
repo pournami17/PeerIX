@@ -57,6 +57,14 @@
 .addbuttons {
 	float: right;
 }
+#userTable tbody tr td:last-child a {
+    color: #1e91be;
+    border-right: solid 1px #BBB7B7;
+    padding-right: 6px;
+}
+#userTable td:last-child a:last-child {
+  border-right: none;
+}
 div.dataTables_wrapper div.dataTables_length label,
 div.dataTables_wrapper div.dataTables_filter label {
   font-size: 15px;
