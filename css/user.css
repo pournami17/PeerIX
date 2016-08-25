@@ -1,0 +1,103 @@
+.user-wrapper {
+  position: relative;
+  padding-top: 25px;
+  margin-top: 25px;
+}
+.dt-buttons a {
+  padding: 5px 20px;
+  background-color: #4c6a92;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.dt-buttons a:after {
+
+}
+#userTable_wrapper {
+	text-align: right;
+}
+#userTable {
+	margin-top: 100px;
+}
+#userTable.dataTable thead .sorting_asc:after {
+  content: "\25BC";
+  font-size: 11px;
+  color: #4c6a92;
+  position: absolute;
+  top: 8px;
+  opacity: 1;
+}
+#userTable.dataTable thead .sorting_desc:after {
+  content: "\25B2";
+  font-size: 11px;
+  color: #4c6a92;
+  position: absolute;
+  top: 8px;
+  opacity: 1;
+}
+#userTable.dataTable thead .sorting:after, #userTable.dataTable thead .sorting_asc i, #userTable.dataTable thead .sorting_desc i {
+  display: none
+}
+.dt-buttons {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.dataTables_length, #userTable_filter, .addbuttons {
+	display: inline-block;
+	margin-top: 10px;
+}
+#userTable_filter {
+	margin-left: 10px;
+}
+#userTable td {
+	text-align: left;
+}
+.addbuttons {
+	float: right;
+}
+div.dataTables_wrapper div.dataTables_length label,
+div.dataTables_wrapper div.dataTables_filter label {
+  font-size: 15px;
+  font-weight: 600;
+}
+.dataTables_info {
+	display: none;
+}
+.addbuttons div {
+	word-spacing: -10px;
+	padding: 8px 20px;
+  background-color: #4c6a92;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 900;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.addbuttons div:before {
+  padding-right: 4px;
+  color: #fff;
+  cursor: pointer;
+}
+.actions a {
+	padding-right: 10px;
+}
+#userTable th i {
+	float: right;
+	font-size: 14px;
+	margin-top: 3px;
+}
+#userTable th {
+	padding-right: 5px;
+	cursor: pointer;
+}
+#userTable th:last-child {
+	cursor: default;
+}
+.user-heading {
+ 	font-size: 27px;
+  color: #000000;
+  font-weight: 900;
+  padding-bottom: 5px;
+ }
