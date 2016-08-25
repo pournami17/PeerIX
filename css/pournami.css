@@ -116,7 +116,7 @@ hr {
     width: 100%;
     background: none;
     color: #000;
-
+    border: none;
 }
 .filterable .panel-title {
 	float: left;
@@ -169,4 +169,16 @@ hr {
     border: 1px solid #ddd;
     padding: 16px 20px;
     font-size: 16px;
+}
+/*--------END OF CURRICULUM BUILDER--------------*/
+/*------CREATE PRACTICE TEST---------------*/
+.assign-resident-wrapper {
+	padding: 0 0 50px 0;
+}
+.assign-resident-wrapper h4 {
+	font-weight: 600;
+}
+.assign-resident-wrapper label {
+	float: left;
+	width: 100%;
 }
