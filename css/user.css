@@ -101,3 +101,78 @@ div.dataTables_wrapper div.dataTables_filter label {
   font-weight: 900;
   padding-bottom: 5px;
  }
+
+ /***notification****/
+.notification-wrapper {
+  width: 100%;
+  float: left;
+  margin-top: 40px;
+  border: solid 1px #ADADAD;
+}
+.notification-header {
+  background-color: #3787D9;
+  padding: 10px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  margin: 0px;
+}
+.notification-deleteall {
+  margin-top: 20px;
+  background-color: #3787d9;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.notification-details {
+  padding: 20px 10px;
+}
+.notificationdetails-wrapper {
+  padding: 30px 5px 20px 10px;
+  border-bottom: solid 1px #DADADA;
+  width: 100%;
+  float: left;
+}
+.delete-notification {
+  float: left;
+  width: 100%;
+}
+.notificationdetails-wrapper:last-child {
+  border: none;
+}
+.deleteall-wrapper {
+  text-align: center;
+}
+.notificationdetails-content {
+  color: #3787D9;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 0px 10px 15px 0px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.notificationdetails-time, .delete-notification {
+  color: #757373;
+}
+.notificationdetails-time .glyphicon-time {
+  padding-right: 5px;
+}
+@media (max-width: 600px) {
+  .notification-wrapper .col-xs-10 {
+    width: 100%;
+    margin-top: 50px;
+    padding: 0px 5px;
+  }
+  .deleteall-wrapper {
+    position: absolute;
+    width: 88%;
+    padding: 0px;
+  }
+  .notificationdetails-time {
+    padding: 0px;
+  }
+
+}
