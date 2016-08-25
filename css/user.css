@@ -136,9 +136,11 @@ div.dataTables_wrapper div.dataTables_filter label {
   width: 100%;
   float: left;
 }
-.delete-notification {
+.delete-notification, .delete-notification:hover {
   float: left;
   width: 100%;
+  color: #757373;
+  text-decoration: none;
 }
 .notificationdetails-wrapper:last-child {
   border: none;
@@ -154,7 +156,7 @@ div.dataTables_wrapper div.dataTables_filter label {
   white-space: pre-wrap;
   word-break: break-word;
 }
-.notificationdetails-time, .delete-notification {
+.notificationdetails-time {
   color: #757373;
 }
 .notificationdetails-time .glyphicon-time {
