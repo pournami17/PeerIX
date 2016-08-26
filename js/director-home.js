@@ -47,5 +47,4 @@ $(document).ready(function(){
     $(".turnarrow").click(function(){
         $(".navbar-toggle").addClass("is-active");
     });
-    
 });
