@@ -365,6 +365,67 @@ hr {
     font-size: 16px;
 }
 /*--------END OF CURRICULUM BUILDER--------------*/
+/*------------------ADD RESIDENT-------------------*/
+.add-resident-wrapper h3{
+  font-size: 18px;
+    border-bottom: 1px solid #ccc;
+    padding: 6px 0;
+    font-weight: 600;
+}
+.residents-container ul {
+  padding: 10px;
+  background: #edf3f7;
+  list-style-type: none;
+  float: left;
+  width: 100%;
+}
+.residents-container ul li {
+  padding: 10px;
+  margin: 0;
+}
+.resident-info {
+  padding: 10px;
+  background: #fff;
+  border-radius: 5px;
+}
+.resident-info table {
+  width: 100%;
+}
+.resident-image-col{
+  vertical-align: top;
+}
+.add-resident-col,
+.resident-details-col {
+  vertical-align: middle;
+}
+.resident-image-col,
+.resident-image {
+  width: 60px;
+}
+.resident-image img{
+  border-radius: 5px;
+}
+.resident-details-col {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.resident-details h4 {
+  margin: 0 0 5px 0;
+  font-weight: 600;
+    font-size: 16px;
+}
+.resident-details .designation {
+  color: #767676;
+  font-size: 13px;
+}
+.add-resident-col {
+  width: 50px;
+    text-align: center;
+}
+.add-resident {
+  font-size: 35px;
+}
+/*------------------END OF ADD RESIDENT-------------------*/
 /***Progress page***/
 #percentage-completed-graph svg, #unique-questions-graph svg,
 #percentage-completed-graph .highcharts-container , #unique-questions-graph .highcharts-container {
