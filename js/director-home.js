@@ -39,4 +39,11 @@ $(document).ready(function(){
             $table.find('tbody').prepend($('<tr class="no-result text-center"><td colspan="'+ $table.find('.filters th').length +'">No result found</td></tr>'));
         }
     });
+
+    $('.filterable .more').click(function(){
+        $(this).parents('.filterable').find('tbody').append('<tr><td><div class="checkbox"><label><input type="checkbox"></label></div></td><td>John</td><td>85%</td></tr>');
+    });
+    $(".turnarrow").click(function(){
+        $(".navbar-toggle").addClass("is-active");
+    });
 });
