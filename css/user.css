@@ -312,6 +312,10 @@ hr {
   float: left;
   width: 75%;
 }
+.myprogress-link, .myprogress-link:hover {
+  text-decoration: none;
+  color: black;
+}
 /*-----End of director homepage-------*/
 /*---------Curriculum Builder------------------*/
 .curriculum-builder-wrapper h3 {
