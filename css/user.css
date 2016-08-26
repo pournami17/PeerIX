@@ -361,6 +361,25 @@ hr {
     font-size: 16px;
 }
 /*--------END OF CURRICULUM BUILDER--------------*/
+/***Progress page***/
+#percentage-completed-graph svg, #unique-questions-graph svg,
+#percentage-completed-graph .highcharts-container , #unique-questions-graph .highcharts-container {
+    max-height: 280px!important;
+    min-height: 280px!important;
+}
+#percentage-completed-graph , #unique-questions-graph  {
+    max-height: 400px!important;
+    min-height: 400px!important;
+}
+.myprogress-panelwrapper table tr {
+  border-bottom: solid 1px #dadada;
+}
+.myprogress-panelwrapper table {
+  width: 96%;
+}
+.uniqueH2 {
+  margin-bottom: 30px;
+}
 /*------CREATE PRACTICE TEST---------------*/
 .assign-resident-wrapper {
   padding: 0 0 50px 0;
