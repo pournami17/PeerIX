@@ -41,7 +41,7 @@ $(document).ready(function(){
     });
 
     $('.filterable .more').click(function(){
-        $(this).parents('.filterable').find('tbody').append('<tr><td><div class="checkbox"><label><input type="checkbox"></label></div></td><td>John</td><td>85%</td></tr>');
+        $(this).parents('.filterable').find('tbody').append('<tr><td>John</td><td>85%</td><td><a class="more-table" href="#">></a></td></tr>');
     });
 
     $(".turnarrow").click(function(){

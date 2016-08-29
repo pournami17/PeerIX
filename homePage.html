@@ -95,7 +95,6 @@
                     <div class="row"></div>
                 </div>
                 <div class="director-dashboard">
-                <div>
                     <div class="col-sm-12 col-md-9 dashboard-left-wrapper">
                         <div class="row">
                             <div class="col-sm-12 col-md-9">
@@ -108,6 +107,8 @@
                                                 <select id="selectbasic" name="selectbasic" class="form-control">
                                                   <option value="1">PGY 1</option>
                                                   <option value="2">PGY 2</option>
+                                                  <option value="2">PGY 3</option>
+                                                  <option value="2">PGY 4</option>
                                                 </select>
                                               </div>
                                             </div>
@@ -131,7 +132,7 @@
                                         </div>
                                         <div class="chartchoose chartchooseNew" id="overall-graph">
                                             <div class="row">
-                                                <div class="col-sm-12 col-md-7">
+                                                <div class="col-sm-12 col-lg-7">
                                                     <div class="chart-wrapper">
                                                         <div class="oveScore1" style="width: 100%">
                                                             <div id="overall_score_chart" style="width:100%; max-height: 400px;">Loading...</div>
@@ -345,7 +346,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-sm-12 col-md-5">
+                                                <div class="col-sm-12 col-lg-5">
                                                     <div class="container graph-details">
                                                         <div class="row">
                                                             <div class="col-xs-12">
@@ -423,10 +424,22 @@
                                             <td>Active</td>
                                         </tr>
                                         <tr>
-                                            <td>Cutaneous Disorders<a href="#">View Results</a></td>
-                                            <td>7/15/16</td>
-                                            <td>8/22/16</td>
-                                            <td>Complete</td>
+                                            <td>Cardiovascular Disorder</td>
+                                            <td>8/26/16</td>
+                                            <td>9/1/16</td>
+                                            <td>Active</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cardiovascular Disorder</td>
+                                            <td>8/26/16</td>
+                                            <td>9/1/16</td>
+                                            <td>Active</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cardiovascular Disorder</td>
+                                            <td>8/26/16</td>
+                                            <td>9/1/16</td>
+                                            <td>Active</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -463,14 +476,10 @@
                             </ul>
                         </div>
                     </div>
-
-                    </div>
                 </div>
                 <div class="row">
-                        <div class="col-md-12">
-
-                        <h3 class="text-center performance-metrics">Performance Metrics</h3>
-                        <hr>
+                        <div class="col-md-12 performance-metrics-wrapper">
+                            <h3 class="text-center performance-metrics">Performance Metrics</h3>
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="panel panel-primary filterable">
@@ -483,7 +492,6 @@
                                         <table class="table">
                                             <thead>
                                                 <tr class="filters">
-                                                    <th></th>
                                                     <th><input type="text" class="form-control" placeholder="Name" disabled></th>
                                                     <th style="min-width: 115px;"><input type="text" class="form-control" placeholder="Overall score" disabled></th>
                                                     <th></th>
@@ -492,40 +500,19 @@
                                             <tbody>
                                                 <tr>
                                                     <tr>
-                                                        <td>
-                                                            <div class="checkbox">
-                                                                <label>
-                                                                  <input type="checkbox">
-                                                                </label>
-                                                              </div>
-                                                        </td>
                                                         <td><a class="myprogress-link" href="../PeerIX/progress.html">John Doe</a></td>
                                                         <td>89%</td>
-                                                        <td><a href="#">></a></td>
+                                                        <td><a class="more-table" href="#">></a></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>
-                                                        <div class="checkbox">
-                                                            <label>
-                                                              <input type="checkbox">
-                                                            </label>
-                                                          </div>
-                                                    </td>
                                                     <td><a class="myprogress-link" href="../PeerIX/progress.html">Jane Doe</a></td>
                                                     <td>82%</td>
-                                                    <td><a href="#">></a></td>
+                                                    <td><a class="more-table" href="#">></a></td>
                                                 </tr>
                                                 <tr>
-                                                     <td>
-                                                        <div class="checkbox">
-                                                            <label>
-                                                              <input type="checkbox">
-                                                            </label>
-                                                          </div>
-                                                    </td>
                                                     <td><a class="myprogress-link" href="../PeerIX/progress.html">Jane Doe2</a></td>
                                                     <td>78%</td>
-                                                    <td><a href="#">></a></td>
+                                                    <td><a class="more-table" href="#">></a></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -545,7 +532,6 @@
                                         <table class="table">
                                             <thead>
                                                 <tr class="filters">
-                                                    <th></th>
                                                     <th><input type="text" class="form-control" placeholder="Name" disabled></th>
                                                     <th style="min-width: 115px;"><input type="text" class="form-control" placeholder="Average Question/Day" disabled></th>
                                                     <th></th>
@@ -554,40 +540,19 @@
                                             <tbody>
                                                 <tr>
                                                     <tr>
-                                                        <td>
-                                                            <div class="checkbox">
-                                                                <label>
-                                                                  <input type="checkbox">
-                                                                </label>
-                                                              </div>
-                                                        </td>
                                                         <td><a class="myprogress-link" href="../PeerIX/progress.html">John Doe</a></td>
                                                         <td>15</td>
-                                                        <td><a href="#">></a></td>
+                                                        <td><a class="more-table" href="#">></a></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>
-                                                        <div class="checkbox">
-                                                            <label>
-                                                              <input type="checkbox">
-                                                            </label>
-                                                          </div>
-                                                    </td>
                                                     <td><a class="myprogress-link" href="../PeerIX/progress.html">Jane Doe</a></td>
                                                     <td>10</td>
-                                                    <td><a href="#">></a></td>
+                                                    <td><a class="more-table" href="#">></a></td>
                                                 </tr>
                                                 <tr>
-                                                     <td>
-                                                        <div class="checkbox">
-                                                            <label>
-                                                              <input type="checkbox">
-                                                            </label>
-                                                          </div>
-                                                    </td>
                                                     <td><a class="myprogress-link" href="../PeerIX/progress.html">Jane Doe 2</a></td>
                                                     <td>8</td>
-                                                    <td><a href="#">></a></td>
+                                                    <td><a class="more-table" href="#">></a></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -607,7 +572,6 @@
                                         <table class="table">
                                             <thead>
                                                 <tr class="filters">
-                                                    <th></th>
                                                     <th style="min-width: 140px;"><input type="text" class="form-control" placeholder="Category" disabled></th>
                                                     <th><input type="text" class="form-control" placeholder="Scores" disabled></th>
                                                     <th></th>
@@ -616,40 +580,18 @@
                                             <tbody>
                                                 <tr>
                                                     <tr>
-                                                        <td>
-                                                            <div class="checkbox">
-                                                                <label>
-                                                                  <input type="checkbox">
-                                                                </label>
-                                                              </div>
-                                                        </td>
                                                         <td>Signs, Symptoms, and Presentation</td>
                                                         <td>89%</td>
-                                                        <td><a href="#">></a></td>
+                                                        <td><a class="more-table" href="#">></a></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>
-                                                        <div class="checkbox">
-                                                            <label>
-                                                              <input type="checkbox">
-                                                            </label>
-                                                          </div>
-                                                    </td>
                                                     <td>Obstetrics and Gynecology</td>
                                                     <td>89%</td>
-                                                    <td><a href="#">></a></td>
+                                                    <td><a class="more-table" href="#">></a></td>
                                                 </tr>
-                                                <tr>
-                                                     <td>
-                                                        <div class="checkbox">
-                                                            <label>
-                                                              <input type="checkbox">
-                                                            </label>
-                                                          </div>
-                                                    </td>
                                                     <td>Procedures and Skills</td>
                                                     <td>89%</td>
-                                                    <td><a href="#">></a></td>
+                                                    <td><a class="more-table" href="#">></a></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -669,7 +611,6 @@
                                         <table class="table">
                                             <thead>
                                                 <tr class="filters">
-                                                    <th></th>
                                                     <th><input type="text" class="form-control" placeholder="Name" disabled></th>
                                                     <th style="min-width: 115px;"><input type="text" class="form-control" placeholder="% completed" disabled></th>
                                                     <th></th>
@@ -678,40 +619,19 @@
                                             <tbody>
                                                 <tr>
                                                     <tr>
-                                                        <td>
-                                                            <div class="checkbox">
-                                                                <label>
-                                                                  <input type="checkbox">
-                                                                </label>
-                                                              </div>
-                                                        </td>
                                                         <td><a class="myprogress-link" href="../PeerIX/progress.html">John Doe</a></td>
                                                         <td>89%</td>
-                                                        <td><a href="#">></a></td>
+                                                        <td><a class="more-table" href="#">></a></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>
-                                                        <div class="checkbox">
-                                                            <label>
-                                                              <input type="checkbox">
-                                                            </label>
-                                                          </div>
-                                                    </td>
                                                     <td><a class="myprogress-link" href="../PeerIX/progress.html">Jane Doe</a></td>
                                                     <td>90%</td>
-                                                    <td><a href="#">></a></td>
+                                                    <td><a href="#" class="more-table">></a></td>
                                                 </tr>
                                                 <tr>
-                                                     <td>
-                                                        <div class="checkbox">
-                                                            <label>
-                                                              <input type="checkbox">
-                                                            </label>
-                                                          </div>
-                                                    </td>
                                                     <td><a class="myprogress-link" href="../PeerIX/progress.html">Jane Doe 2</a></td>
                                                     <td>89%</td>
-                                                    <td><a href="#">></a></td>
+                                                    <td><a href="#" class="more-table">></a></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -728,10 +648,10 @@
 </div>
 <!-- /container -->
 <script type="text/javascript">
-                    jQuery(function () {
-                        jQuery('[data-toggle="tooltip"]').tooltip();
-                    });
-                    </script>
+jQuery(function () {
+    jQuery('[data-toggle="tooltip"]').tooltip();
+});
+</script>
 <script type="text/javascript" src="js/bootstrap.min.js?v=1.0" id="boostrap-js"></script>
 <script type="text/javascript" src="js/director-home.js"></script>
 <script type="text/javascript" src="js/bootstrap-datepicker.js?v=1.0" id="boostrapDatePicker-js"></script>

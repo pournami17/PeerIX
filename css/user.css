@@ -183,7 +183,7 @@ div.dataTables_wrapper div.dataTables_filter label {
   border: 1px solid black;
   padding: 10px;
   margin: 0 0 10px 0;
-  height: 200px;
+  min-height: 350px;
   overflow: hidden;
 }
 .announcement-cnt ul{
@@ -196,7 +196,15 @@ div.dataTables_wrapper div.dataTables_filter label {
     display: block;
     width: 100%;
   overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
+}
+.director-dashboard .chartchoose.chartchooseNew {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+.director-dashboard .oveScore1, .director-dashboard .oveScore1 svg, .director-dashboard .highcharts-container,
+.director-dashboard #overall_score_chart{
+  max-height: 340px;
 }
 .dashboard-left-wrapper .btn-dashboard {
   font-size: 1em;
@@ -300,22 +308,72 @@ hr {
   font-weight: 600;
 }
 .filterable .panel-heading {
-  padding-left: 0;
-    padding-right: 0;
-    float: left;
-    width: 100%;
-    background: none;
+  float: left;
+  width: 100%;
+  background: #C6D8F3;
+  color: #3E3E3E;
+  border: 5px;
+  min-height: 50px;
+}
+.filterable table {
+  border: solid 1px #BBBBBB;
+}
+.filterable table .more-table, .filterable table .more-table:hover {
     color: #000;
-    border: none;
+    background-color: #D0D0D0;
+    padding: 0px 5px;
+    font-weight: 600;
+    border-radius: 2px;
+    text-decoration: none;
+}
+.filterable .panel-footer {
+    text-align: center;
+    color: #4c6a92;
+    background-color: #fff;
+}
+.filterable .panel-footer a, .filterable .panel-footer a:hover {
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 5px 30px;
+    background-color: #4c6a92;
+    border-radius: 5px;
+    color: #fff;
 }
 .filterable .panel-title {
   float: left;
   width: 75%;
+  text-align: center;
+  font-weight: 600;
 }
 .myprogress-link, .myprogress-link:hover {
   text-decoration: none;
   color: black;
 }
+.performance-metrics {
+  background-color: #4c6a92;
+  color: #fff;
+  padding: 10px 5px;
+  font-size: 20px;
+  margin: 20px 0px 0px 0px;
+}
+.performance-metrics, .performance-metrics-wrapper .row{
+    width: 100%;
+    float: left;
+    margin: 0px;
+}
+/*.performance-metrics-wrapper table thead tr th:nth-child(1), .performance-metrics-wrapper table thead tr th:nth-child(4),
+.performance-metrics-wrapper table tbody tr td:nth-child(1), .performance-metrics-wrapper table thead tr td:nth-child(4) {
+    width: 10%;
+}
+.performance-metrics-wrapper table thead tr th:nth-child(2),
+.performance-metrics-wrapper table tbody tr td:nth-child(2) {
+    width: 50%;
+}
+.performance-metrics-wrapper table thead tr th:nth-child(3),
+.performance-metrics-wrapper table tbody tr td:nth-child(3) {
+    width: 30%;
+}*/
 /*-----End of director homepage-------*/
 /*---------Curriculum Builder------------------*/
 .curriculum-builder-wrapper h3 {
@@ -456,6 +514,11 @@ hr {
   float: left;
   width: 100%;
 }
+@media (max-width: 991px) {
+  .announcement-cnt {
+      min-height: 150px;
+  }
+}
 @media (max-width: 600px) {
   .notification-wrapper .col-xs-10 {
     width: 100%;
@@ -470,5 +533,4 @@ hr {
   .notificationdetails-time {
     padding: 0px;
   }
-
 }
