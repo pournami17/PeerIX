@@ -16,7 +16,7 @@
 .gauge-chart-wrapper, .line-chart-wrapper {
 	padding: 0px;
 }
-.line-chart-title, .gauge-chart-title {
+.line-chart-title, .gauge-chart-title, .assigmnets-title {
   background-color: #F5F5F5;
   margin: 0px;
   padding: 15px 22px;
@@ -32,24 +32,75 @@
 .line-chart-wrapper svg {
 	border-left: solid 1px #dedede;
 }
-.maingraph-wrapper, .graph-legend-wrapper {
+.maingraph-wrapper, .graph-legend-wrapper, .sectionone-wrapper {
 	border-bottom: solid 1px #dedede;
 }
 .graph-legend .sub_legend:nth-child(1) {
 	margin-left: 0px;
 }
 .graph-legend .sub_legend {
-    display: inline-block;
-    margin-left: 20px;
-    margin-bottom: 10px;
-    width: 25%;
+  display: inline-block;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  width: 25%;
 }
 .graph-legend .green_legend {
-    background-color: #81c609;
+  background-color: #81c609;
 }
 .graph-legend .legend-text {
 	margin-top: 5px;
 }
 .legend_common {
-    margin-right: 10px;
+  margin-right: 10px;
+}
+.gauge-chart-wrapper .center-number, .gauge-chart-wrapper .score-percent-symbol {
+	color: #000!important;
+}
+.assigmnets-wrapper {
+  padding: 0px;
+}
+.assignmnets-table {
+  width: 100%;
+}
+.assignmnets-table thead, .assignmnets-table tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+.assignmnets-table tbody {
+  height: 260px;
+  overflow-y: auto;
+  display: block;
+  width: 100%;
+}
+.assignmnets-table thead th, .assignmnets-table tbody td {
+  padding: 20px 0px 10px;
+  font-size: 15px;
+}
+.assignmnets-table thead {
+  border-bottom: solid 1px #dedede;
+}
+.assignmnets-tablewrapper {
+  margin-left: 20px;
+}
+.assignmnets-table .myprogress-link, .assignmnets-table .myprogress-link:hover {
+    text-decoration: none;
+    color: #1e91be;
+}
+.assignmnets-table tbody tr td:nth-child(1) {
+  width: 40%;
+}
+.assignmnets-table tbody tr td {
+  font-weight: 600;
+}
+.assignmnets-table tbody tr td:nth-child(2),
+.assignmnets-table tbody tr td:nth-child(3),
+.assignmnets-table tbody tr td:nth-child(4) {
+  width: 20%;
+}
+.assignmnets-table tbody tr {
+  border-bottom: solid 2px #dedede;
+}
+.assignmnets-table tbody tr:last-child {
+  border-bottom: none;
 }
