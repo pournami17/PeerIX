@@ -242,7 +242,7 @@ div.dataTables_wrapper div.dataTables_filter label {
 .select-graduate-year,
 .post-grad-year {
   float: left;
-  width: 50%;
+  width: 100%;
 }
 .select-graduate-year .form-group {
   margin: 0;
@@ -563,6 +563,61 @@ hr {
   width: 100%;
 }
 /*------------END OF ADDITION----------------*/
+/*-----DASHBOARD MENU-----*/
+.dashboard-menu-cnt {
+  margin: 62px 0 0 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  -webkit-box-shadow: 0 1px 25px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 1px 25px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 25px rgba(0, 0, 0, 0.5);
+}
+.dashboard-menu-cnt ul {
+  list-style: none;
+  margin: 0
+}  
+.dashboard-menu-cnt label {
+  width: 100%;
+  font-size: 20px;
+}
+.dashboard-menu-options .list-group-item a {
+  text-align: center;
+  display: block;
+}
+.dashboard-menu-options .list-group-item a img{
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+.dashboard-menu-options .list-group-item a:hover {
+  opacity: 0.8;
+}
+
+@media (min-width: 992px) {
+  .dashboard-residents-count li {
+    height: 100px;
+    border-right: 1px solid #ddd;
+  }
+  .dashboard-residents-count li:last-child {
+    border: none;
+  }
+  .dashboard-menu-options .list-group-horizontal .list-group-item {
+    display: inline-block;
+    border: none;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+  }
+  .dashboard-menu-options .list-group-horizontal .list-group-item:last-child {
+    border-right: none;
+  }
+  .dashboard-menu-options .list-group-horizontal .list-group-item {
+    margin-bottom: 0;
+    margin-left:-4px;
+    margin-right: 0;
+    border-radius: 0;
+  }
+}
+/*-----END OF DASHBOARD MENU-----*/
 @media (max-width: 991px) {
   .announcement-cnt {
       min-height: 150px;
