@@ -351,11 +351,11 @@ hr {
   color: black;
 }
 .performance-metrics {
-  background-color: #4c6a92;
-  color: #fff;
+  border-bottom: solid 1px #4c6a92;
+  color: #4c6a92;
   padding: 10px 5px;
   font-size: 20px;
-  margin: 20px 0px 0px 0px;
+  margin: 20px 0px 10px 0px!important;
 }
 .performance-metrics, .performance-metrics-wrapper .row{
     width: 100%;
