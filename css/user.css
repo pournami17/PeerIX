@@ -180,19 +180,13 @@ div.dataTables_wrapper div.dataTables_filter label {
 .announcement-cnt {
   float: left;
   width: 100%;
-  border: 1px solid black;
-  padding: 10px;
+  border: 1px solid #c0c0c0;
+  padding: 0;
   margin: 0 0 10px 0;
   min-height: 350px;
   overflow: hidden;
 }
-.announcement-cnt ul{
-  list-style: none;
-  padding: 0 10px;
-  height: auto;
-}
 .announce-inner-wrapper {
-  height: 135px;
     display: block;
     width: 100%;
   overflow-x: hidden;
@@ -514,6 +508,40 @@ hr {
   float: left;
   width: 100%;
 }
+/*----------ADDED ON AUGUST 31 2016------------------------*/
+.row {
+  border: 1px solid red;
+}
+.announcement-settings {
+  color: #4c6a92;
+}
+.announcement-title {
+  background: #F5F5F5;
+  margin: 0;
+  padding: 10px;
+}
+.announcement-date-wrapper {
+  margin: 10px 0 0 0;
+  font-size: 12px;
+  color: #76838f;
+}
+.announcement-cnt .list-group {
+  padding: 10px;
+}
+.announcement-cnt .list-group-item  {
+  padding: 0
+}
+.announcement-cnt .list-group-item {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  margin: 0 0 10px 0;
+}
+.announcement-description a {
+  color: #000;
+  font-weight: 600;
+}
+
+/*------------END OF ADDITION----------------*/
 @media (max-width: 991px) {
   .announcement-cnt {
       min-height: 150px;
