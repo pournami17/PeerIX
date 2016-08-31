@@ -302,15 +302,10 @@ hr {
   font-weight: 600;
 }
 .filterable .panel-heading {
-  float: left;
-  width: 100%;
-  background: #C6D8F3;
-  color: #3E3E3E;
-  border: 5px;
-  min-height: 50px;
-}
-.filterable table {
-  border: solid 1px #BBBBBB;
+    width: 100%;
+    background: none;
+    color: #3E3E3E;
+    border: none;
 }
 .filterable table .more-table, .filterable table .more-table:hover {
     color: #000;
@@ -335,10 +330,10 @@ hr {
     color: #fff;
 }
 .filterable .panel-title {
-  float: left;
-  width: 75%;
-  text-align: center;
-  font-weight: 600;
+    width: 100%;
+    text-align: left;
+    font-weight: 600;
+    font-size: 20px;
 }
 .myprogress-link, .myprogress-link:hover {
   text-decoration: none;
@@ -351,23 +346,7 @@ hr {
   font-size: 20px;
   margin: 20px 0px 10px 0px!important;
 }
-.performance-metrics, .performance-metrics-wrapper .row{
-    width: 100%;
-    float: left;
-    margin: 0px;
-}
-/*.performance-metrics-wrapper table thead tr th:nth-child(1), .performance-metrics-wrapper table thead tr th:nth-child(4),
-.performance-metrics-wrapper table tbody tr td:nth-child(1), .performance-metrics-wrapper table thead tr td:nth-child(4) {
-    width: 10%;
-}
-.performance-metrics-wrapper table thead tr th:nth-child(2),
-.performance-metrics-wrapper table tbody tr td:nth-child(2) {
-    width: 50%;
-}
-.performance-metrics-wrapper table thead tr th:nth-child(3),
-.performance-metrics-wrapper table tbody tr td:nth-child(3) {
-    width: 30%;
-}*/
+
 /*-----End of director homepage-------*/
 /*---------Curriculum Builder------------------*/
 .curriculum-builder-wrapper h3 {
@@ -540,7 +519,19 @@ hr {
   color: #000;
   font-weight: 600;
 }
-
+.metrics-table {
+  padding: 0;
+}
+.metrics-table .panel{
+  margin: 0;
+  background: transparent;
+  -webkit-box-shadow: 1px 0px 0px 0px #d3d3d3;
+  -moz-box-shadow: 1px 0px 0px 0px #d3d3d3;
+  box-shadow: 1px 0px 0px 0px #d3d3d3;
+}
+.metrics-table .table>tbody>tr>td {
+  border: none;
+}
 /*------------END OF ADDITION----------------*/
 @media (max-width: 991px) {
   .announcement-cnt {
