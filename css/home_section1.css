@@ -1,0 +1,55 @@
+#linechartContainer .highcharts-legend, #linechartContainer .highcharts-title,
+#linechartContainer .highcharts-yaxis-title {
+	display: none;
+}
+.graph-section {
+	margin-top: 20px;
+}
+.director-dashboard .oveScore1, .director-dashboard .oveScore1 svg,
+.director-dashboard .highcharts-container,
+.director-dashboard #overall_score_chart{
+  max-height: 400px;
+}
+.first-chart-wrapper {
+	padding-bottom: 0px;
+}
+.gauge-chart-wrapper, .line-chart-wrapper {
+	padding: 0px;
+}
+.line-chart-title, .gauge-chart-title {
+  background-color: #F5F5F5;
+  margin: 0px;
+  padding: 15px 22px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.gauge-chart-title {
+	border-right: solid 1px #fff;
+}
+.line-chart-title {
+	border-left: solid 1px #dedede;
+}
+.line-chart-wrapper svg {
+	border-left: solid 1px #dedede;
+}
+.maingraph-wrapper, .graph-legend-wrapper {
+	border-bottom: solid 1px #dedede;
+}
+.graph-legend .sub_legend:nth-child(1) {
+	margin-left: 0px;
+}
+.graph-legend .sub_legend {
+    display: inline-block;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    width: 25%;
+}
+.graph-legend .green_legend {
+    background-color: #81c609;
+}
+.graph-legend .legend-text {
+	margin-top: 5px;
+}
+.legend_common {
+    margin-right: 10px;
+}
