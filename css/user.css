@@ -661,7 +661,7 @@ hr {
   color: #76838f;
 }
 .announcement-cnt .list-group {
-  padding: 10px;
+  padding: 10px 10px 10px 20px;
 }
 .announcement-cnt .list-group-item  {
   padding: 0
