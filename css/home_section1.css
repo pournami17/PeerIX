@@ -1,3 +1,21 @@
+@font-face {
+    font-family: 'OpenSans-CondBold';
+    src: url('../fonts/OpenSans-CondBold/OpenSans-CondBold.eot');
+    src: url('../fonts/OpenSans-CondBold/OpenSans-CondensedBold.woff')
+        format('woff'), url('../fonts/OpenSans-CondBold/OpenSans-CondensedBold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+  font-family: 'fontello';
+  src: url('../fonts/font/fontello.eot?72973542');
+  src: url('../fonts/font/fontello.eot?72973542#iefix') format('embedded-opentype'),
+       url('../fonts/font/fontello.woff?72973542') format('woff'),
+       url('../fonts/font/fontello.ttf?72973542') format('truetype'),
+       url('../fonts/font/fontello.svg?72973542#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 #linechartContainer .highcharts-legend, #linechartContainer .highcharts-title,
 #linechartContainer .highcharts-yaxis-title {
 	display: none;
@@ -16,12 +34,13 @@
 .gauge-chart-wrapper, .line-chart-wrapper {
 	padding: 0px;
 }
-.line-chart-title, .gauge-chart-title, .assigmnets-title {
+.line-chart-title, .gauge-chart-title, .assigmnets-title, .announcement-title, .metrics-table .panel-title {
   background-color: #F5F5F5;
   margin: 0px;
   padding: 15px 22px;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 21px;
+  font-family: 'OpenSans-CondBold';
 }
 .gauge-chart-title {
 	border-right: solid 1px #fff;
@@ -104,3 +123,7 @@
 .assignmnets-table tbody tr:last-child {
   border-bottom: none;
 }
+.announcement-wrapper {
+  padding-left: 0px;
+}
+

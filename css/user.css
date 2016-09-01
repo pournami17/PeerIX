@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'OpenSans-CondBold';
+    src: url('../fonts/OpenSans-CondBold/OpenSans-CondBold.eot');
+    src: url('../fonts/OpenSans-CondBold/OpenSans-CondBold.woff')
+        format('woff'), url('../fonts/OpenSans-CondBold/OpenSans-CondBold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
 .user-wrapper {
   position: relative;
   padding-top: 25px;
@@ -181,10 +189,14 @@ div.dataTables_wrapper div.dataTables_filter label {
   float: left;
   width: 100%;
   border: 1px solid #c0c0c0;
+  border-top: none;
   padding: 0;
-  margin: 0 0 10px 0;
+  margin: 0px;
   min-height: 350px;
   overflow: hidden;
+}
+.program-announcement {
+  min-height: 519px;
 }
 .announce-inner-wrapper {
     display: block;
@@ -575,10 +587,11 @@ hr {
 .dashboard-menu-cnt ul {
   list-style: none;
   margin: 0
-}  
+}
 .dashboard-menu-cnt label {
   width: 100%;
   font-size: 20px;
+  font-family: 'OpenSans-CondBold';
 }
 .dashboard-menu-options .list-group-item a {
   text-align: center;
@@ -588,6 +601,7 @@ hr {
   margin: 0 auto;
   display: block;
   text-align: center;
+  max-width: 45px;
 }
 .dashboard-menu-options .list-group-item a:hover {
   opacity: 0.8;
@@ -615,6 +629,7 @@ hr {
     margin-left:-4px;
     margin-right: 0;
     border-radius: 0;
+    max-width: 120px;
   }
 }
 /*-----END OF DASHBOARD MENU-----*/
