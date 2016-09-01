@@ -195,9 +195,6 @@ div.dataTables_wrapper div.dataTables_filter label {
   min-height: 350px;
   overflow: hidden;
 }
-.program-announcement {
-  min-height: 519px;
-}
 .announce-inner-wrapper {
     display: block;
     width: 100%;
@@ -566,10 +563,11 @@ hr {
   table-layout: fixed;
 }
 .metrics-table tbody {
-  height: 200px;
+  max-height: 200px;
   overflow-y: auto;
   display: block;
   width: 100%;
+  height: auto;
 }
 /*------------END OF ADDITION----------------*/
 .dashboard-residents-count li {
@@ -726,7 +724,7 @@ hr {
   .dashboard-menu-options .more-options .menu-icon img {
     top: 35%;
   }
-} 
+}
 /*-----END OF DASHBOARD MENU-----*/
 @media (max-width: 991px) {
   .announcement-cnt {

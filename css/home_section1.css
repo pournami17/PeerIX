@@ -38,7 +38,6 @@
   background-color: #F5F5F5;
   margin: 0px;
   padding: 15px 22px;
-  font-weight: bold;
   font-size: 21px;
   font-family: 'OpenSans-CondBold';
 }
@@ -92,9 +91,14 @@
   display: block;
   width: 100%;
 }
+.graph-response-wrapper .sub_legend {
+    vertical-align: top;
+}
 .assignmnets-table thead th, .assignmnets-table tbody td {
   padding: 20px 0px 10px;
   font-size: 15px;
+  white-space: pre-wrap;
+  word-break:break-word;
 }
 .assignmnets-table thead {
   border-bottom: solid 1px #dedede;
@@ -108,6 +112,10 @@
 }
 .assignmnets-table tbody tr td:nth-child(1) {
   width: 40%;
+  min-width: 250px;
+}
+.assignmnets-table thead tr th:nth-child(1) {
+  min-width: 250px;
 }
 .assignmnets-table tbody tr td {
   font-weight: 600;
@@ -116,6 +124,13 @@
 .assignmnets-table tbody tr td:nth-child(3),
 .assignmnets-table tbody tr td:nth-child(4) {
   width: 20%;
+  min-width: 100px;
+}
+.assignmnets-table thead tr th:nth-child(2),
+.assignmnets-table thead tr th:nth-child(3),
+.assignmnets-table thead tr th:nth-child(4) {
+  width: 20%;
+  min-width: 100px;
 }
 .assignmnets-table tbody tr {
   border-bottom: solid 2px #dedede;
@@ -126,4 +141,26 @@
 .announcement-wrapper {
   padding-left: 0px;
 }
-
+.dashboard-menu-cnt {
+  display: none;
+}
+@media screen and (max-width:991px) {
+  .graph-response-wrapper, .announcement-wrapper {
+    width: 100%;
+  }
+  .program-announcement, .acep-announcement {
+    border-top: solid 1px #dedede;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+  }
+  .list-group {
+    padding-left: 22px!important;
+  }
+  .announcement-cnt {
+      min-height: 150px;
+  }
+  .metrics-table {
+    margin: 0px;
+  }
+}
