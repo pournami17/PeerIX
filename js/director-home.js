@@ -6,4 +6,8 @@ $(document).ready(function(){
     $(".turnarrow").click(function(){
         $(".navbar-toggle").addClass("is-active");
     });
+
+    $(".btn-dashboard-menu").click(function(){
+        $('.dashboard-menu-options .list-group').slideToggle();
+    })
 });
