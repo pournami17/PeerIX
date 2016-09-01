@@ -10,4 +10,19 @@ $(document).ready(function(){
     $(".btn-dashboard-menu").click(function(){
         $('.dashboard-menu-options .list-group').slideToggle();
     })
+
+    $(window).load(function() {
+        var windowWidth = $(window).width();
+        if(windowWidth > 991){
+    	   $('.equalheight-wrapper').equalheight();
+        }
+    });
+
+    $(window).resize(function(){
+        $('.equalheight-wrapper').css("height", "auto");
+        var windowWidth = $(window).width();
+        if(windowWidth > 991){
+           $('.equalheight-wrapper').equalheight();
+        }
+    });
 });
