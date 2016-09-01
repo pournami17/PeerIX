@@ -141,9 +141,6 @@
 .announcement-wrapper {
   padding-left: 0px;
 }
-.dashboard-menu-cnt {
-  display: none;
-}
 @media screen and (max-width:991px) {
   .graph-response-wrapper, .announcement-wrapper {
     width: 100%;
