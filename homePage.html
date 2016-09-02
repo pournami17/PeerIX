@@ -562,7 +562,7 @@
                             <div class="col-sm-12 col-md-3 pull-right announcement-wrapper">
                                 <div class="announcement-cnt program-announcement equalheight-wrapper">
                                     <h4 class="announcement-title"><span>Program Announcement</span>
-                                        <a class="announcement-settings pull-right" href="#" class="pull-right"><i class="fa fa-cog" aria-hidden="true"></i></a>
+                                        <a class="announcement-settings pull-right" href="#" class="pull-right"><i class="fa fa-cog" aria-hidden="true" data-toggle = "modal" data-target = "#announcementModal"></i></a>
                                     </h4>
                                     <div class="announce-inner-wrapper">
                                         <ul class="list-group">
@@ -794,6 +794,74 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal -->
+<div class = "modal fade" id = "announcementModal" tabindex = "-1" role = "dialog" 
+   aria-labelledby = "myModalLabel" aria-hidden = "true">
+   
+   <div class = "modal-dialog">
+      <div class = "modal-content">
+         
+         <div class = "modal-header">
+            <button type = "button" class = "close" data-dismiss = "modal" aria-hidden = "true">
+               ×
+            </button>
+            
+            <h4 class = "modal-title" id = "myModalLabel">
+               Announcements
+            </h4>
+         </div>
+         
+         <div class = "modal-body">
+            <div class="announce-inner-wrapper">
+                                        <ul class="list-group">
+                                            <li class="list-group-item">
+                                                <div class="announcement-item">
+                                                    <div class="announcement-description">
+                                                        <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget.</a>
+                                                    </div>
+                                                    <div class="announcement-date-wrapper">
+                                                        <p>Posted on <span class="announcement-date">3/12/2016</span> at <span class="announcement-time">11:45AM</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="announcement-item">
+                                                    <div class="announcement-description">
+                                                        <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget.</a>
+                                                    </div>
+                                                    <div class="announcement-date-wrapper">
+                                                        <p>Posted on <span class="announcement-date">3/12/2016</span> at <span class="announcement-time">11:45AM</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="announcement-item">
+                                                    <div class="announcement-description">
+                                                        <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget.</a>
+                                                    </div>
+                                                    <div class="announcement-date-wrapper">
+                                                        <p>Posted on <span class="announcement-date">3/12/2016</span> at <span class="announcement-time">11:45AM</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+         </div>
+         
+         <div class = "modal-footer">
+            <button type = "button" class = "btn btn-default" data-dismiss = "modal">
+               Close
+            </button>
+         </div>
+         
+      </div><!-- /.modal-content -->
+   </div><!-- /.modal-dialog -->
+   
+</div><!-- /.modal -->
 <!-- /container -->
 <script type="text/javascript">
 jQuery(function () {
