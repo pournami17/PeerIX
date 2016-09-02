@@ -3,7 +3,8 @@ $(document).ready(function(){
         $(this).parents('.filterable').find('tbody').append('<tr><td>John</td><td>85%</td></tr>');
     });
 
-    $(".turnarrow").click(function(){
+    $(".turnarrow").on('click',function(){
+        console.log("clicked");
         $(".navbar-toggle").addClass("is-active");
     });
 
