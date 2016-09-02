@@ -761,6 +761,8 @@ hr {
     color: #000;
     float: left;
     width: 100%;
+    margin: 0;
+    padding: 0;
 }
 .dashboard-menu-options .list-group-item a img{
   margin: 0 auto;
