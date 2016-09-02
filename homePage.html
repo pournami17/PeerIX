@@ -89,567 +89,711 @@
                 </div>
             </div>
         </header>
-        <div class="container content-mrgT detailscontent-wrapper">
-
-                <div class="container pretestscore-headingwrapper">
-                    <div class="row"></div>
-                </div>
-                <div class="director-dashboard">
-                    <div class="col-sm-12 col-md-9 dashboard-left-wrapper">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-9">
-                                <div class="year-wrapper">
-                                    <form class="form-horizontal select-graduate-year">
-                                        <fieldset>
-                                            <div class="form-group">
-                                              <label for="selectbasic">Select Graduate Year for status</label>
-                                              <div>
-                                                <select id="selectbasic" name="selectbasic" class="form-control">
-                                                  <option value="1">PGY 1</option>
-                                                  <option value="2">PGY 2</option>
-                                                  <option value="2">PGY 3</option>
-                                                  <option value="2">PGY 4</option>
-                                                </select>
-                                              </div>
-                                            </div>
-                                        </fieldset>
-                                    </form>
-                                    <div class="post-grad-year">
-                                        <label>Post Graduate Year 1</label>
-                                        <label><span class="residents-number">25</span> Total Residents</label>
+        <div class="container-fluid dashboard-menu-cnt">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-7 col-lg-6 dashboard-menu-options pull-right">
+                            <button class="btn btn-deafult btn-dashboard-menu pull-right visible-xs"><i class="fa fa-navicon" aria-hidden="true"></i></button>
+                            <ul class="list-group list-group-horizontal">
+                                <li class="list-group-item">
+                                    <a class="create-test-schedule" href="../PeerIX/create-practice-test.html">
+                                        <div class="menu-icon">
+                                            <img src="../PeerIX/images/create-testing-schedule.png">
+                                        </div>
+                                        <span>Create<br class="rwd-break"> Testing Schedule</span>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a class="create-practice-test" href="../PeerIX/create-practice-test.html">
+                                        <div class="menu-icon">
+                                            <img src="../PeerIX/images/create-practice-test.png">
+                                        </div>
+                                        <span>Create<br class="rwd-break"> Practice Test</span>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a class="edit-residents" href="../PeerIX/users.html">
+                                        <div class="menu-icon">
+                                            <img src="../PeerIX/images/edit-residents.png">
+                                        </div>
+                                        <span>Edit<br class="rwd-break"> Residents</span>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a class="export-reports" href="#">
+                                        <div class="menu-icon">
+                                            <img src="../PeerIX/images/export-reports.png">
+                                        </div>
+                                        <span>Export<br class="rwd-break"> Reports</span>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a data-toggle="collapse-side" data-target=".side-collapse" data-target-2=".side-collapse-container" class="btn more-options navbar-toggle turnarrow" href="#">
+                                        <div class="menu-icon">
+                                            <img src="../PeerIX/images/more-options.png">
+                                        </div>
+                                        <span>More<br class="rwd-break"> Options</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-6 dashboard-residents-count pull-left">
+                            <ul>
+                                <li class="col-xs-6 col-sm-6 col-md-6">
+                                    <div class="year-wrapper">
+                                        <form class="form-horizontal select-graduate-year">
+                                            <fieldset>
+                                                <div class="form-group">
+                                                  <label for="selectbasic">Select Graduate Year</label>
+                                                  <div>
+                                                    <select id="selectbasic" name="selectbasic" class="form-control">
+                                                      <option value="1">PGY 1</option>
+                                                      <option value="2">PGY 2</option>
+                                                      <option value="2">PGY 3</option>
+                                                      <option value="2">PGY 4</option>
+                                                    </select>
+                                                  </div>
+                                                </div>
+                                            </fieldset>
+                                        </form>
                                     </div>
-                                </div>
-                                <div class="overall-correct-responses">
-                                    <h4>Overall Correct Response</h4>
-                                    <div class="row">
-                                        <div id="graph-scripts">
+                                </li>
+                                <li class="col-xs-6 col-sm-6 col-md-6">
+                                    <div class="post-grad-year">
+                                        <label>Total Residents</label>
+                                        <span class="residents-number">25</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container content-mrgT detailscontent-wrapper newhomepage-wrapper">
+            <div class="director-dashboard">
+                <div class="row">
+                    <div class="col-xs-12 sectionone-wrapper">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-9 pull-left graph-response-wrapper">
+                                <div class="equalheight-wrapper">
+                                    <div class="row maingraph-wrapper">
+                                        <div class="col-xs-12 col-sm-6 gauge-chart-wrapper">
+                                            <h4 class="gauge-chart-title">Correct Response
+                                            </h4>
+                                            <script src="https://code.highcharts.com/modules/exporting.js"></script>
                                             <script type="text/javascript"
-                                                src="js/highcharts/v4.2.5/highcharts.js"></script>
+                                                        src="js/highcharts/v4.2.5/highcharts.js"></script>
                                             <script type="text/javascript"
                                                 src="js/highcharts/v4.2.5/highcharts-more.js"></script>
                                             <script type="text/javascript"
-                                                src="js/highcharts/v4.2.5/solid-gauge.js"></script>
-                                        </div>
-                                        <div class="chartchoose chartchooseNew" id="overall-graph">
-                                            <div class="row">
-                                                <div class="col-sm-12 col-lg-7">
-                                                    <div class="chart-wrapper">
-                                                        <div class="oveScore1" style="width: 100%">
-                                                            <div id="overall_score_chart" style="width:100%; max-height: 400px;">Loading...</div>
-                                                            <script type="text/javascript">
-                                                                $(function () {
-                                                                    if (!Highcharts.theme) {
-                                                                        Highcharts.setOptions({
-                                                                            chart: {
-                                                                                backgroundColor: '#F6F9FB'
-                                                                            },
-                                                                            colors: ['#4d6991', '#E03100', '#F49503'],
-                                                                            title: {
-                                                                                style: {
-                                                                                    color: 'silver'
-                                                                                }
-                                                                            },
-                                                                            tooltip: {
-                                                                                style: {
-                                                                                    color: 'silver'
-                                                                                }
-                                                                            }
-                                                                        });
+                                                        src="js/highcharts/v4.2.5/solid-gauge.js"></script>
+                                            <div class="chart-wrapper first-chart-wrapper">
+                                                <div class="oveScore1" style="width: 100%">
+                                                    <div id="overall_score_chart" style="width:100%; max-height: 400px;">Loading...</div>
+                                                    <script type="text/javascript">
+                                                      $(function () {
+                                                        if (!Highcharts.theme) {
+                                                            Highcharts.setOptions({
+                                                                chart: {
+                                                                    backgroundColor: '#FFFFFF'
+                                                                },
+                                                                colors: ['#81c609', '#4d6991', '#F49503'],
+                                                                title: {
+                                                                    style: {
+                                                                        color: 'silver'
                                                                     }
+                                                                },
+                                                                tooltip: {
+                                                                    style: {
+                                                                        color: 'silver'
+                                                                    }
+                                                                }
+                                                            });
+                                                        }
 
-                                                                    var gaugeOptions = {
-                                                                        chart: {
-                                                                            type: 'solidgauge',
-                                                                            marginTop: 70,
-                                                                            marginBottom:70,
-                                                                            marginLeft: 70,
-                                                                            marginRight: 70
-                                                                        },
-                                                                        title: null,
-                                                                        pane : {
-                                                                            size: '100%',
-                                                                            startAngle: 0,
-                                                                            endAngle: 360,
-                                                                            background: {
-                                                                                backgroundColor:'none',
-                                                                                innerRadius: '100%',
-                                                                                outerRadius: '100%',
-                                                                                shape: 'circle',
-                                                                                borderWidth: 0
-                                                                            }
-                                                                        },
+                                                        var gaugeOptions = {
+                                                            chart: {
+                                                                type: 'solidgauge',
+                                                                marginTop: 20,
+                                                                marginBottom:70,
+                                                                marginLeft: 70,
+                                                                marginRight: 70
+                                                            },
+                                                            title: null,
+                                                            pane : {
+                                                                size: '100%',
+                                                                startAngle: 0,
+                                                                endAngle: 360,
+                                                                background: {
+                                                                    backgroundColor:'none',
+                                                                    innerRadius: '100%',
+                                                                    outerRadius: '100%',
+                                                                    shape: 'circle',
+                                                                    borderWidth: 0
+                                                                }
+                                                            },
 
-                                                                        tooltip: {
-                                                                            enabled: false
-                                                                        },
+                                                            tooltip: {
+                                                                enabled: false
+                                                            },
 
-                                                                        // the value axis
-                                                                        yAxis: [
-                                                                        {
-                                                                            lineWidth: 0,
-                                                                            zIndex: 4,
-                                                                            min: 0,
-                                                                            max: 100,
-                                                                            title: {
-                                                                                text: ''
-                                                                            },
+                                                            // the value axis
+                                                            yAxis: [
+                                                            {
+                                                                lineWidth: 0,
+                                                                zIndex: 4,
+                                                                min: 0,
+                                                                max: 100,
+                                                                title: {
+                                                                    text: ''
+                                                                },
 
-                                                                            minorTickLength: 0,
-                                                                            tickWidth: 2,
-                                                                            tickLength: 15,
-                                                                            tickColor: Highcharts.getOptions().colors[1],
-                                                                            tickPosition: 'outside',
-                                                                            tickPositions: [16],
-                                                                            labels: {
-                                                                                distance: 20,
-                                                                                enabled: true,
-                                                                                x: 15,
-                                                                                y: -20,
-                                                                                formatter: function() {
-                                                                                    return '<span class="graph-average-score">' + this.value + '%</span>';
-                                                                                },
-                                                                                useHTML: true,
-                                                                                style: {
-                                                                                  fontSize: '1em',
-                                                                                  margin: 70,
-                                                                                  color: Highcharts.getOptions().colors[1]
-                                                                                }
-                                                                           }
-                                                                        },
-                                                                        {
-                                                                            lineWidth: 0,
-                                                                            zIndex: 4,
-                                                                            min: 0,
-                                                                            max: 100,
-                                                                            title: {
-                                                                                text: ''
-                                                                            },
+                                                                minorTickLength: 0,
+                                                                tickWidth: 2,
+                                                                tickLength: 15,
+                                                                tickColor: Highcharts.getOptions().colors[1],
+                                                                tickPosition: 'outside',
+                                                                tickPositions: [16],
+                                                                labels: {
+                                                                    distance: 20,
+                                                                    enabled: true,
+                                                                    x: 15,
+                                                                    y: -20,
+                                                                    formatter: function() {
+                                                                        return '<span class="graph-average-score">' + this.value + '%</span>';
+                                                                    },
+                                                                    useHTML: true,
+                                                                    style: {
+                                                                      fontSize: '1em',
+                                                                      margin: 70,
+                                                                      color: Highcharts.getOptions().colors[1]
+                                                                    }
+                                                               }
+                                                            },
+                                                            {
+                                                                lineWidth: 0,
+                                                                zIndex: 4,
+                                                                min: 0,
+                                                                max: 100,
+                                                                title: {
+                                                                    text: ''
+                                                                },
 
-                                                                            minorTickLength: 0,
-                                                                            tickWidth: 2,
-                                                                            tickLength: 18,
-                                                                            tickColor: Highcharts.getOptions().colors[1],
-                                                                            tickPosition: 'inside',
-                                                                            tickPositions: [16],
-                                                                            labels: {
-                                                                                style: {
-                                                                                  visibility: 'hidden'
-                                                                                }
-                                                                           }
-                                                                        },
-                                                                        {
-                                                                            lineWidth: 0,
-                                                                            zIndex: 4,
-                                                                            min: 0,
-                                                                            max: 100,
-                                                                            title: {
-                                                                                text: ''
-                                                                            },
+                                                                minorTickLength: 0,
+                                                                tickWidth: 2,
+                                                                tickLength: 18,
+                                                                tickColor: Highcharts.getOptions().colors[1],
+                                                                tickPosition: 'inside',
+                                                                tickPositions: [16],
+                                                                labels: {
+                                                                    style: {
+                                                                      visibility: 'hidden'
+                                                                    }
+                                                               }
+                                                            },
+                                                            {
+                                                                lineWidth: 0,
+                                                                zIndex: 4,
+                                                                min: 0,
+                                                                max: 100,
+                                                                title: {
+                                                                    text: ''
+                                                                },
 
-                                                                            minorTickLength: 0,
-                                                                            tickWidth: 2,
-                                                                            tickLength: 20,
-                                                                            tickColor: Highcharts.getOptions().colors[2],
-                                                                            tickPosition: 'outside',
-                                                                            tickPositions: [63],
-                                                                            labels: {
-                                                                                distance: 60,
-                                                                                enabled: true,
-                                                                                align: 'low',
-                                                                                x: 5,
-                                                                                y: 10,
-                                                                                formatter: function() {
-                                                                                    return '<span class="graph-abeam-score">' + this.value + '%</span>';
-                                                                                },
-                                                                                useHTML: true,
-                                                                                style: {
-                                                                                  fontSize: '1em',
-                                                                                  rotation: 0,
-                                                                                  color:Highcharts.getOptions().colors[2],
-                                                                                  float: 'left',
-                                                                                  border: '1px'
-                                                                                }
-                                                                           }
-                                                                        },
-                                                                        {
-                                                                            lineWidth: 0,
-                                                                            zIndex: 4,
-                                                                            min: 0,
-                                                                            max: 100,
-                                                                            title: {
-                                                                                text: ''
-                                                                            },
+                                                                minorTickLength: 0,
+                                                                tickWidth: 2,
+                                                                tickLength: 20,
+                                                                tickColor: Highcharts.getOptions().colors[2],
+                                                                tickPosition: 'outside',
+                                                                tickPositions: [63],
+                                                                labels: {
+                                                                    distance: 60,
+                                                                    enabled: true,
+                                                                    align: 'low',
+                                                                    x: 5,
+                                                                    y: 10,
+                                                                    formatter: function() {
+                                                                        return '<span class="graph-abeam-score">' + this.value + '%</span>';
+                                                                    },
+                                                                    useHTML: true,
+                                                                    style: {
+                                                                      fontSize: '1em',
+                                                                      rotation: 0,
+                                                                      color:Highcharts.getOptions().colors[2],
+                                                                      float: 'left',
+                                                                      border: '1px'
+                                                                    }
+                                                               }
+                                                            },
+                                                            {
+                                                                lineWidth: 0,
+                                                                zIndex: 4,
+                                                                min: 0,
+                                                                max: 100,
+                                                                title: {
+                                                                    text: ''
+                                                                },
 
-                                                                            minorTickLength: 0,
-                                                                            tickWidth: 2,
-                                                                            tickLength: 16,
-                                                                            tickColor: Highcharts.getOptions().colors[2],
-                                                                            tickPosition: 'inside',
-                                                                            tickPositions: [63],
-                                                                            labels: {
-                                                                                style: {
-                                                                                  visibility: 'hidden'
-                                                                                }
-                                                                           }
-                                                                        }
-                                                                        ],
+                                                                minorTickLength: 0,
+                                                                tickWidth: 2,
+                                                                tickLength: 16,
+                                                                tickColor: Highcharts.getOptions().colors[2],
+                                                                tickPosition: 'inside',
+                                                                tickPositions: [63],
+                                                                labels: {
+                                                                    style: {
+                                                                      visibility: 'hidden'
+                                                                    }
+                                                               }
+                                                            }
+                                                            ],
 
-                                                                        plotOptions: {
-                                                                            solidgauge: {
-                                                                                dataLabels: {
-                                                                                    y: 5,
-                                                                                    borderWidth: 0,
-                                                                                    useHTML: true
-                                                                                }
-                                                                            }
-                                                                        }
+                                                            plotOptions: {
+                                                                solidgauge: {
+                                                                    dataLabels: {
+                                                                        y: 5,
+                                                                        borderWidth: 0,
+                                                                        useHTML: true
+                                                                    }
+                                                                }
+                                                            }
 
-                                                                    };
+                                                        };
 
-                                                                    // Over all score chart
-                                                                    $('#overall_score_chart').highcharts(Highcharts.merge(gaugeOptions, {
+                                                        // Over all score chart
+                                                        $('#overall_score_chart').highcharts(Highcharts.merge(gaugeOptions, {
 
-                                                                        credits: {
-                                                                            enabled: false
-                                                                        },
+                                                            credits: {
+                                                                enabled: false
+                                                            },
 
-                                                                        series: [{
-                                                                            name: 'Your Score',
-                                                                            innerRadius:'65%',
-                                                                            outerRadius: '78%',
-                                                                            radius: '78%',
-                                                                            color: Highcharts.getOptions().colors[0],
-                                                                            data: [{y:23, color: '#4d6991'}],
-                                                                            dataLabels: {
-                                                                                format: '<div class="score-percent"><span class="center-number" style="color:' +
-                                                                                    ((Highcharts.getOptions().colors[0]) || 'black') + '">{y}</span><span class="score-percent-symbol">%</span></div><div class="score-percent-your-score-text">Your Score</div></div>'
-                                                                            },
-                                                                        },{
-                                                                            name: 'Average Score',
-                                                                            innerRadius:'78%',
-                                                                            outerRadius: '90%',
-                                                                            radius: '90%',
-                                                                            color: Highcharts.getOptions().colors[1],
-                                                                            data: [{y:16, color: '#E03100'}]
-                                                                        },{
-                                                                            name: 'Projected ABEM Score based on questions to date',
-                                                                            innerRadius:'90%',
-                                                                            outerRadius: '100%',
-                                                                            radius: '100%',
-                                                                            color: Highcharts.getOptions().colors[2],
-                                                                            data: [{y:63, color: '#F49503'}]
-                                                                        }],
+                                                            series: [{
+                                                                name: 'Your Score',
+                                                                innerRadius:'65%',
+                                                                outerRadius: '78%',
+                                                                radius: '78%',
+                                                                color: Highcharts.getOptions().colors[0],
+                                                                data: [{y:23, color: '#81c609'}],
+                                                                dataLabels: {
+                                                                    format: '<div class="score-percent"><span class="center-number" style="color:' +
+                                                                        ((Highcharts.getOptions().colors[0]) || 'black') + '">{y}</span><span class="score-percent-symbol">%</span></div><div class="score-percent-your-score-text">PGY 1 Score</div></div>'
+                                                                },
+                                                            },{
+                                                                name: 'Average Score',
+                                                                innerRadius:'78%',
+                                                                outerRadius: '90%',
+                                                                radius: '90%',
+                                                                color: Highcharts.getOptions().colors[1],
+                                                                data: [{y:16, color: '#4d6991'}]
+                                                            },{
+                                                                name: 'Projected ABEM Score based on questions to date',
+                                                                innerRadius:'90%',
+                                                                outerRadius: '100%',
+                                                                radius: '100%',
+                                                                color: Highcharts.getOptions().colors[2],
+                                                                data: [{y:63, color: '#F49503'}]
+                                                            }],
 
-                                                                    }));
-                                                                });
-                                                            </script>
-                                                        </div>
-                                                    </div>
+                                                        }));
+                                                    });
+                                                    </script>
                                                 </div>
-                                                <div class="col-sm-12 col-lg-5">
-                                                    <div class="container graph-details">
-                                                        <div class="row">
-                                                            <div class="col-xs-12">
-                                                                <div class="panel-group acrdInfo">
-                                                                    <div class="sub_legend">
-                                                                        <span class="indigo_legend legend_common"></span>
-                                                                        <span class="legend_text score-tag" onclick="void(0)">PGY 1 Average Score <i data-toggle="tooltip" data-placement="bottom" title="This score represents the percentage of questions that you have answered correctly." class="blue-result-tooltip result-tooltip fa fa-question-circle-o" aria-hidden="true"></i></span>
-                                                                    </div>
-                                                                    <div class="sub_legend">
-                                                                        <span class="red_legend legend_common"></span>
-                                                                        <span class="legend_text" onclick="void(0)">National Average PGY 1 Score <i data-toggle="tooltip" data-placement="bottom" title="This score is the average score of all tests (practice, simulated)." class="red-result-tooltip result-tooltip fa fa-question-circle-o" aria-hidden="true"></i>
-                                                                        </span>
-                                                                    </div>
-                                                                    <div class="sub_legend">
-                                                                        <span class="orange_legend legend_common"></span>
-                                                                        <span class="legend_text" onclick="void(0)">Program Average Score <i data-toggle="tooltip" data-placement="bottom" title="The PEER IX calculates an ABEM projected score by analyzing your performance on all PEER exams and multiplying an ‘ABEM emphasis factor’ which is associated with the exam emphasis placed on each EM Topic. Note that this is only an estimate and may not reflect ABEM performance." class="orange-result-tooltip result-tooltip fa fa-question-circle-o" aria-hidden="true"></i>
-                                                                        </span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-6 line-chart-wrapper">
+                                            <h4 class="line-chart-title">Performance Over Time
+                                            </h4>
+                                            <div id="linechartContainer" style="min-width: 310px; height: 400px; margin: 0 auto">
+                                                <script type="text/javascript">
+                                                    $(function () {
+                                                        $('#linechartContainer').highcharts({
+                                                            chart: {
+                                                                marginTop: 70,
+                                                                marginBottom:70,
+                                                                marginLeft: 70,
+                                                                marginRight: 70
+                                                            },
+                                                            xAxis: {
+                                                                categories: ['2011', '2012', '2013', '2014', '2015', '2016'],
+                                                                label: {
+                                                                    rotation: -90,
+                                                                    align: 'top'
+                                                                }
+                                                            },
+                                                            yAxis: {
+                                                                min: 0,
+                                                                max: 100,
+                                                                tickInterval: 25,
+                                                                labels: {
+                                                                    formatter: function() {
+                                                                        return this.value + ' %';
+                                                                    }
+                                                                },
+                                                            },
+                                                            tooltip: {
+                                                                valueSuffix: '%'
+                                                            },
+                                                            credits: {
+                                                                  enabled: false
+                                                            },
+                                                            legend: {
+                                                                layout: 'vertical',
+                                                                align: 'right',
+                                                                verticalAlign: 'middle',
+                                                                borderWidth: 0
+                                                            },
+                                                            series: [{
+                                                                data: [9, 25, 35, 94, 65, 25]
+                                                            }, {
+                                                                data: [8, 16, 48, 77, 42, 10]
+                                                            }, {
+                                                                data: [12, 16, 33, 65, 48, 15]
+                                                            }]
+                                                        });
+                                                    });
+                                                </script>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 graph-legend-wrapper">
+                                            <div class="graph-legend">
+                                                <div class="sub_legend">
+                                                    <span class="green_legend legend_common"></span>
+                                                    <p class="legend-text">Average PGY 1 </p>
+                                                </div>
+                                                <div class="sub_legend">
+                                                    <span class="indigo_legend legend_common"></span>
+                                                    <p class="legend-text">National Average PGY 1
+                                                    </p>
+                                                </div>
+                                                <div class="sub_legend">
+                                                    <span class="orange_legend legend_common"></span>
+                                                    <p class="legend-text">Program Average
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-xs-12 assigmnets-wrapper">
+                                        <h4 class="assigmnets-title">Assignments
+                                        </h4>
+                                        <div class="assignmnets-tablewrapper">
+                                            <table class="assignmnets-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th width="38%">E M Model Category<i class="fa fa-fw fa-sort"></i></th>
+                                                        <th width="20%">Start Date<i class="fa fa-fw fa-sort"></i></th>
+                                                        <th width="20%">End Date<i class="fa fa-fw fa-sort"></i></th>
+                                                        <th width="20%">Status<i class="fa fa-fw fa-sort"></i></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><a class="myprogress-link" href="../PeerIX/progress.html">Signs, Symptoms and Presentations</a></td>
+                                                        <td>8/20/2016</td>
+                                                        <td>10/20/2018</td>
+                                                        <td>Active</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a class="myprogress-link" href="../PeerIX/progress.html">Abdominal & Gastrointestinal Disorders</a></td>
+                                                        <td>8/20/2016</td>
+                                                        <td>10/20/2018</td>
+                                                        <td>Complete</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a class="myprogress-link" href="../PeerIX/progress.html">Abdominal & Gastrointestinal Disorders</a></td>
+                                                        <td>8/20/2016</td>
+                                                        <td>10/20/2018</td>
+                                                        <td>Active</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a class="myprogress-link" href="../PeerIX/progress.html">Cardiovascular Disorders</a></td>
+                                                        <td>8/20/2016</td>
+                                                        <td>10/20/2018</td>
+                                                        <td>Active</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a class="myprogress-link" href="../PeerIX/progress.html">Abdominal & Gastrointestinal Disorders</a></td>
+                                                        <td>8/20/2016</td>
+                                                        <td>10/20/2018</td>
+                                                        <td>Active</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a class="myprogress-link" href="../PeerIX/progress.html">Cutaneous Disorders</a></td>
+                                                        <td>8/20/2016</td>
+                                                        <td>10/20/2018</td>
+                                                        <td>Complete</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a class="myprogress-link" href="../PeerIX/progress.html">Signs, Symptoms and Presentations</a></td>
+                                                        <td>8/20/2016</td>
+                                                        <td>10/20/2018</td>
+                                                        <td>Active</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a class="myprogress-link" href="../PeerIX/progress.html">Abdominal & Gastrointestinal Disorders</a></td>
+                                                        <td>8/20/2016</td>
+                                                        <td>10/20/2018</td>
+                                                        <td>Complete</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a class="myprogress-link" href="../PeerIX/progress.html">Abdominal & Gastrointestinal Disorders</a></td>
+                                                        <td>8/20/2016</td>
+                                                        <td>10/20/2018</td>
+                                                        <td>Active</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a class="myprogress-link" href="../PeerIX/progress.html">Cardiovascular Disorders</a></td>
+                                                        <td>8/20/2016</td>
+                                                        <td>10/20/2018</td>
+                                                        <td>Active</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-sm-12 col-md-3">
-                                <button type="button" class="btn btn-primary btn-dashboard">
-                                <a href="../PeerIX/curriculum-builder.html">Create Testing Schedule</a></button>
-                                <button type="button" class="btn btn-primary btn-dashboard"><a href="../PeerIX/create-practice-test.html">Create a Practice Test</a></button>
-                                <button type="button" class="btn btn-primary btn-dashboard">Add/Remove Residents</button>
-                                <button type="button" class="btn btn-primary btn-dashboard"><a href="../PeerIX/notification.html">Remediation Options</a></button>
-                                <button type="button" class="btn btn-primary btn-dashboard">View PGY 1 Reports</button>
-                                <button data-toggle="collapse-side" data-target=".side-collapse" data-target-2=".side-collapse-container" type="button" class="btn btn-primary btn-dashboard navbar-toggle turnarrow btn-view-more-opt">View More Options</button>
+                            <div class="col-sm-12 col-md-3 pull-right announcement-wrapper">
+                                <div class="announcement-cnt program-announcement equalheight-wrapper">
+                                    <h4 class="announcement-title"><span>Program Announcement</span>
+                                        <a class="announcement-settings pull-right" href="#" class="pull-right"><i class="fa fa-cog" aria-hidden="true"></i></a>
+                                    </h4>
+                                    <div class="announce-inner-wrapper">
+                                        <ul class="list-group">
+                                            <li class="list-group-item">
+                                                <div class="announcement-item">
+                                                    <div class="announcement-description">
+                                                        <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget.</a>
+                                                    </div>
+                                                    <div class="announcement-date-wrapper">
+                                                        <p>Posted on <span class="announcement-date">3/12/2016</span> at <span class="announcement-time">11:45AM</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="announcement-item">
+                                                    <div class="announcement-description">
+                                                        <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget.</a>
+                                                    </div>
+                                                    <div class="announcement-date-wrapper">
+                                                        <p>Posted on <span class="announcement-date">3/12/2016</span> at <span class="announcement-time">11:45AM</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="announcement-item">
+                                                    <div class="announcement-description">
+                                                        <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget.</a>
+                                                    </div>
+                                                    <div class="announcement-date-wrapper">
+                                                        <p>Posted on <span class="announcement-date">3/12/2016</span> at <span class="announcement-time">11:45AM</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="announcement-cnt acep-announcement">
+                                    <h4 class="announcement-title"><span>ACEP Announcement</span></h4>
+                                    <div class="announce-inner-wrapper">
+                                        <ul class="list-group">
+                                            <li class="list-group-item">
+                                                <div class="announcement-item">
+                                                    <div class="announcement-description">
+                                                        <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget.</a>
+                                                    </div>
+                                                    <div class="announcement-date-wrapper">
+                                                        <p>Posted on <span class="announcement-date">3/12/2016</span> at <span class="announcement-time">11:45AM</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="announcement-item">
+                                                    <div class="announcement-description">
+                                                        <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget.</a>
+                                                    </div>
+                                                    <div class="announcement-date-wrapper">
+                                                        <p>Posted on <span class="announcement-date">3/12/2016</span> at <span class="announcement-time">11:45AM</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="announcement-item">
+                                                    <div class="announcement-description">
+                                                        <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget.</a>
+                                                    </div>
+                                                    <div class="announcement-date-wrapper">
+                                                        <p>Posted on <span class="announcement-date">3/12/2016</span> at <span class="announcement-time">11:45AM</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                    <!--PERFORMANCE METRICS -->
+                    <div class="col-xs-12">
                         <div class="row">
-                            <div class="table-responsive">
-                                <table class="table assignments-table">
-                                    <thead>
-                                        <tr>
-                                            <th>
-                                                <span>Assignments</span>
-                                                <div class="pull-right">
-                                                    <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span></button>
-                                                </div>
-                                            </th>
-                                            <th>
-                                                <span>Start Date</span>
-                                                <div class="pull-right">
-                                                    <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span></button>
-                                                </div>
-                                            </th>
-                                            <th>
-                                                <span>End Date</span>
-                                                <div class="pull-right">
-                                                    <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span></button>
-                                                </div>
-                                            </th>
-                                            <th>
-                                                <span>Status</span>
-                                                <div class="pull-right">
-                                                    <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span></button>
-                                                </div>
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Cardiovascular Disorder</td>
-                                            <td>8/26/16</td>
-                                            <td>9/1/16</td>
-                                            <td>Active</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Cardiovascular Disorder</td>
-                                            <td>8/26/16</td>
-                                            <td>9/1/16</td>
-                                            <td>Active</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Cardiovascular Disorder</td>
-                                            <td>8/26/16</td>
-                                            <td>9/1/16</td>
-                                            <td>Active</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Cardiovascular Disorder</td>
-                                            <td>8/26/16</td>
-                                            <td>9/1/16</td>
-                                            <td>Active</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                 <div class="col-xs-12">
-                                    <ul class="pagination pull-right">
-                                        <li><a href="#">«</a></li>
-                                        <li><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">4</a></li>
-                                        <li><a href="#">5</a></li>
-                                        <li><a href="#">»</a></li>
-                                    </ul>
+                            <div class="col-xs-12">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6 col-md-3 metrics-table">
+                                        <div class="panel panel-primary filterable">
+                                            <div class="panel-heading">
+                                                <h3 class="panel-title">Performance Ranking</h3>
+                                            </div>
+                                            <div class="panel-body">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Name<i class="fa fa-fw fa-sort"></i></th>
+                                                            <th>Score<i class="fa fa-fw fa-sort"></i></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a class="myprogress-link" href="../PeerIX/progress.html">John Doe</a></td>
+                                                            <td>89%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a class="myprogress-link" href="../PeerIX/progress.html">Jane Doe</a></td>
+                                                            <td>82%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a class="myprogress-link" href="../PeerIX/progress.html">Jane Doe2</a></td>
+                                                            <td>78%</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="panel-footer">
+                                                <a href="javascript:void(0)" class="more">More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 metrics-table">
+                                        <div class="panel panel-primary filterable">
+                                            <div class="panel-heading">
+                                                <h3 class="panel-title">Engagement Level</h3>
+                                            </div>
+                                            <div class="panel-body">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Name<i class="fa fa-fw fa-sort"></i></th>
+                                                            <th>Questions/Wk<i class="fa fa-fw fa-sort"></i></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a class="myprogress-link" href="../PeerIX/progress.html">John Doe</a></td>
+                                                            <td>15</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a class="myprogress-link" href="../PeerIX/progress.html">Jane Doe</a></td>
+                                                            <td>10</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a class="myprogress-link" href="../PeerIX/progress.html">Jane Doe 2</a></td>
+                                                            <td>8</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="panel-footer">
+                                                <a href="javascript:void(0)" class="more">More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 metrics-table">
+                                        <div class="panel panel-primary filterable">
+                                            <div class="panel-heading">
+                                                <h3 class="panel-title">Performance by Category</h3>
+                                            </div>
+                                            <div class="panel-body">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Category<i class="fa fa-fw fa-sort"></i></th>
+                                                            <th>Scores<i class="fa fa-fw fa-sort"></i></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Signs, Symptoms, and Presentation</td>
+                                                            <td>89%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Obstetrics and Gynecology</td>
+                                                            <td>89%</td>
+                                                        </tr>
+                                                            <td>Procedures and Skills</td>
+                                                            <td>89%</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="panel-footer">
+                                                <a href="javascript:void(0)" class="more">More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 metrics-table">
+                                        <div class="panel panel-primary filterable">
+                                            <div class="panel-heading">
+                                                <h3 class="panel-title">PEER Completion</h3>
+                                            </div>
+                                            <div class="panel-body">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Name<i class="fa fa-fw fa-sort"></i></th>
+                                                            <th>completed<i class="fa fa-fw fa-sort"></i></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a class="myprogress-link" href="../PeerIX/progress.html">John Doe</a></td>
+                                                            <td>89%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a class="myprogress-link" href="../PeerIX/progress.html">Jane Doe</a></td>
+                                                            <td>90%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a class="myprogress-link" href="../PeerIX/progress.html">Jane Doe 2</a></td>
+                                                            <td>89%</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="panel-footer">
+                                                <a href="javascript:void(0)" class="more">More</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-3 announcement-wrapper">
-                    <div class="announcement-cnt program-announcement">
-                        <h4><span>Program Announcement</span>
-                            <a href="#" class="pull-right"><i class="fa fa-cog" aria-hidden="true"></i></a>
-                        </h4>
-                        <div class="announce-inner-wrapper">
-                            <ul>
-                                <li><a href="#">Please click here to see your syllybus for PGY 1</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="announcement-cnt acep-announcement">
-                        <h4><span>Acep Announcement</span></h4>
-                        <div class="announce-inner-wrapper">
-                            <ul>
-                                <li><a href="#">ACEP have just released Podcasting series, check it out! https:Peercast.org</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                    <!-- END OF PERFORMANCE METRICS  -->
                 </div>
-                <div class="row">
-                        <div class="col-md-12 performance-metrics-wrapper">
-                            <h3 class="text-center performance-metrics">Performance Metrics</h3>
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div class="panel panel-primary filterable">
-                                        <div class="panel-heading">
-                                            <h3 class="panel-title">Student Performance Ranking</h3>
-                                            <div class="pull-right">
-                                                <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span></button>
-                                            </div>
-                                        </div>
-                                        <div class="panel-body">
-                                            <table class="table">
-                                                <thead>
-                                                    <tr class="filters">
-                                                        <th><input type="text" class="form-control" placeholder="Name" disabled></th>
-                                                        <th style="min-width: 115px;"><input type="text" class="form-control" placeholder="Overall score" disabled></th>
-                                                        <th></th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td><a class="myprogress-link" href="../PeerIX/progress.html">John Doe</a></td>
-                                                        <td>89%</td>
-                                                        <td><a class="more-table" href="#">></a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><a class="myprogress-link" href="../PeerIX/progress.html">Jane Doe</a></td>
-                                                        <td>82%</td>
-                                                        <td><a class="more-table" href="#">></a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><a class="myprogress-link" href="../PeerIX/progress.html">Jane Doe2</a></td>
-                                                        <td>78%</td>
-                                                        <td><a class="more-table" href="#">></a></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <div class="panel-footer">
-                                            <a href="javascript:void(0)" class="more">More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="panel panel-primary filterable">
-                                        <div class="panel-heading">
-                                            <h3 class="panel-title">Student Engagement Level</h3>
-                                            <div class="pull-right">
-                                                <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span></button>
-                                            </div>
-                                        </div>
-                                        <div class="panel-body">
-                                            <table class="table">
-                                                <thead>
-                                                    <tr class="filters">
-                                                        <th><input type="text" class="form-control" placeholder="Name" disabled></th>
-                                                        <th style="min-width: 115px;"><input type="text" class="form-control" placeholder="Average Question/Day" disabled></th>
-                                                        <th></th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td><a class="myprogress-link" href="../PeerIX/progress.html">John Doe</a></td>
-                                                        <td>15</td>
-                                                        <td><a class="more-table" href="#">></a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><a class="myprogress-link" href="../PeerIX/progress.html">Jane Doe</a></td>
-                                                        <td>10</td>
-                                                        <td><a class="more-table" href="#">></a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><a class="myprogress-link" href="../PeerIX/progress.html">Jane Doe 2</a></td>
-                                                        <td>8</td>
-                                                        <td><a class="more-table" href="#">></a></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <div class="panel-footer">
-                                            <a href="javascript:void(0)" class="more">More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="panel panel-primary filterable">
-                                        <div class="panel-heading">
-                                            <h3 class="panel-title">Overall Performance by Category</h3>
-                                            <div class="pull-right">
-                                                <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span></button>
-                                            </div>
-                                        </div>
-                                        <div class="panel-body">
-                                            <table class="table">
-                                                <thead>
-                                                    <tr class="filters">
-                                                        <th style="min-width: 140px;"><input type="text" class="form-control" placeholder="Category" disabled></th>
-                                                        <th><input type="text" class="form-control" placeholder="Scores" disabled></th>
-                                                        <th></th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>Signs, Symptoms, and Presentation</td>
-                                                        <td>89%</td>
-                                                        <td><a class="more-table" href="#">></a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Obstetrics and Gynecology</td>
-                                                        <td>89%</td>
-                                                        <td><a class="more-table" href="#">></a></td>
-                                                    </tr>
-                                                        <td>Procedures and Skills</td>
-                                                        <td>89%</td>
-                                                        <td><a class="more-table" href="#">></a></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <div class="panel-footer">
-                                            <a href="javascript:void(0)" class="more">More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="panel panel-primary filterable">
-                                        <div class="panel-heading">
-                                            <h3 class="panel-title">Percentage of PEER Completed</h3>
-                                            <div class="pull-right">
-                                                <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span></button>
-                                            </div>
-                                        </div>
-                                        <div class="panel-body">
-                                        <table class="table">
-                                            <thead>
-                                                <tr class="filters">
-                                                    <th><input type="text" class="form-control" placeholder="Name" disabled></th>
-                                                    <th style="min-width: 115px;"><input type="text" class="form-control" placeholder="% completed" disabled></th>
-                                                    <th></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td><a class="myprogress-link" href="../PeerIX/progress.html">John Doe</a></td>
-                                                    <td>89%</td>
-                                                    <td><a class="more-table" href="#">></a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><a class="myprogress-link" href="../PeerIX/progress.html">Jane Doe</a></td>
-                                                    <td>90%</td>
-                                                    <td><a href="#" class="more-table">></a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><a class="myprogress-link" href="../PeerIX/progress.html">Jane Doe 2</a></td>
-                                                    <td>89%</td>
-                                                    <td><a href="#" class="more-table">></a></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        </div>
-                                        <div class="panel-footer">
-                                            <a href="javascript:void(0)" class="more">More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
             </div>
+        </div>
     </div>
-</div>
 <!-- /container -->
 <script type="text/javascript">
 jQuery(function () {
