@@ -28,7 +28,7 @@ $(document).ready(function(){
 
     $(".btn-dashboard-menu").click(function(){
         $('.dashboard-menu-options .list-group').slideToggle();
-    })
+    });
 
     $(window).load(function() {
         var windowWidth = $(window).width();

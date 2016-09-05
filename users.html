@@ -97,7 +97,7 @@
                             <li><a href="../PeerIX/add-resident.html">Add Resident</a></li>
                             <li><a href="../PeerIX/notification.html">Notifications</a></li>
                             <li><a href="../PeerIX/users.html">Users</a></li>
-                            <li><a href="#">Resident Changes</a></li>
+                            <li><a href="../PeerIX/director_signin.html">Log Out</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -128,9 +128,9 @@
                             <td>Integrated Type</td>
                             <td>2016</td>
                             <td>
-                                <a href="">View</a>
-                                <a href="">Edit</a>
-                                <a href="">Delete</a>
+                                <span id="viewUserModel">View</span>
+                                <span id="editUserModel">Edit</span>
+                                <span id="deleteUser">Delete</span>
                             </td>
                         </tr>
                         <tr>
@@ -142,9 +142,9 @@
                             <td></td>
                             <td>2020</td>
                             <td>
-                                <a href="">View</a>
-                                <a href="">Edit</a>
-                                <a href="">Delete</a>
+                                <span id="viewUserModel">View</span>
+                                <span id="editUserModel">Edit</span>
+                                <span id="deleteUser">Delete</span>
                             </td>
                         </tr>
                         <tr>
@@ -156,9 +156,9 @@
                             <td></td>
                             <td>2014</td>
                             <td>
-                                <a href="">View</a>
-                                <a href="">Edit</a>
-                                <a href="">Delete</a>
+                                <span id="viewUserModel">View</span>
+                                <span id="editUserModel">Edit</span>
+                                <span id="deleteUser">Delete</span>
                             </td>
                         </tr>
                         <tr>
@@ -170,9 +170,9 @@
                             <td></td>
                             <td>2005</td>
                             <td>
-                                <a href="">View</a>
-                                <a href="">Edit</a>
-                                <a href="">Delete</a>
+                                <span id="viewUserModel">View</span>
+                                <span id="editUserModel">Edit</span>
+                                <span id="deleteUser">Delete</span>
                             </td>
                         </tr>
                         <tr>
@@ -184,15 +184,61 @@
                             <td></td>
                             <td>2024</td>
                             <td>
-                                <a href="">View</a>
-                                <a href="">Edit</a>
-                                <a href="">Delete</a>
+                                <span id="viewUserModel">View</span>
+                                <span id="editUserModel">Edit</span>
+                                <span id="deleteUser">Delete</span>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
+    </div>
+    <div id="userView" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Modal Header</h4>
+          </div>
+          <div class="modal-body">
+            <p>First Name: <span class="firstName"></span></p>
+            <p>Last Name: <span class="lastName"></span></p>
+            <p>Email: <span class="email"></span></p>
+            <p>Role: <span class="role"></span></p>
+            <p>Year: <span class="year"></span></p>
+            <p>Integrated Type: <span class="integratedType"></span></p>
+            <p>Graduation Year: <span class="GraduationType"></span></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="userEdit" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Modal Header</h4>
+          </div>
+          <div class="modal-body">
+            <p>First Name: <span class="firstName"></span></p>
+            <p>Last Name: <span class="lastName"></span></p>
+            <p>Email: <span class="email"></span></p>
+            <p>Role: <span class="role"></span></p>
+            <p>Year: <span class="year"></span></p>
+            <p>Integrated Type: <span class="integratedType"></span></p>
+            <p>Graduation Year: <span class="GraduationType"></span></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
     </div>
 </body>
 <!-- /container -->

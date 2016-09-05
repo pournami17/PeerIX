@@ -1,16 +1,30 @@
 jQuery(document).ready(function(){
-    jQuery(window).load(function() {
-        var windowWidth = $(window).width();
-        if(windowWidth > 991){
-    	   jQuery('.equalheight-wrapper').equalheight();
-        }
+    jQuery('.addAssignmemnts').on('click', function(){
+        var aaa = $('#createTestBtn').val();
+        console.log(aaa)
     });
 
-    jQuery(window).resize(function(){
-        jQuery('.equalheight-wrapper').css("height", "auto");
-        var windowWidth = $(window).width();
-        if(windowWidth > 991){
-           jQuery('.equalheight-wrapper').equalheight();
-        }
+    $( "#startDate, #endDate" ).datepicker();
+
+    $('#addAssignmemnts').click(function(){
+        var assignmentName = $('#assignmentName').val();
+        var startDate = $('#startDate').val();
+        var endDate = $('#endDate').val();
+        var diff = daydiff(parseDate(startDate), parseDate(endDate));
+        var aaa = $('#assignmentName').val();
+        var aaa = $('#assignmentName').val();
+        var passRequirements = $('#passRequirements').val();
+        $('.table-curriculum-builder table tbody').append('<tr class="child"><td>'+assignmentName+'<\/td><td>'+startDate+'<\/td><td>'+endDate+'<\/td><td>'+diff+'<\/td><td>'+aaa+'<\/td><td>'+passRequirements+'%<\/td></tr>');
+        jQuery('#add-test').modal('hide');
+
     });
+
+    function parseDate(str) {
+        var mdy = str.split('/');
+        return new Date(mdy[2], mdy[0]-1, mdy[1]);
+    }
+
+    function daydiff(first, second) {
+        return Math.round((second-first)/(1000*60*60*24));
+    }
 });

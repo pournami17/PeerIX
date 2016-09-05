@@ -84,7 +84,7 @@
                             <li><a href="../PeerIX/add-resident.html">Add Resident</a></li>
                             <li><a href="../PeerIX/notification.html">Notifications</a></li>
                             <li><a href="../PeerIX/users.html">Users</a></li>
-                            <li><a href="#">Resident Changes</a></li>
+                            <li><a href="../PeerIX/director_signin.html">Log Out</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -94,86 +94,66 @@
             <div class="add-resident-wrapper">
                 <h3>Add Resident</h3>
             </div>
-            <div class="residents-container">
-                <ul>
-                    <li class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="resident-info">
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td class="resident-image-col">
-                                            <div class="resident-image">
-                                                <img class="img-responsive" src="images/resident2.jpg" alt="">
-                                            </div>
-                                        </td>
-                                        <td class="resident-details-col">
-                                            <div class="resident-details">
-                                                <h4>Alexandra smith</h4>
-                                                <span class="designation">Interior designer</span>
-                                            </div>
-                                        </td>
-                                        <td class="add-resident-col">
-                                            <a data-toggle="modal" class="add-resident" href="#add-resident-modal"><i class="fa fa-plus-circle"></i></a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+            <div class="select-outer-container">
+                <div class="search-container">
+                    <form class="form-search form-inline">
+                        <label for="text">First Name:</label>
+                        <input type="text" class="form-control search-query" id="firstName">
+                        <label for="text">Last Name:</label>
+                        <input type="text" class="form-control search-query" id="lastName">
+                        <label for="text">Designation:</label>
+                        <input type="text" class="form-control search-query" id="designation">
+                        <button type="button" class="btn btn-default">Search</button>
+                    </form>
+                </div>
+            </div>
+            <div class="resident-info">
+                <div class="resident-infocontainer">
+                    <div class="resident-image-col">
+                        <div class="resident-image">
+                            <img class="img-responsive" src="images/resident1.jpg" alt="">
                         </div>
-                    </li>
-                    <li class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="resident-info">
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td class="resident-image-col">
-                                            <div class="resident-image">
-                                                <img class="img-responsive" src="images/resident1.jpg" alt="">
-                                            </div>
-                                        </td>
-                                        <td class="resident-details-col">
-                                            <div class="resident-details">
-                                                <h4>John Doe</h4>
-                                                <span class="designation">Web Developer</span>
-                                            </div>
-                                        </td>
-                                        <td class="add-resident-col">
-                                            <a data-toggle="modal" class="add-resident" href="#add-resident-modal"><i class="fa fa-plus-circle"></i></a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="resident-details">
+                            <h4>John Doe</h4>
+                            <span class="designation">Web Developer</span>
                         </div>
-                    </li>
-                    <li class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="resident-info">
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td class="resident-image-col">
-                                            <div class="resident-image">
-                                                <img class="img-responsive" src="images/resident3.jpg" alt="">
-                                            </div>
-                                        </td>
-                                        <td class="resident-details-col">
-                                            <div class="resident-details">
-                                                <h4>Joe Angry</h4>
-                                                <span class="designation">Artist</span>
-                                            </div>
-                                        </td>
-                                        <td class="add-resident-col">
-                                            <a data-toggle="modal" class="add-resident" href="#add-resident-modal"><i class="fa fa-plus-circle"></i></a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="add-resident-col">
+                            <a data-toggle="modal" class="add-resident" href="#add-resident-modal"><i class="fa fa-plus-circle"></i></a>
                         </div>
-                    </li>
-                </ul>
+                    </div>
+                </div>
+                <div class="resident-infocontainer">
+                    <div class="resident-image-col">
+                        <div class="resident-image">
+                            <img class="img-responsive" src="images/resident3.jpg" alt="">
+                        </div>
+                        <div class="resident-details">
+                            <h4>Joe Angry</h4>
+                            <span class="designation">Artist</span>
+                        </div>
+                        <div class="add-resident-col">
+                            <a data-toggle="modal" class="add-resident" href="#add-resident-modal"><i class="fa fa-plus-circle"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="resident-infocontainer">
+                    <div class="resident-image-col">
+                        <div class="resident-image">
+                            <img class="img-responsive" src="images/resident2.jpg" alt="">
+                        </div>
+                        <div class="resident-details">
+                            <h4>Alexandra smith</h4>
+                            <span class="designation">Interior designer</span>
+                        </div>
+                        <div class="add-resident-col">
+                            <a data-toggle="modal" class="add-resident" href="#add-resident-modal"><i class="fa fa-plus-circle"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
  <!-- Modal -->
-  <div class="modal fade" id="add-resident-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="add-resident-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -193,8 +173,9 @@
         </div>
       </div>
     </div>
-  </div>
+</div>
 <!-- /container -->
+<script type="text/javascript" src="js/addresident.js" id="addresident-js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js?v=1.0" id="boostrap-js"></script>
 <script type="text/javascript" src="js/peerix-footer.js?v=1.0" id="peerixFooter-js"></script>
 </body>

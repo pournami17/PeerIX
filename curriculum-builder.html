@@ -44,6 +44,7 @@
 	<script type="text/javascript" src=js/peerix-header.js?v=1.0" id="peerixHeader-js"></script>
     <!-- new style-->
     <link href="css/user.css" rel="stylesheet" type="text/css">
+    <link href="css/home_section1.css" rel="stylesheet" type="text/css">
     <link href="select2/css/select2.min.css" rel="stylesheet" />
     <script src="select2/js/select2.min.js"></script>
     <script type="text/javascript">
@@ -92,7 +93,7 @@
                             <li><a href="../PeerIX/add-resident.html">Add Resident</a></li>
                             <li><a href="../PeerIX/notification.html">Notifications</a></li>
                             <li><a href="../PeerIX/users.html">Users</a></li>
-                            <li><a href="#">Resident Changes</a></li>
+                            <li><a href="../PeerIX/director_signin.html">Log Out</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -101,53 +102,57 @@
         <div class="container content-mrgT detailscontent-wrapper">
             <div class="curriculum-builder-wrapper">
                 <h3>Program Curriculum Builder</h3>
-                <form class="form-inline form-curriculum-gsy-class">
-                    <fieldset>
-                        <div class="form-group">
-                            <label class="pull-left control-label" for="gsy-class">Choose your curriculum GSY class</label>
-                            <div class="col-md-4">
-                            <select id="gsy-class" name="gsy-class" class="form-control">
-                              <option value="1">GSY 1</option>
-                              <option value="2">GSY 2</option>
-                            </select>
-                            </div>
+                <div class="row">
+                    <div class="col-xs-12 curriculum-table-wrapper">
+                        <form class="form-inline form-curriculum-gsy-class">
+                            <fieldset>
+                                <div class="form-group">
+                                    <label class="pull-left control-label" for="gsy-class">Choose your curriculum GSY class</label>
+                                    <div class="col-md-4">
+                                    <select id="gsy-class" name="gsy-class" class="form-control">
+                                      <option value="1">GSY 1</option>
+                                      <option value="2">GSY 2</option>
+                                    </select>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                        <div class="table-responsive table-curriculum-builder">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Assignments</th>
+                                        <th>Start Date</th>
+                                        <th>End Date</th>
+                                        <th>No. of days</th>
+                                        <th>No. of questions</th>
+                                        <th>Passing Requirements</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Sign, Symptoms and Presentation</td>
+                                        <td>8/19/2016</td>
+                                        <td>8/25/2016</td>
+                                        <td>6</td>
+                                        <td>50</td>
+                                        <td>75%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cardiovascular Disorder</td>
+                                        <td>8/26/2016</td>
+                                        <td>9/1/2016</td>
+                                        <td>5</td>
+                                        <td>40</td>
+                                        <td>70%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                    </fieldset>
-                </form>
-                <div class="table-responsive table-curriculum-builder">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Assignments</th>
-                                <th>Start Date</th>
-                                <th>End Date</th>
-                                <th>No. of days</th>
-                                <th>No. of questions</th>
-                                <th>Passing Requirements</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Sign, Symptoms and Presentation</td>
-                                <td>8/19/2016</td>
-                                <td>8/25/2016</td>
-                                <td>6</td>
-                                <td>50</td>
-                                <td>75%</td>
-                            </tr>
-                            <tr>
-                                <td>Cardiovascular Disorder</td>
-                                <td>8/26/2016</td>
-                                <td>9/1/2016</td>
-                                <td>5</td>
-                                <td>40</td>
-                                <td>70%</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    </div>
                 </div>
-                <div class="col-xs-12">
-                    <div class="row">
+                <div class="row">
+                    <div class="col-xs-12">
                         <a data-toggle="modal" href="#add-test" id="add_row" class="btn btn-default btn-add-row pull-right"><i class="fa fa-plus" aria-hidden="true"></i></a>
                     </div>
                 </div>
@@ -156,126 +161,187 @@
     </div>
 <!-- /container -->
 <!-- Modal -->
-  <div class="modal fade" id="add-test" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="add-test" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 <h3 class="modal-title">CREATE A PRACTICE TEST</h3>
             </div>
-        <div class="modal-body">
-        <div class="create-practice-box">
-            <form id="ptForm" action="" enctype="multipart/form-data" method="post">
-                            <div class="no-question">
-                                <h4>Number of Questions</h4>
-                                <div class="question-list clearfix">
-                                    <ul class="question-number">
-                                        <li>
-                                            <input id="qc_5" type="radio"  name="questionCount" value="5" class="qc_5" />
-                                            <label for="qc_5">5</label>
-                                        </li>
-                                        <li>
-                                            <input id="qc_10" type="radio"  name="questionCount" value="10" class="qc_10" />
-                                            <label for="qc_10">10</label>
-                                        </li>
-                                        <li>
-                                            <input id="qc_25" type="radio"  name="questionCount" value="25" class="qc_25" />
-                                            <label for="qc_25">25</label>
-                                        </li>
-                                        <li>
-                                            <input id="qc_50" type="radio"  name="questionCount" value="50" class="qc_50" />
-                                            <label for="qc_50">50</label>
-                                        </li>
-                                        <li>
-                                            <input id="qc_100" type="radio"  name="questionCount" value="100" class="qc_100" />
-                                            <label for="qc_100">100</label>
-                                        </li>
-                                        <li>
-                                            <input id="qc_All" type="radio"  name="questionCount" value="0" class="qc_0" />
-                                            <label for="qc_All">All</label>
-                                        </li>
-                                    </ul>
-                                    <span style="clear: both;float: left;" class="error" id="er_questionCount"></span>
-                                </div>
-                            </div>
-                            <div class="bdr-seperator"></div>
-
-                            <div class="content-question">
-                                <div class="categories_wrapper">
-                                    <h4>Content for Questions</h4>
-                                    <div class="question-list clearfix">
-                                        <select name="peerTestId" id="peerTestId">
-                                            <option value="542" >PEER IX</option>
-                                            <option value="543" >PEER VIII</option>
-                                        </select>
-                                        <span class="error" id="er_peerTestId"></span>
-                                    </div>
-                                    <div class="bdr-seperator"></div>
-                                    <span class="error" id="er_topicCategories"></span>
-                                    <table class="table table-bordered">
-                                        <tbody>
-                                            <tr>
-                                                <td width="80" align="center" valign="middle">
-                                                    <div class="btn-group radioMain1" data-toggle="buttons">
-                                                        <label class="btn btn-default ">
-                                                            <input name="topicCategories"  class="topicCategories" type="radio" value="all" id="allTopics" autocomplete="off"  />
-                                                            <span class="glyphicon glyphicon-record"></span>
-                                                        </label>
-                                                        <label for="validate-text" class="checkboxInfo"></label>
-                                                    </div>
-                                                </td>
-                                                <td class="question-content">All categories, randomized</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <table class="table table-bordered">
-                                        <tbody>
-                                            <span class="error" id="er_questionTopics"></span>
-                                            <tr>
-                                                <td width="80" align="center" valign="middle">
-                                                    <div class="btn-group radioMain1" data-toggle="buttons">
-                                                        <label class="btn btn-default ">
-                                                        <input name="topicCategories" class="topicCategories" type="radio" value="selectedTopics" autocomplete="off" id="selectedTopics"  />
-                                                        <span class="glyphicon glyphicon-record"></span>
-                                                        </label>
-                                                        <label for="validate-text" class="checkboxInfo"></label>
-                                                    </div>
-                                                </td>
-                                                <td class="question-content">Selected categories</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <div id="qstnTopicsList"></div>
-                                    <div class="bdr-seperator"></div>
-                                    <div class=" clearfix"></div>
-                                </div>
-                                    <div class="savetest">
-                                        <h4>Save this test as:</h4>
-                                        <span class="error" id="er_testName"></span>
-                                        <div class="form-group">
-                                            <input  type="text" name="testName" class="form-control" value="Practice Test 08 - 25">
-                                        </div>
-                                        <div id="wait_for_validation" class="hideDiv">
-                                            <img alt="Loader" src="images/loader1.gif">
-                                            <div class="loader">We're validating your data, please wait <span class="loader__dot">.</span><span class="loader__dot">.</span><span class="loader__dot">.</span></div>
-                                        </div>
-                                        <div id="wait_for_redirect" class="hideDiv">
-                                            <img alt="Loader" src="images/loader1.gif">
-                                            <div class="loader">Redirecting, please wait <span class="loader__dot">.</span><span class="loader__dot">.</span><span class="loader__dot">.</span></div>
-                                        </div>
-                                        <input type="hidden" name="peerpath_exam_week" id="peerpath_exam_week" value="" />
-                                        <input type="submit" id="createTestBtn" name="createTestBtn" class="btn btn-primary create-btn" value="Create Test" />
-                                    </div>
-                                </div>
-                            </div>
-                        </form></div>
+            <div id="create-test-modal-body" class="modal-body">
+               <div class="row">
+                  <div class="col-sm-12">
+                     <div class="create-practice-box">
+                        <form id="ptForm" action="" enctype="multipart/form-data" method="post">
+                           <div class="no-question">
+                              <h4>Number of Questions</h4>
+                              <div class="question-list clearfix">
+                                 <ul class="question-number">
+                                    <li>
+                                       <input id="qc_5" type="radio" name="questionCount" value="5" class="qc_5">
+                                       <label for="qc_5">5</label>
+                                    </li>
+                                    <li>
+                                       <input id="qc_10" type="radio" name="questionCount" value="10" class="qc_10">
+                                       <label for="qc_10">10</label>
+                                    </li>
+                                    <li>
+                                       <input id="qc_25" type="radio" name="questionCount" value="25" class="qc_25">
+                                       <label for="qc_25">25</label>
+                                    </li>
+                                    <li>
+                                       <input id="qc_50" type="radio" name="questionCount" value="50" class="qc_50">
+                                       <label for="qc_50">50</label>
+                                    </li>
+                                    <li>
+                                       <input id="qc_100" type="radio" name="questionCount" value="100" class="qc_100">
+                                       <label for="qc_100">100</label>
+                                    </li>
+                                    <li>
+                                       <input id="qc_All" type="radio" name="questionCount" value="0" class="qc_0">
+                                       <label for="qc_All">All</label>
+                                    </li>
+                                 </ul>
+                                 <span style="clear: both;float: left;" class="error" id="er_questionCount"></span>
+                              </div>
+                           </div>
+                           <div class="bdr-seperator"></div>
+                           <div class="content-question">
+                              <div class="categories_wrapper">
+                                 <h4>Content for Questions</h4>
+                                 <div class="question-list clearfix">
+                                    <select name="peerTestId" id="peerTestId">
+                                       <option value="542">Peerix</option>
+                                    </select>
+                                    <span class="error" id="er_peerTestId"></span>
+                                 </div>
+                                 <div class="bdr-seperator"></div>
+                                 <span class="error" id="er_topicCategories"></span>
+                                 <table class="table table-bordered">
+                                    <tbody>
+                                       <tr>
+                                          <td width="80" align="center" valign="middle">
+                                             <div class="btn-group radioMain1" data-toggle="buttons">
+                                                <label class="btn btn-default ">
+                                                <input name="topicCategories" class="topicCategories" type="radio" value="all" id="allTopics" autocomplete="off">
+                                                <span class="glyphicon glyphicon-record"></span>
+                                                </label>
+                                                <label for="validate-text" class="checkboxInfo"></label>
+                                             </div>
+                                          </td>
+                                          <td class="question-content">All categories, randomized</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <span class="error" id="er_questionTopics"></span>
+                                 <table class="table table-bordered">
+                                    <tbody>
+                                       <tr>
+                                          <td width="80" align="center" valign="middle">
+                                             <div class="btn-group radioMain1" data-toggle="buttons">
+                                                <label class="btn btn-default ">
+                                                <input name="topicCategories" class="topicCategories" type="radio" value="selectedTopics" autocomplete="off" id="selectedTopics">
+                                                <span class="glyphicon glyphicon-record"></span>
+                                                </label>
+                                                <label for="validate-text" class="checkboxInfo"></label>
+                                             </div>
+                                          </td>
+                                          <td class="question-content">Selected categories</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <div class="bdr-seperator"></div>
+                                 <div class=" clearfix"></div>
+                              </div>
+                              <div class="curriculum-date-wrapper row">
+                                 <div class="form-group col-xs-12 col-md-6">
+                                    <h4>Start Date</h4>
+                                    <span class="error" id="er_startDate"></span>
+                                    <input placeholder="Enter Start Date" type="text" name="startDate" id="startDate" class="form-control" value="">
+                                 </div>
+                                 <div class="form-group col-xs-12 col-md-6">
+                                    <h4>End Date</h4>
+                                    <span class="error" id="er_endDate"></span>
+                                    <input placeholder="Enter End Date" type="text" name="endDate" id="endDate" class="form-control" value="">
+                                 </div>
+                              </div>
+                              <div class="bdr-seperator"></div>
+                              <h4>Passing Requirements</h4>
+                              <span class="error" id="er_passRequirements"></span>
+                              <div class="form-group">
+                                 <input placeholder="Passing Requirements" type="text" name="passRequirements" id="passRequirements" class="form-control" value="">
+                              </div>
+                              <div class="bdr-seperator"></div>
+                              <input type="hidden" name="curriculumClass" id="curriculumClass" value="1">
+                              <input type="hidden" name="isDirectorTest" id="isDirectorTest" value="1">
+                              <div class="savetest">
+                                 <h4>Save this test as:</h4>
+                                 <span class="error" id="er_testName"></span>
+                                 <div class="form-group">
+                                    <input type="text" name="testName" id="assignmentName" class="form-control" value="Director Test 09 - 02">
+                                 </div>
+                                 <div id="wait_for_validation" class="hideDiv">
+                                    <img alt="Loader" src="http://10.7.20.21:86/content/theme/peerix/images/loader1.gif">
+                                    <div class="loader">We're validating your data, please wait <span class="loader__dot">.</span><span class="loader__dot">.</span><span class="loader__dot">.</span></div>
+                                 </div>
+                                 <div id="wait_for_redirect" class="alert alert-success hideDiv">
+                                    <img alt="Loader" src="http://10.7.20.21:86/content/theme/peerix/images/loader1.gif">
+                                    <div class="loader">Redirecting, please wait <span class="loader__dot">.</span><span class="loader__dot">.</span><span class="loader__dot">.</span></div>
+                                 </div>
+                                 <input type="hidden" name="peerpath_exam_week" id="peerpath_exam_week" value="">
+                                 <input type="button" id="addAssignmemnts" name="addAssignmemntsBtn" class="btn btn-primary create-btn" value="Add Assignments">
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+               <div class="modal fade" tabindex="-1" role="dialog" id="confirm">
+                  <div class="modal-dialog">
+                     <div class="modal-content">
+                        <div class="modal-header">
+                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                           <span aria-hidden="true">x</span>
+                           </button>
+                           <h4 class="modal-title" id="gridModalLabel">Warning</h4>
+                        </div>
+                        <div class="modal-body" id="confirm_message">
+                           Are you sure?
+                        </div>
+                        <div class="modal-footer">
+                           <button type="button" class="btn btn-default" data-dismiss="modal" id="confirm_create_test">Create Test</button>
+                           <button type="button" class="btn btn-default" data-dismiss="modal" id="confirm_cancel_test">Cancel</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="modal fade" tabindex="-1" role="dialog" id="qstn_not_available">
+                  <div class="modal-dialog">
+                     <div class="modal-content">
+                        <div class="modal-header">
+                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                           <span aria-hidden="true">x</span>
+                           </button>
+                           <h4 class="modal-title" id="gridModalLabel">Warning</h4>
+                        </div>
+                        <div class="modal-body">
+                           <div class="row">
+                              <div class="col-md-12" id="pp-error-message-box"></div>
+                           </div>
+                        </div>
+                        <div class="modal-footer">
+                           <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
         </div>
-        
-      </div>
     </div>
-  </div>
+</div>
+<script type="text/javascript" src="js/bootstrap-datepicker.js" id="boostrapDatePicker-js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js?v=1.0" id="boostrap-js"></script>
-<script type="text/javascript" src="js/director-home.js"></script>
+<script type="text/javascript" src="js/new-home.js"></script>
 <script type="text/javascript" src="js/peerix-footer.js?v=1.0" id="peerixFooter-js"></script>
 </body>
 </html>

@@ -399,12 +399,7 @@ hr {
 
 /*-----End of director homepage-------*/
 /*---------Curriculum Builder------------------*/
-.curriculum-builder-wrapper h3 {
-  font-size: 18px;
-    border-bottom: 1px solid #ccc;
-    padding: 6px 0;
-    font-weight: 600;
-}
+
 .form-curriculum-gsy-class label {
   font-weight: normal;
     font-size: 16px;
@@ -416,7 +411,7 @@ hr {
   width: 100%;
 }
 .table-curriculum-builder {
-  padding: 50px 0;
+  padding: 25px 0;
 }
 .btn-add-row {
   background: #4c6a92;
@@ -559,7 +554,8 @@ hr {
 .gauge-chart-wrapper, .line-chart-wrapper {
   padding: 0px;
 }
-.line-chart-title, .gauge-chart-title, .assigmnets-title, .announcement-title, .metrics-table .panel-title {
+.line-chart-title, .gauge-chart-title, .assigmnets-title,
+.curriculum-builder-wrapper h3, .announcement-title, .metrics-table .panel-title {
   background-color: #F5F5F5;
   margin: 0px;
   padding: 15px 22px;
