@@ -4,20 +4,14 @@ $(document).ready(function() {
     var firstName = $.trim($(this).prevAll('#firstName').val()).toLowerCase();
     var lastName = $.trim($(this).prevAll('#lastName').val()).toLowerCase();
     var designation = $.trim($(this).prevAll('#designation').val()).toLowerCase();
-    console.log(firstName, lastName, designation )
-    $('.resident-details h4').each(function(){
-     	var $this = $(this);
-     	var searchKey = $this.text().toLowerCase();
-     	if(searchKey.indexOf(firstName) === -1 || searchKey.indexOf(lastName) === -1 )
-        $this.closest('.resident-infocontainer').fadeOut();
-      else $this.closest('.resident-infocontainer').fadeIn();
-    });
-    $('.resident-details .designation').each(function(){
-     	var $this = $(this);
-     	var searchKey = $this.text().toLowerCase();
-     	if(searchKey.indexOf(designation) === -1 )
-        $this.closest('.resident-infocontainer').fadeOut();
-      else $this.closest('.resident-infocontainer').fadeIn();
-    });
+    console.log(firstName, lastName, designation );
+    $('.resident-infocontainer').each(function(){
+     	var $thisName = $(this).children('.resident-image-col').find('h4');
+        var $thisDesg = $(this).children('.resident-image-col').find('.designation');
+     	var searchKey1 = $thisName.text().toLowerCase();
+        var searchKey2 = $thisDesg.text().toLowerCase();
+     	if(searchKey1.indexOf(firstName) === -1 || searchKey1.indexOf(lastName) === -1 || searchKey2.indexOf(designation) === -1 )
+            $(this).closest('.resident-infocontainer').fadeOut();
+        });
 	});
 });
