@@ -11,10 +11,9 @@ jQuery(document).ready(function(){
         var startDate = $('#startDate').val();
         var endDate = $('#endDate').val();
         var diff = daydiff(parseDate(startDate), parseDate(endDate));
-        var aaa = $('#assignmentName').val();
-        var aaa = $('#assignmentName').val();
+        var qn = $("input[name='questionCount']:checked"). val();
         var passRequirements = $('#passRequirements').val();
-        $('.table-curriculum-builder table tbody').append('<tr class="child"><td>'+assignmentName+'<\/td><td>'+startDate+'<\/td><td>'+endDate+'<\/td><td>'+diff+'<\/td><td>'+aaa+'<\/td><td>'+passRequirements+'%<\/td></tr>');
+        $('.table-curriculum-builder table tbody').append('<tr class="child"><td>'+assignmentName+'<\/td><td>'+startDate+'<\/td><td>'+endDate+'<\/td><td>'+diff+'<\/td><td>'+qn+'<\/td><td>'+passRequirements+'%<\/td></tr>');
         jQuery('#add-test').modal('hide');
 
     });
