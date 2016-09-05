@@ -14,7 +14,7 @@ jQuery(document).ready(function() {
     jQuery('.result-tooltip').tooltip();
 
     jQuery(document).click(function(e) {
-        if (!jQuery(e.target).is('.side-collapse  , .navbar-toggle, .c-hamburger span')) {
+        if (!jQuery(e.target).is('.side-collapse  , .navbar-toggle, .c-hamburger span, .more-options span, .more-options .menu-icon')) {
             jQuery(".side-collapse").addClass("in");
             jQuery(".side-collapse-container").removeClass("out");
             jQuery(".body-color").hide();

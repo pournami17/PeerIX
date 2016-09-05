@@ -1,6 +1,24 @@
 $(document).ready(function(){
-    $('.filterable .more').click(function(){
-        $(this).parents('.filterable').find('tbody').append('<tr><td>John</td><td>85%</td></tr>');
+    $('.table-engagement-level .more').click(function(){
+        $(this).parents('.filterable').find('tbody').append('<tr><td><a class="myprogress-link" href="../PeerIX/progress.html">Juan</a></td><td>10</td></tr>');
+    });
+
+    $('.table-performance-ranking .more').click(function(){
+        $(this).parents('.filterable').find('tbody').append('<tr><td><a class="myprogress-link" href="../PeerIX/progress.html">John</a></td><td>85%</td></tr>');
+    });
+
+    $('.table-performance-category .more').click(function(){
+        $(this).parents('.filterable').find('tbody').append('<tr><td>Signs, Symptoms, and Presentation</td><td>85%</td></tr>');
+    });
+
+    $('.table-peer-completion .more').click(function(){
+        $(this).parents('.filterable').find('tbody').append('<tr><td><a class="myprogress-link" href="../PeerIX/progress.html">Suzane</a></td><td>75%</td></tr>');
+    });
+
+    $('.assignments-table, .filterable table').dataTable({
+        "paging":   false,
+        "info":     false,
+        "filter": false
     });
 
     $(".turnarrow").on('click',function(){

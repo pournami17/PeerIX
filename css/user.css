@@ -24,6 +24,9 @@
   font-weight: normal;
   font-style: normal;
 }
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'OpenSans-CondBold';
+}
 .user-wrapper {
   position: relative;
   padding-top: 25px;
@@ -65,8 +68,17 @@
   top: 8px;
   opacity: 1;
 }
-#userTable.dataTable thead .sorting:after, #userTable.dataTable thead .sorting_asc i, #userTable.dataTable thead .sorting_desc i {
+#userTable.dataTable thead .sorting:after, #userTable.dataTable thead .sorting_asc i, #userTable.dataTable thead .sorting_desc i,
+{
   display: none
+}
+.assignments-table.dataTable thead .sorting_desc:after,
+.assignments-table.dataTable thead .sorting_asc:after,
+.assignments-table.dataTable thead .sorting:after,
+.filterable .dataTable thead .sorting_desc:after,
+.filterable .dataTable thead .sorting_asc:after,
+.filterable .dataTable thead .sorting:after {
+  display: none;
 }
 .dt-buttons {
   position: absolute;
@@ -306,6 +318,9 @@ hr {
     margin-top: 15px;
     border: none;
 }
+.filterable table {
+  margin: 0;
+}
 .filterable .filters input[disabled] {
     background-color: transparent;
     border: none;
@@ -377,6 +392,10 @@ hr {
   padding: 10px 5px;
   font-size: 20px;
   margin: 20px 0px 10px 0px!important;
+}
+.table-performance-category th:last-child, 
+.table-performance-category td:last-child {
+    width: 70px;
 }
 
 /*-----End of director homepage-------*/
@@ -527,6 +546,9 @@ hr {
 .graph-section {
   margin-top: 20px;
 }
+.director-dashboard {
+  margin: 0 0 50px 0;
+}
 .director-dashboard .oveScore1, .director-dashboard .oveScore1 svg,
 .director-dashboard .highcharts-container,
 .director-dashboard #overall_score_chart{
@@ -582,15 +604,15 @@ hr {
 .assigmnets-wrapper {
   padding: 0px;
 }
-.assignmnets-table {
+.assignments-table {
   width: 100%;
 }
-.assignmnets-table thead, .assignmnets-table tbody tr {
+.assignments-table thead, .assignments-table tbody tr {
   display: table;
   width: 100%;
   table-layout: fixed;
 }
-.assignmnets-table tbody {
+.assignments-table tbody {
   height: 260px;
   overflow-y: auto;
   display: block;
@@ -599,48 +621,51 @@ hr {
 .graph-response-wrapper .sub_legend {
     vertical-align: top;
 }
-.assignmnets-table thead th, .assignmnets-table tbody td {
+.assignments-table thead th, .assignments-table tbody td {
   padding: 20px 0px 10px;
   font-size: 15px;
   white-space: pre-wrap;
   word-break:break-word;
 }
-.assignmnets-table thead {
+.assignments-table thead th:first-child {
+  padding-left: 10px !important;
+}
+.assignments-table thead {
   border-bottom: solid 1px #dedede;
 }
-.assignmnets-tablewrapper {
-  margin-left: 20px;
+.assignments-tablewrapper {
+  margin: 0;
 }
-.assignmnets-table .myprogress-link, .assignmnets-table .myprogress-link:hover {
+.assignments-table .myprogress-link, .assignments-table .myprogress-link:hover {
     text-decoration: none;
     color: #1e91be;
 }
-.assignmnets-table tbody tr td:nth-child(1) {
+.assignments-table tbody tr td:nth-child(1) {
   width: 40%;
   min-width: 250px;
 }
-.assignmnets-table thead tr th:nth-child(1) {
+.assignments-table thead tr th:nth-child(1) {
   min-width: 250px;
 }
-.assignmnets-table tbody tr td {
+.assignments-table tbody tr td {
   font-weight: 600;
 }
-.assignmnets-table tbody tr td:nth-child(2),
-.assignmnets-table tbody tr td:nth-child(3),
-.assignmnets-table tbody tr td:nth-child(4) {
+.assignments-table tbody tr td:nth-child(2),
+.assignments-table tbody tr td:nth-child(3),
+.assignments-table tbody tr td:nth-child(4) {
   width: 20%;
   min-width: 100px;
 }
-.assignmnets-table thead tr th:nth-child(2),
-.assignmnets-table thead tr th:nth-child(3),
-.assignmnets-table thead tr th:nth-child(4) {
+.assignments-table thead tr th:nth-child(2),
+.assignments-table thead tr th:nth-child(3),
+.assignments-table thead tr th:nth-child(4) {
   width: 20%;
   min-width: 100px;
 }
-.assignmnets-table tbody tr {
+.assignments-table tbody tr {
   border-bottom: solid 2px #dedede;
 }
-.assignmnets-table tbody tr:last-child {
+.assignments-table tbody tr:last-child {
   border-bottom: none;
 }
 .announcement-wrapper {
@@ -708,11 +733,10 @@ hr {
   table-layout: fixed;
 }
 .metrics-table tbody {
-  max-height: 200px;
+  height: 150px;
   overflow-y: auto;
   display: block;
   width: 100%;
-  height: auto;
 }
 /*------------END OF ADDITION----------------*/
 .dashboard-residents-count li {
