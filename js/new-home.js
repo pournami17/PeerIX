@@ -6,6 +6,11 @@ jQuery(document).ready(function(){
 
     $( "#startDate, #endDate" ).datepicker();
 
+    $(".question-number li").on('click',function(){
+        $(this).parent().find('.active').removeClass('active');
+        $(this).addClass('active');
+    });
+
     $('#addAssignmemnts').click(function(){
         var assignmentName = $('#assignmentName').val();
         var startDate = $('#startDate').val();

@@ -25,23 +25,23 @@ $(document).ready(function(){
     });
 
     $(".question-number li").on('click',function(){
-        console.log("hi");
         $(this).parent().find('.active').removeClass('active');
         $(this).addClass('active');
     });
 
-    $(window).load(function() {
-        var windowWidth = $(window).width();
-        if(windowWidth > 991){
-    	   $('.equalheight-wrapper').equalheight();
-        }
-    });
+});
 
-    $(window).resize(function(){
-        $('.equalheight-wrapper').css("height", "auto");
-        var windowWidth = $(window).width();
-        if(windowWidth > 991){
-           $('.equalheight-wrapper').equalheight();
-        }
-    });
+$(window).load(function() {
+    var windowWidth = $(window).width();
+    if(windowWidth > 991){
+       $('.equalheight-wrapper').equalheight();
+    }
+});
+
+$(window).resize(function(){
+    $('.equalheight-wrapper').css("height", "auto");
+    var windowWidth = $(window).width();
+    if(windowWidth > 991){
+       $('.equalheight-wrapper').equalheight();
+    }
 });
