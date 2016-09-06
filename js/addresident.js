@@ -14,4 +14,13 @@ $(document).ready(function() {
             $(this).closest('.resident-infocontainer').fadeOut();
         });
 	});
+
+    $(".save-resident-changes").on('click', function(){
+        $('#add-resident-modal').modal('hide');
+        $('.resident-info').prepend('<div class="alert alert-success text-center">Class added successfully</div>');
+        setTimeout(function() {
+            $(".alert").alert('close');
+        }, 2000);
+    });
+
 });
