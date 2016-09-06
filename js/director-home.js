@@ -15,12 +15,6 @@ $(document).ready(function(){
         $(this).parents('.filterable').find('tbody').append('<tr><td><a class="myprogress-link" href="../PeerIX/progress.html">Suzane</a></td><td>75%</td></tr>');
     });
 
-    $('.assignments-table, .filterable table').dataTable({
-        "paging":   false,
-        "info":     false,
-        "filter": false
-    });
-
     $(".turnarrow").on('click',function(){
         console.log("clicked");
         $(".navbar-toggle").addClass("is-active");
@@ -28,6 +22,12 @@ $(document).ready(function(){
 
     $(".btn-dashboard-menu").click(function(){
         $('.dashboard-menu-options .list-group').slideToggle();
+    });
+
+    $(".question-number li").on('click',function(){
+        console.log("hi");
+        $(this).parent().find('.active').removeClass('active');
+        $(this).addClass('active');
     });
 
     $(window).load(function() {

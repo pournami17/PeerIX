@@ -880,6 +880,11 @@
 <script type="text/javascript">
 jQuery(function () {
     jQuery('[data-toggle="tooltip"]').tooltip();
+    jQuery('.assignments-table, .filterable table').dataTable({
+        "paging":   false,
+        "info":     false,
+        "filter": false
+    });
 });
 </script>
 <script type="text/javascript" src="js/bootstrap.min.js?v=1.0" id="boostrap-js"></script>
