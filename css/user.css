@@ -584,6 +584,18 @@ hr {
 .category-details-heading {
   margin-top: 20px!important;
 }
+.line-chart-wrapper {
+  position: relative;
+}
+.linegraph-change {
+  position: absolute;
+  top: 56px;
+  right: 50px;
+  z-index: 9;
+  background-color: #ebebeb;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
 .directorsigin-wrapper {
   border: solid 2px #C7C3C3;
   padding: 60px 60px 0px 60px;

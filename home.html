@@ -404,15 +404,17 @@
                                                     </script>
                                                 </div>
                                             </div>
-                                            Toggle:
-                                            <button id="toggle-type" class="autocompare">Type</button>
-                                            <button id="toggle-opposite" class="autocompare">Opposite</button>
-                                            <button id="toggle-linewidth" class="autocompare">Line width</button>
-                                            <button id="toggle-linecolor" class="autocompare">Line color</button>
                                         </div>
                                         <div class="col-xs-12 col-sm-6 line-chart-wrapper">
                                             <h4 class="line-chart-title">Performance Over Time
                                             </h4>
+
+                                            <select class="linegraph-change" onchange="linechartDropdown(this);">
+                                                <option value="1">Week</option>
+                                                <option value="2">Month</option>
+                                                <option value="3">Year</option>
+                                            </select>
+
                                             <div id="linechartContainer" style="min-width: 310px; height: 400px; margin: 0 auto">
                                                 <script type="text/javascript">
                                                     $(function () {
@@ -461,6 +463,21 @@
                                                             }]
                                                         });
                                                     });
+                                                    function linechartDropdown(sel) {
+                                                        if(sel.value == 1){
+                                                            var chart = $('#linechartContainer').highcharts();
+                                                            chart.series[0].setData([29.9, 71.5, 96.4, 69.2, 48.5, 16.4, 14.1] );
+                                                            chart.xAxis[0].setCategories(['Mon', 'Tues', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun']);
+                                                        } else if(sel.value == 2){
+                                                            var chart = $('#linechartContainer').highcharts();
+                                                            chart.series[0].setData([29.9, 71.5, 96.4, 69.2, 48.5, 16.4, 14.1, 96.4, 69.2, 48.5, 16.4, 14.1] );
+                                                            chart.xAxis[0].setCategories(['jan', 'Feb', 'Mar', 'April', 'May', 'June', 'July', 'August', 'Sep', 'Oct', 'Nov', 'Dec']);
+                                                        } else if (sel.value == 3) {
+                                                            var chart = $('#linechartContainer').highcharts();
+                                                            chart.series[0].setData([9, 25, 35, 94, 65, 25] );
+                                                            chart.xAxis[0].setCategories(['2011', '2012', '2013', '2014', '2015', '2016']);
+                                                        }
+                                                    };
                                                 </script>
                                             </div>
                                         </div>
