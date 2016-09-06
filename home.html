@@ -191,6 +191,7 @@
                                                 src="js/highcharts/v4.2.5/highcharts-more.js"></script>
                                             <script type="text/javascript"
                                                         src="js/highcharts/v4.2.5/solid-gauge.js"></script>
+                                            <script src="https://code.highcharts.com/modules/exporting.js"></script>
                                             <div class="chart-wrapper first-chart-wrapper">
                                                 <div class="oveScore1" style="width: 100%">
                                                     <div id="overall_score_chart" style="width:100%; max-height: 400px;">Loading...</div>
@@ -403,6 +404,11 @@
                                                     </script>
                                                 </div>
                                             </div>
+                                            Toggle:
+                                            <button id="toggle-type" class="autocompare">Type</button>
+                                            <button id="toggle-opposite" class="autocompare">Opposite</button>
+                                            <button id="toggle-linewidth" class="autocompare">Line width</button>
+                                            <button id="toggle-linecolor" class="autocompare">Line color</button>
                                         </div>
                                         <div class="col-xs-12 col-sm-6 line-chart-wrapper">
                                             <h4 class="line-chart-title">Performance Over Time
@@ -496,61 +502,61 @@
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td><a class="myprogress-link" href="../PeerIX/progress.html">Signs, Symptoms and Presentations</a></td>
+                                                        <td><a class="category-link" href="../PeerIX/category-details.html">Signs, Symptoms and Presentations</a></td>
                                                         <td>8/20/2016</td>
                                                         <td>10/20/2018</td>
                                                         <td>Active</td>
                                                     </tr>
                                                     <tr>
-                                                        <td><a class="myprogress-link" href="../PeerIX/progress.html">Abdominal & Gastrointestinal Disorders</a></td>
+                                                        <td><a class="category-link" href="../PeerIX/category-details.html">Abdominal & Gastrointestinal Disorders</a></td>
                                                         <td>8/20/2016</td>
                                                         <td>10/20/2018</td>
                                                         <td>Complete</td>
                                                     </tr>
                                                     <tr>
-                                                        <td><a class="myprogress-link" href="../PeerIX/progress.html">Abdominal & Gastrointestinal Disorders</a></td>
+                                                        <td><a class="category-link" href="../PeerIX/category-details.html">Abdominal & Gastrointestinal Disorders</a></td>
                                                         <td>8/20/2016</td>
                                                         <td>10/20/2018</td>
                                                         <td>Active</td>
                                                     </tr>
                                                     <tr>
-                                                        <td><a class="myprogress-link" href="../PeerIX/progress.html">Cardiovascular Disorders</a></td>
+                                                        <td><a class="category-link" href="../PeerIX/category-details.html">Cardiovascular Disorders</a></td>
                                                         <td>8/20/2016</td>
                                                         <td>10/20/2018</td>
                                                         <td>Active</td>
                                                     </tr>
                                                     <tr>
-                                                        <td><a class="myprogress-link" href="../PeerIX/progress.html">Abdominal & Gastrointestinal Disorders</a></td>
+                                                        <td><a class="category-link" href="../PeerIX/category-details.html">Abdominal & Gastrointestinal Disorders</a></td>
                                                         <td>8/20/2016</td>
                                                         <td>10/20/2018</td>
                                                         <td>Active</td>
                                                     </tr>
                                                     <tr>
-                                                        <td><a class="myprogress-link" href="../PeerIX/progress.html">Cutaneous Disorders</a></td>
+                                                        <td><a class="category-link" href="../PeerIX/category-details.html">Cutaneous Disorders</a></td>
                                                         <td>8/20/2016</td>
                                                         <td>10/20/2018</td>
                                                         <td>Complete</td>
                                                     </tr>
                                                     <tr>
-                                                        <td><a class="myprogress-link" href="../PeerIX/progress.html">Signs, Symptoms and Presentations</a></td>
+                                                        <td><a class="category-link" href="../PeerIX/category-details.html">Signs, Symptoms and Presentations</a></td>
                                                         <td>8/20/2016</td>
                                                         <td>10/20/2018</td>
                                                         <td>Active</td>
                                                     </tr>
                                                     <tr>
-                                                        <td><a class="myprogress-link" href="../PeerIX/progress.html">Abdominal & Gastrointestinal Disorders</a></td>
+                                                        <td><a class="category-link" href="../PeerIX/category-details.html">Abdominal & Gastrointestinal Disorders</a></td>
                                                         <td>8/20/2016</td>
                                                         <td>10/20/2018</td>
                                                         <td>Complete</td>
                                                     </tr>
                                                     <tr>
-                                                        <td><a class="myprogress-link" href="../PeerIX/progress.html">Abdominal & Gastrointestinal Disorders</a></td>
+                                                        <td><a class="category-link" href="../PeerIX/category-details.html">Abdominal & Gastrointestinal Disorders</a></td>
                                                         <td>8/20/2016</td>
                                                         <td>10/20/2018</td>
                                                         <td>Active</td>
                                                     </tr>
                                                     <tr>
-                                                        <td><a class="myprogress-link" href="../PeerIX/progress.html">Cardiovascular Disorders</a></td>
+                                                        <td><a class="category-link" href="../PeerIX/category-details.html">Cardiovascular Disorders</a></td>
                                                         <td>8/20/2016</td>
                                                         <td>10/20/2018</td>
                                                         <td>Active</td>
@@ -667,7 +673,7 @@
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <td><a class="myprogress-link" href="../PeerIX/progress.html">John Doe</a></td>
+                                                            <td><a class="myprogress-link" href="../PeerIX/progress.html" >John Doe</a></td>
                                                             <td>89%</td>
                                                         </tr>
                                                         <tr>
@@ -889,6 +895,7 @@ jQuery(function () {
 </script>
 <script type="text/javascript" src="js/bootstrap.min.js?v=1.0" id="boostrap-js"></script>
 <script type="text/javascript" src="js/director-home.js"></script>
+<script type="text/javascript" src="js/home.js"></script>
 <script type="text/javascript" src="js/bootstrap-datepicker.js?v=1.0" id="boostrapDatePicker-js"></script>
 <script type="text/javascript" src="js/peerix-footer.js?v=1.0" id="peerixFooter-js"></script>
 </body>

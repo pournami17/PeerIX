@@ -47,36 +47,52 @@
     <link href="css/home_section1.css" rel="stylesheet" type="text/css">
 
 </head>
-<body class="peerix template-">
+<body class="directorsigin-mainwrapper peerix template-">
     <div class=" side-collapse-container">
         <div class="container content-mrgT detailscontent-wrapper">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="signIn sigin-director">
+            <div class="row directorsigin-wrapper">
+                <div class="col-sm-6">
+                    <div class="signIn">
                         <h2>Director Sign In</h2>
                         <div class="form-group">
-                          <label for="validate-text">Username </label>
-                          <input type="text" class="form-control" required>
+                            <label for="validate-text">ACEP Username </label>
+                            <input type="text" placeholder="Username" id="username"
+                                name="username" class="form-control" required autofocus>
                         </div>
                         <div class="form-group">
-                          <label for="validate-text">Password</label>
-                          <input type="text" class="form-control"  required>
+                            <label for="validate-text">Password</label>
+                            <input type="password" placeholder="Password" id="password"
+                                name="password" class="form-control" required>
                         </div>
                         <div class="form-group">
-                          <div class="btn-group checkBoxMain" data-toggle="buttons">
-                            <label class="btn btn-default active">
-                              <input type="checkbox" autocomplete="off" checked>
-                              <span class="glyphicon glyphicon-ok"></span> </label>
-                            <label for="validate-text" class="rememberText">Remember me next time.</label>
-                          </div>
+                            <div class="btn-group checkBoxMain" data-toggle="buttons">
+                                <label class="btn btn-default active"> <input type="checkbox"
+                                    autocomplete="off" checked> <span class="glyphicon glyphicon-ok"></span>
+                                </label> <label for="validate-text" class="rememberText">Remember
+                                    me next time.</label>
+                            </div>
                         </div>
                         <button class="btn btn-primary buttonSignIn" type="submit"  onclick="location.href='home.html'">Sign In</button>
-                        <a href="#" class="frgPass">Forgot  your username or password?</a><br>
+                        <a href="#" class="frgPass"> Forgot your username or password?</a><br>
                         <a href="#" class="getSign">Get Sign in help.</a>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="createAc">
+                        <h2>Director Sign In</h2>
+                        <p>An acep.org account allows you to personalize your ACEP
+                            experience, make purchase, register for educational meetings, access
+                            CME certificates and much more.</p>
+                        <p>If you are an ACEP member, an acep.org account allows you to
+                            access member benefits, modify your profile and renew your
+                            membership.</p>
+                        <button class="btn btn-primary buttonAc" type="submit">Create an
+                            Account</button>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     <!-- /container -->
     <script type="text/javascript">
     jQuery(function () {

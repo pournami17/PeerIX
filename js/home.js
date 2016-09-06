@@ -24,4 +24,25 @@ jQuery(document).ready(function(){
       jQuery('#peerix-reviewpoint-modal .modal-content .modal-body').empty().html(jQuery('#peer-point-content').html());
       jQuery('#peerix-reviewpoint-modal').modal('show');
     });
+
+    jQuery('.myprogress-link').on('click', function(){
+      localStorage.clear();
+      var clikedUserName = $(this).html();
+      localStorage.setItem("clikedUserName", clikedUserName);
+    });
+
+    jQuery('.category-link').on('click', function(){
+      localStorage.clear();
+      var categoryName = $(this).html();
+      localStorage.setItem("categoryName", categoryName);
+    });
+
+    var clikedUserName = localStorage.getItem("clikedUserName");
+    var categoryName = localStorage.getItem("categoryName");
+    $(".category-details-heading").append("<b>"+ categoryName +"</b>");
+    $(".checkprogress-heading").append("<b>Check "+ clikedUserName +"'s Progress</b>");
+    $(".studentprogress-header").append("Here's what "+ clikedUserName +" done so far:");
+    $(".studentprogress-subheader").append("Here's what "+ clikedUserName +" can do next:");
+
+
 });
