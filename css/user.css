@@ -984,8 +984,11 @@ hr {
     max-width: 500px;
     margin: 0 auto 20px;
   }
-  .curriculum-builder-wrapper, .add-resident-wrapper {
-    margin-top: 0px!important;
+  .curriculum-builder-wrapper, .user-heading, .create-practice-box {
+    margin-top: 25px!important;
+  }
+  .add-resident-wrapper {
+    margin-top: 5px!important;
   }
 }
 /*-----END OF DASHBOARD MENU-----*/

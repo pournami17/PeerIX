@@ -46,6 +46,7 @@
 
 <!-- new style and script file -->
     <link href="css/user.css" rel="stylesheet" type="text/css">
+    <link href="css/home_section1.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="js/user.js"></script>
 <!-- datatable and csv -->
     <link href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -201,19 +202,19 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Modal Header</h4>
+            <h4 class="modal-title">User Details</h4>
           </div>
           <div class="modal-body">
-            <p>First Name: <span class="firstName"></span></p>
-            <p>Last Name: <span class="lastName"></span></p>
-            <p>Email: <span class="email"></span></p>
-            <p>Role: <span class="role"></span></p>
-            <p>Year: <span class="year"></span></p>
-            <p>Integrated Type: <span class="integratedType"></span></p>
-            <p>Graduation Year: <span class="GraduationType"></span></p>
+            <p><label class="userdetails-label">First Name:</label> <span class="firstName"></span></p>
+            <p><label class="userdetails-label">Last Name:</label> <span class="lastName"></span></p>
+            <p><label class="userdetails-label">Email:</label> <span class="email"></span></p>
+            <p><label class="userdetails-label">Role:</label> <span class="role"></span></p>
+            <p><label class="userdetails-label">Year:</label> <span class="year"></span></p>
+            <p><label class="userdetails-label">Integrated Type:</label> <span class="integratedType"></span></p>
+            <p><label class="userdetails-label">Graduation Year:</label> <span class="GraduationType"></span></p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-default userdetails-closebutton" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>

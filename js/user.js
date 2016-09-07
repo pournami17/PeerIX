@@ -88,5 +88,10 @@ $(document).ready(function() {
         $(this).parents('tr').remove();
     });
 
+    $('.save-resident-changes').click(function(){
+        $('#userEdit').modal('hide');
+    });
+
+
 } );
 
