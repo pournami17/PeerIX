@@ -251,6 +251,30 @@
                                        </tr>
                                     </tbody>
                                  </table>
+                                 <div id="qstnTopicsList">                                        
+                                      <table class="table table-bordered hideDiv" id="categoriesList" style="display: table;">
+                                        <tbody>
+                                          <tr>
+                                            <td></td>
+                                            <td>
+                                              <div class="well well-sm" style="height: 150px; overflow: auto;">
+                                                <div class="checkbox">
+                                                  <label><b>EM Model Category</b></label>
+                                                </div>
+                                                <div class="checkbox">
+                                                  <label><input type="checkbox" value="12" class="questionTopic" name="questionTopics[]">Endocrine, Metabolic &amp; Nutritional Disorders <span class="hideDiv">(3)</span></label>
+                                                </div>
+                                                <div class="checkbox">
+                                                  <label><input type="checkbox" value="13" class="questionTopic" name="questionTopics[]">Environmental Disorders <span class="hideDiv">(1)</span></label>
+                                                </div>
+                                              </div>
+                                              <a onclick="$(this).parent().find(':checkbox').prop('checked', true);">Select All</a> /
+                                              <a onclick="$(this).parent().find(':checkbox').prop('checked', false);">Unselect All</a>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
                                  <div class="bdr-seperator"></div>
                                  <div class=" clearfix"></div>
                               </div>

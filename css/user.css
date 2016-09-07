@@ -30,6 +30,9 @@ h1, h2, h3, h4, h5, h6 {
 .question-list li.active {
     background-color: #4C6A92;
 }
+#qstnTopicsList {
+  display: none;
+}
 .user-wrapper {
   position: relative;
   padding-top: 25px;

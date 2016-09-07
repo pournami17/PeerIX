@@ -19,6 +19,17 @@ jQuery(document).ready(function(){
 
     });
 
+    $("input[name='topicCategories']").change(function(){
+        $(this).parents('.categories_wrapper').find('.active').removeClass('active');
+        $(this).parent('label').addClass('active');
+        if($(this).val() == 'selectedTopics'){
+            $('#qstnTopicsList').show();
+        }
+        else {
+            $('#qstnTopicsList').hide();
+        }
+    });
+
 });
 
 function parseDate(str) {
