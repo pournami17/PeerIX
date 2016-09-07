@@ -31,7 +31,16 @@ $(document).ready(function(){
 
     $('.practicetest-save').click(function(){
         var assignmentName = $('#assignmentName').val();
-        $('.testsaved-msg').append("Practice test" +assignmentName+ "saved successfully.");
+        var startDate = $('#startDate').val();
+        var endDate = $('#endDate').val();
+        var diff = daydiff(parseDate(startDate), parseDate(endDate));
+        var qn = $("input[name='questionCount']:checked"). val();
+        var passRequirements = $('#passRequirements').val();
+        if (assignmentName.length>0 && startDate.length>0 && endDate.length>0 && passRequirements.length>0 && qn.length>0) {
+            var assignmentName = $('#assignmentName').val();
+        } else if (assignmentName.length>0 || startDate.length>0 || endDate.length>0 || passRequirements.length>0 || qn.length>0) {
+            $('.filledall-errormsg').css("display", "block");
+        }
     });
 
     $("input[name='topicCategories']").change(function(){

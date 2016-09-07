@@ -901,6 +901,13 @@ hr {
 .button-signin:hover {
   background: #3777a0;
 }
+.filledall-errormsg, .questionnumber-errormsg{
+  color: #FF0000;
+  display: none;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
 @media (min-width: 768px) {
   .select-graduate-year select {
     width: 150px;

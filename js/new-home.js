@@ -2,6 +2,12 @@ jQuery(document).ready(function(){
     $('.testsaved-msg').html('');
     $( "#startDate, #endDate" ).datepicker();
 
+    $("#add_row").on('click',function(){
+        $('.questionnumber-errormsg, .filledall-errormsg').css("display", "none");
+        $('#assignmentName, #startDate, #endDate, #passRequirements').val('');
+        $('.question-number li').removeClass("active")
+    });
+
     $(".question-number li").on('click',function(){
         $(this).parent().find('.active').removeClass('active');
         $(this).addClass('active');
@@ -14,9 +20,15 @@ jQuery(document).ready(function(){
         var diff = daydiff(parseDate(startDate), parseDate(endDate));
         var qn = $("input[name='questionCount']:checked"). val();
         var passRequirements = $('#passRequirements').val();
-        $('.table-curriculum-builder table tbody').append('<tr class="child"><td>'+assignmentName+'<\/td><td>'+startDate+'<\/td><td>'+endDate+'<\/td><td>'+diff+'<\/td><td>'+qn+'<\/td><td>'+passRequirements+'%<\/td></tr>');
-        jQuery('#add-test').modal('hide');
-
+        if (assignmentName.length>0 && startDate.length>0 && endDate.length>0 && passRequirements.length>0 && ($('.question-number li').hasClass("active") == true)) {
+            $('.table-curriculum-builder table tbody').append('<tr class="child"><td>'+assignmentName+'<\/td><td>'+startDate+'<\/td><td>'+endDate+'<\/td><td>'+diff+'<\/td><td>'+qn+'<\/td><td>'+passRequirements+'%<\/td></tr>');
+            jQuery('#add-test').modal('hide');
+        } if (assignmentName.length>0 && startDate.length>0 && endDate.length>0 && passRequirements.length>0 && $('.question-number li').hasClass("active") == false) {
+            $('.questionnumber-errormsg').css("display", "block");
+        }
+        else {
+            $('.filledall-errormsg').css("display", "block");
+        }
     });
 
     $("input[name='topicCategories']").change(function(){
@@ -30,6 +42,9 @@ jQuery(document).ready(function(){
         }
     });
 
+    $('#assignmentName, #startDate, #endDate, #passRequirements, #qn').click(function () {
+        $('.filledall-errormsg, .questionnumber-errormsg').css("display", "none");
+    });
 });
 
 function parseDate(str) {
