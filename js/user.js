@@ -13,9 +13,9 @@ $(document).ready(function() {
         $('#addRowModal').modal('toggle');
     });
 
-    // $('.userTable_wrapper #refresh').click(function(){
-    //    $('#userTable').DataTable();
-    // });
+    $('#userTable_wrapper #refresh').click(function(){
+       $('#userTable').DataTable().draw();
+    });
 
     var usersDetails = [];
     $('#addRowModal .btn-add').on('click',function(){
