@@ -40,8 +40,9 @@
         </script>
 	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
 	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
-	<script type="text/javascript" src=js/plugin.js?v=1.0" id="plugin-js"></script>
-	<script type="text/javascript" src=js/peerix-header.js?v=1.0" id="peerixHeader-js"></script>
+	<script type="text/javascript" src="js/plugin.js" id="plugin-js"></script>
+    <script type="text/javascript" src="js/home.js" id="plugin-js"></script>
+	<script type="text/javascript" src="js/peerix-header.js?v=1.0" id="peerixHeader-js"></script>
     <!-- new style -->
     <link href="css/user.css" rel="stylesheet" type="text/css">
     <link href="css/home_section1.css" rel="stylesheet" type="text/css">
@@ -51,48 +52,48 @@
     <div id="header">
          <p align="center"><a href="http://www.acep.org/"><img class="aceplogo" src="../PeerIX/images/signin-logo.png" width="468" height="46" alt="ACEP"></a></p>
     </div>
-    
-        <div class="container">
-            <div class="row directorsigin-wrapper">
+
+    <div class="container">
+        <div class="row directorsigin-wrapper">
             <div class="directorSignin-inner">
                 <div class="col-sm-6 col-xs-12">
                     <div class="signIn">
                         <h2>Director Sign In</h2>
-                            <div class="login-box">
-                                <input type="text" placeholder="Username" id="username"
-                                    name="username" class="txtbox" required autofocus>
-                                <input type="password" placeholder="Password" id="password"
-                                    name="password" class="txtbox txtbox_1" required>
-                                <button class="button-signin" type="submit"  onclick="location.href='home.html'">Sign In</button>
-                            </div>
-                            <div class="btn-group checkBoxMain" data-toggle="buttons">
-                                <label class="btn btn-default active"> <input type="checkbox"
-                                    autocomplete="off" checked> <span class="glyphicon glyphicon-ok"></span>
-                                </label> <label for="validate-text" class="rememberText">Remember
-                                    me next time.</label>
-                            </div>
+                        <div class="login-box">
+                            <input type="text" placeholder="Username" id="username"
+                                name="username" class="txtbox" required autofocus>
+                            <input type="password" placeholder="Password" id="password"
+                                name="password" class="txtbox txtbox_1" required>
+                            <button class="button-signin" type="submit"  onclick="location.href='home.html'">Sign In</button>
                         </div>
-
-                        <a href="#" class="frgPass"> Forgot your username or password?</a><br>
-                        <a href="#" class="getSign">Get Sign in help.</a>
-                    </div>
-                    <div class="col-sm-6 col-xs-12">
-                        <div class="createAc">
-                            <h2>Create an Account</h2>
-                            <p>An acep.org account allows you to personalize your ACEP
-                                experience, make purchase, register for educational meetings, access
-                                CME certificates and much more.</p>
-                            <p>If you are an ACEP member, an acep.org account allows you to
-                                access member benefits, modify your profile and renew your
-                                membership.</p>
-                            <button class="btn btn-primary buttonAc" type="submit">Create an
-                                Account</button>
+                        <div class="btn-group checkBoxMain" data-toggle="buttons">
+                            <label class="btn btn-default active"> <input type="checkbox"
+                                autocomplete="off" checked> <span class="glyphicon glyphicon-ok"></span>
+                            </label> <label for="validate-text" class="rememberText">Remember
+                                me next time.</label>
                         </div>
                     </div>
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                    <div class="createAc">
+                        <h2>Create an Account</h2>
+                        <p>An acep.org account allows you to personalize your ACEP
+                            experience, make purchase, register for educational meetings, access
+                            CME certificates and much more.</p>
+                        <p>If you are an ACEP member, an acep.org account allows you to
+                            access member benefits, modify your profile and renew your
+                            membership.</p>
+                        <button class="btn btn-primary buttonAc" type="submit">Create an
+                            Account</button>
                     </div>
+                </div>
+                <div class="col-xs-12">
+                    <a href="#" class="frgPass"> Forgot your username or password?</a><br>
+                    <a href="#" class="getSign">Get Sign in help.</a>
                 </div>
             </div>
         </div>
+    </div>
     <!-- /container -->
     <script type="text/javascript">
     jQuery(function () {

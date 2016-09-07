@@ -51,18 +51,3 @@ $(document).ready(function(){
     });
 
 });
-
-$(window).load(function() {
-    var windowWidth = $(window).width();
-    if(windowWidth > 991){
-       $('.equalheight-wrapper').equalheight();
-    }
-});
-
-$(window).resize(function(){
-    $('.equalheight-wrapper').css("height", "auto");
-    var windowWidth = $(window).width();
-    if(windowWidth > 991){
-       $('.equalheight-wrapper').equalheight();
-    }
-});

@@ -3,12 +3,14 @@ jQuery(document).ready(function(){
     		jQuery('.sixth-section .col-md-12 .panel .panel-heading').equalheight();
     		jQuery('.sixth-section .col-md-12 .panel .panel-body').equalheight();
     		jQuery('.sixth-section .padd0').equalheight();
+        jQuery('.signIn, .createAc').equalheight();
     });
 
     jQuery(window).resize(function(){
     		jQuery('.sixth-section .col-md-12 .panel .panel-heading').equalheight();
     		jQuery('.sixth-section .col-md-12 .panel .panel-body').equalheight();
         jQuery('.sixth-section .padd0').equalheight();
+        jQuery('.signIn, .createAc').equalheight();
     });
 
     // Method to show the Peer Review info pop up

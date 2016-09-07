@@ -3,6 +3,7 @@ $(document).ready(function() {
         "dom": '<"addbuttons"> lBfrtip ',
         "buttons": ['csv'],
         "order": [],
+        "paging":   false,
         "columnDefs": [ { orderable: false, targets: [7]}]
     } );
 
@@ -12,14 +13,18 @@ $(document).ready(function() {
         $('#addRowModal').modal('toggle');
     });
 
+    // $('.userTable_wrapper #refresh').click(function(){
+    //    $('#userTable').DataTable();
+    // });
+
     var usersDetails = [];
     $('#addRowModal .btn-add').on('click',function(){
         $('.resident-info input[type=checkbox]').each(function () {
             if(this.checked) {
-                var firstName = $(this).parent().find('.resident-image-col .resident-details .firstName').html();
-                var lastName = $(this).parent().find('.resident-image-col .resident-details .lastName').html();
+                var firstName = $(this).parent().find('.resident-details .firstName').html();
+                var lastName = $(this).parent().find('.resident-details .lastName').html();
                 var email = '';
-                var role = $(this).parent().find('.resident-image-col .resident-details .designation').html();
+                var role = $(this).parent().find('.resident-details .designation').html();
                 var year = '';
                 var integratedType = '';
                 var graduationYear = '';
@@ -54,15 +59,17 @@ $(document).ready(function() {
     });
 
     $('.form-search .btn').on('click', function(e){
-        var firstName = $.trim($(this).prevAll('#firstName').val()).toLowerCase();
-        var lastName = $.trim($(this).prevAll('#lastName').val()).toLowerCase();
-        var designation = $.trim($(this).prevAll('#designation').val()).toLowerCase();
+        var firstName = $.trim($(this).parent().parent().find('#firstName').val()).toLowerCase();
+        var lastName = $.trim($(this).parent().parent().find('#lastName').val()).toLowerCase();
+        var designation = $.trim($(this).parent().parent().find('#designation').val()).toLowerCase();
         $('.resident-infocontainer').each(function(){
-            var $thisName = $(this).children('.resident-image-col').find('h4');
-            var $thisDesg = $(this).children('.resident-image-col').find('.designation');
-            var searchKey1 = $thisName.text().toLowerCase();
-            var searchKey2 = $thisDesg.text().toLowerCase();
-            if(searchKey1.indexOf(firstName) === -1 || searchKey1.indexOf(lastName) === -1 || searchKey2.indexOf(designation) === -1 )
+            var $thisName1 = $(this).children('.resident-image-col').find(' .resident-details .firstName');
+            var $thisName2 = $(this).children('.resident-image-col').find(' .resident-details .lastName');
+            var $thisDesg = $(this).children('.resident-image-col').find(' .resident-details .designation');
+            var searchKey1 = $thisName1.text().toLowerCase();
+            var searchKey2 = $thisName2.text().toLowerCase();
+            var searchKey3 = $thisDesg.text().toLowerCase();
+            if(searchKey1.indexOf(firstName) === -1 || searchKey2.indexOf(lastName) === -1 || searchKey3.indexOf(designation) === -1 )
                 $(this).closest('.resident-infocontainer').fadeOut();
         });
     });
