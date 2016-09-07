@@ -4,6 +4,7 @@ $(document).ready(function() {
         "buttons": ['csv'],
         "order": [],
         "paging":   false,
+        "responsive": true,
         "columnDefs": [ { orderable: false, targets: [7]}]
     } );
 
@@ -14,7 +15,16 @@ $(document).ready(function() {
     });
 
     $('#userTable_wrapper #refresh').click(function(){
-       $('#userTable').DataTable().draw();
+        $('#userTable').DataTable().destroy();
+        $('#userTable').DataTable({
+            "dom": '<"addbuttons"> lBfrtip ',
+            "buttons": ['csv'],
+            "order": [],
+            "paging":   false,
+            "responsive": true,
+            "columnDefs": [ { orderable: false, targets: [7]}]
+        });
+        $("div.addbuttons").html('<div class="glyphicon glyphicon-plus btn-add-user" id="addRow">ADD USER</div><div class="fa fa-refresh" id="refresh">REFRESH</div>');
     });
 
     var usersDetails = [];
