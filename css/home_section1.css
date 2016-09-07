@@ -19,3 +19,15 @@
 .curriculum-builder-wrapper {
 	margin-top: 40px;
 }
+.assign-resident-wrapper .select2-container,
+.assign-resident-wrapper .select2-search__field {
+	width: 100%!important;
+}
+.practicesuccess-alert {
+  color: #468847;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  padding: 20px 10px;
+  display: none;
+  font-weight: bold;
+}
