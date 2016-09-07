@@ -41,7 +41,7 @@ jQuery(document).ready(function(){
     var categoryName = localStorage.getItem("categoryName");
     $(".category-details-heading").append("<b>"+ categoryName +"</b>");
     $(".checkprogress-heading").append("<b>Check "+ clikedUserName +"'s Progress</b>");
-    $(".studentprogress-header").append("Here's what "+ clikedUserName +" done so far:");
+    $(".studentprogress-header").append("Here's what "+ clikedUserName +" did so far:");
     $(".studentprogress-subheader").append("Here's what "+ clikedUserName +" can do next:");
 
 
