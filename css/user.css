@@ -875,6 +875,29 @@ hr {
     outline: none;
     border: none;
 }
+/*signinpage*/
+.login-box {
+    padding: 5px;
+    border-radius: 5px;
+    background: #055588;
+    margin: 0 auto 10px;
+}
+.button-signin {
+  height: 38px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 38px;
+  color: #fff;
+  border-radius: 5px;
+  margin: 6px 0 0 0;
+  width: 100%;
+  background: #3777a0;
+  border: 5px;
+  cursor: pointer;
+}
+.button-signin:hover {
+  background: #3777a0;
+}
 @media (min-width: 768px) {
   .select-graduate-year select {
     width: 150px;
