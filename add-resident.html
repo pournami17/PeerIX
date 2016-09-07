@@ -45,6 +45,7 @@ Fsave
 
 <!-- new style -->
     <link href="css/user.css" rel="stylesheet" type="text/css">
+    <link href="css/home_section1.css" rel="stylesheet" type="text/css">
 
 </head>
 <body class="peerix template-">
@@ -98,19 +99,27 @@ Fsave
             <div class="select-outer-container">
                 <div class="search-container">
                     <form class="form-search form-inline">
-                        <label for="text">First Name:</label>
-                        <input type="text" class="form-control search-query" id="firstName">
-                        <label for="text">Last Name:</label>
-                        <input type="text" class="form-control search-query" id="lastName">
-                        <label for="text">Designation:</label>
-                        <input type="text" class="form-control search-query" id="designation"><br>
-                        <button type="button" class="btn btn-default search-button">Search</button>
+                        <div class="form-search-details">
+                            <label for="text">First Name:</label>
+                            <input type="text" class="form-control search-query" id="firstName">
+                        </div>
+                        <div class="form-search-details">
+                            <label for="text">Last Name:</label>
+                            <input type="text" class="form-control search-query" id="lastName">
+                        </div>
+                        <div class="form-search-details">
+                            <label for="text">Designation:</label>
+                            <input type="text" class="form-control search-query" id="designation">
+                        </div>
+                        <div class="form-search-button">
+                            <button type="button" class="btn btn-default search-button">Search</button>
+                        </div>
                     </form>
                 </div>
             </div>
             <div class="row">
                 <div class="resident-info">
-                    <div class="resident-infocontainer col-xs-4">
+                    <div class="resident-infocontainer col-xs-12 col-sm-4">
                         <div class="resident-image-col">
                             <div class="resident-image">
                                 <img class="img-responsive" src="images/resident1.jpg" alt="">
@@ -124,7 +133,7 @@ Fsave
                             </div>
                         </div>
                     </div>
-                    <div class="resident-infocontainer col-xs-4">
+                    <div class="resident-infocontainer col-xs-12 col-sm-4">
                         <div class="resident-image-col">
                             <div class="resident-image">
                                 <img class="img-responsive" src="images/resident3.jpg" alt="">
@@ -138,7 +147,7 @@ Fsave
                             </div>
                         </div>
                     </div>
-                    <div class="resident-infocontainer col-xs-4">
+                    <div class="resident-infocontainer col-xs-12 col-sm-4">
                         <div class="resident-image-col">
                             <div class="resident-image">
                                 <img class="img-responsive" src="images/resident2.jpg" alt="">

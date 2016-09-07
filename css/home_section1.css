@@ -16,7 +16,7 @@
 	font-family: 'OpenSans-CondBold';
 	font-size: 18px!important;
 }
-.curriculum-builder-wrapper {
+.curriculum-builder-wrapper, .add-resident-wrapper {
 	margin-top: 40px;
 }
 .assign-resident-wrapper .select2-container,
@@ -30,4 +30,14 @@
   padding: 20px 10px;
   display: none;
   font-weight: bold;
+}
+.search-container .form-search input {
+	margin: 0px 5px 20px 0px;
+}
+.search-container .form-search label {
+	vertical-align: top;
+	margin-top: 7px;
+}
+.form-search-details {
+	display: inline-block;
 }

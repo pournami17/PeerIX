@@ -482,9 +482,6 @@ hr {
 .resident-details {
   padding-left: 20px;
 }
-.search-button {
-  margin-top: 20px;
-}
 .add-resident-col {
   float: right;
 }
@@ -976,6 +973,19 @@ hr {
   }
   .dashboard-menu-options .more-options .menu-icon img {
     top: 35%;
+  }
+  .form-search-details {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .resident-image-col {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 20px;
+  }
+  .curriculum-builder-wrapper, .add-resident-wrapper {
+    margin-top: 0px!important;
   }
 }
 /*-----END OF DASHBOARD MENU-----*/
