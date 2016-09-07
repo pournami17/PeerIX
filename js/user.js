@@ -14,19 +14,6 @@ $(document).ready(function() {
         $('#addRowModal').modal('toggle');
     });
 
-    $('#userTable_wrapper #refresh').click(function(){
-        $('#userTable').DataTable().destroy();
-        $('#userTable').DataTable({
-            "dom": '<"addbuttons"> lBfrtip ',
-            "buttons": ['csv'],
-            "order": [],
-            "paging":   false,
-            "responsive": true,
-            "columnDefs": [ { orderable: false, targets: [7]}]
-        });
-        $("div.addbuttons").html('<div class="glyphicon glyphicon-plus btn-add-user" id="addRow">ADD USER</div><div class="fa fa-refresh" id="refresh">REFRESH</div>');
-    });
-
     var usersDetails = [];
     $('#addRowModal .btn-add').on('click',function(){
         $('.resident-info input[type=checkbox]').each(function () {
