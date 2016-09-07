@@ -222,22 +222,21 @@
       <div class="modal-dialog">
         <!-- Modal content-->
         <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Modal Header</h4>
-          </div>
-          <div class="modal-body">
-            <p>First Name: <span class="firstName"></span></p>
-            <p>Last Name: <span class="lastName"></span></p>
-            <p>Email: <span class="email"></span></p>
-            <p>Role: <span class="role"></span></p>
-            <p>Year: <span class="year"></span></p>
-            <p>Integrated Type: <span class="integratedType"></span></p>
-            <p>Graduation Year: <span class="GraduationType"></span></p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Choose Class</h4>
+            </div>
+            <div class="modal-body">
+                <select id="resident-gsy-class" name="resident-gsy-class" class="form-control">
+                    <option value="1">GSY 1</option>
+                    <option value="2">GSY 2</option>
+                    <option value="3">GSY 3</option>
+                    <option value="4">GSY 4</option>
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary save-resident-changes">Save changes</button>
+            </div>
         </div>
       </div>
     </div>
@@ -245,57 +244,65 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">ADD USER</h4>
+                    <h3>Add Resident</h3>
                 </div>
                 <div class="modal-body">
-                    <form class="form-horizontal">
-                        <fieldset>
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="firstname">First Name</label>  
-                            <div class="col-md-4">
-                                <input id="firstname" name="firstname" type="text" placeholder="firstname" class="form-control input-md">
+                    <div class="select-outer-container">
+                        <div class="search-container">
+                            <form class="form-search form-inline">
+                                <label for="text">First Name:</label>
+                                <input type="text" class="form-control search-query" id="firstName">
+                                <label for="text">Last Name:</label>
+                                <input type="text" class="form-control search-query" id="lastName">
+                                <label for="text">Designation:</label>
+                                <input type="text" class="form-control search-query" id="designation"><br>
+                                <button type="button" class="btn btn-default search-button">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="resident-info">
+                            <div class="resident-infocontainer col-xs-4">
+                                <input type="checkbox" name="users" value="">
+                                <div class="resident-image-col">
+                                    <div class="resident-image">
+                                        <img class="img-responsive" src="images/resident1.jpg" alt="">
+                                    </div>
+                                    <div class="resident-details">
+                                        <span class="firstName">John</span>
+                                        <span class="lastName">Doe</span>
+                                        <span class="designation">Web Developer</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="resident-infocontainer col-xs-4">
+                                <input type="checkbox" name="users" value="">
+                                <div class="resident-image-col">
+                                    <div class="resident-image">
+                                        <img class="img-responsive" src="images/resident3.jpg" alt="">
+                                    </div>
+                                    <div class="resident-details">
+                                        <span class="firstName">Joe </span>
+                                        <span class="lastName">Angry</span>
+                                        <span class="designation">Artist</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="resident-infocontainer col-xs-4">
+                                <input type="checkbox" name="users" value="">
+                                <div class="resident-image-col">
+                                    <div class="resident-image">
+                                        <img class="img-responsive" src="images/resident2.jpg" alt="">
+                                    </div>
+                                    <div class="resident-details">
+                                        <span class="firstName">Alexandra</span>
+                                        <span class="lastName">smith</span>
+                                        <span class="designation">Interior designer</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="lastname">Last Name</label>  
-                            <div class="col-md-4">
-                                <input id="lastname" name="lastname" type="text" placeholder="lastname" class="form-control input-md">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="email">Email</label>  
-                            <div class="col-md-4">
-                                <input id="email" name="email" type="text" placeholder="email" class="form-control input-md">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="role">Role</label>  
-                            <div class="col-md-4">
-                                <input id="role" name="role" type="text" placeholder="role" class="form-control input-md">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="year">Year</label>  
-                            <div class="col-md-4">
-                                <input id="year" name="year" type="text" placeholder="year" class="form-control input-md">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="integratedtype">Integrated Type</label>  
-                            <div class="col-md-4">
-                                <input id="integratedtype" name="integratedtype" type="text" placeholder="Integrated type" class="form-control input-md">
-                          </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="graduationYear">Graduation Year</label>  
-                            <div class="col-md-4">
-                                <input id="graduationYear" name="graduationYear" type="text" placeholder="Graduation Year" class="form-control input-md">
-                            </div>
-                        </div>
-                        </fieldset>
-                        </form>
-
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary btn-add">Add User</button>

@@ -1,9 +1,5 @@
 jQuery(document).ready(function(){
-    jQuery('.addAssignmemnts').on('click', function(){
-        var aaa = $('#createTestBtn').val();
-        console.log(aaa)
-    });
-
+    $('.testsaved-msg').html('');
     $( "#startDate, #endDate" ).datepicker();
 
     $(".question-number li").on('click',function(){
@@ -22,6 +18,7 @@ jQuery(document).ready(function(){
         jQuery('#add-test').modal('hide');
 
     });
+
 });
 
 function parseDate(str) {

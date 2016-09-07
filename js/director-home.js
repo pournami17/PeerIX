@@ -29,6 +29,11 @@ $(document).ready(function(){
         $(this).addClass('active');
     });
 
+    $('.practicetest-save').click(function(){
+        var assignmentName = $('#assignmentName').val();
+        $('.testsaved-msg').append("Practice test" +assignmentName+ "saved successfully.");
+    });
+
 });
 
 $(window).load(function() {

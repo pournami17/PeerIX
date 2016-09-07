@@ -217,7 +217,7 @@
                                         <h4>Save this test as:</h4>
                                         <span class="error" id="er_testName"></span>
                                         <div class="form-group">
-                                            <input  type="text" name="testName" class="form-control" value="Practice Test 08 - 25">
+                                            <input  type="text" id="assignmentName" name="testName" class="form-control" value="Practice Test 08 - 25">
                                         </div>
                                         <div id="wait_for_validation" class="hideDiv">
                                             <img alt="Loader" src="images/loader1.gif">
@@ -228,7 +228,9 @@
                                             <div class="loader">Redirecting, please wait <span class="loader__dot">.</span><span class="loader__dot">.</span><span class="loader__dot">.</span></div>
                                         </div>
                                         <input type="hidden" name="peerpath_exam_week" id="peerpath_exam_week" value="" />
-                                        <input type="submit" id="createTestBtn" name="createTestBtn" class="btn btn-primary create-btn" value="Create Test" />
+                                        <input type="button" name="createTestBtn" class="btn btn-primary create-btn practicetest-save" value="Create Test" />
+
+                                        <div class="testsaved-msg"></div>
                                     </div>
                                 </div>
                                 <div class="col-xs-12 assign-resident-wrapper">
